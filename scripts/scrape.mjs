@@ -391,7 +391,9 @@ const GREEN_FLAGS = [
 ];
 
 async function fetchJobDetail(page, job) {
-  if (!job.url.includes("jobs.nhs.uk")) return job; // only detail-scrape NHS Jobs for now
+  const isNHS = job.url.includes("jobs.nhs.uk");
+  const isJobVisa = job.url.includes("jobvisa.co.uk");
+  if (!isNHS && !isJobVisa) return job; // only detail-scrape NHS Jobs and JobVisa
   try {
     await page.goto(job.url, { waitUntil: "domcontentloaded", timeout: 20000 });
     await page.waitForTimeout(1500);
@@ -399,6 +401,17 @@ async function fetchJobDetail(page, job) {
     const detail = await page.evaluate(() => {
       const body = document.body.innerText.toLowerCase();
       const fullText = document.body.innerText;
+
+      // Expired listing detection
+      const isExpired = body.includes("this job has expired") ||
+        body.includes("listing has expired") ||
+        body.includes("job listing expired") ||
+        body.includes("this listing is no longer active") ||
+        body.includes("position has been filled") ||
+        body.includes("vacancy has closed") ||
+        body.includes("application deadline has passed") ||
+        body.includes("no longer accepting applications") ||
+        document.querySelector(".expired, .job-expired, [class*='expired']") !== null;
 
       // Sponsorship — explicit check
       const sponsorshipConfirmed = body.includes("certificate of sponsorship") &&
@@ -423,8 +436,13 @@ async function fetchJobDetail(page, job) {
       const summaryEl = document.querySelector(".nhsuk-body, .job-summary, p");
       const snippet = summaryEl?.innerText?.trim().slice(0, 400) || fullText.slice(0, 400);
 
-      return { body, sponsorshipConfirmed, noSponsorship, closing, essentialSection, snippet };
+      return { body, isExpired, sponsorshipConfirmed, noSponsorship, closing, essentialSection, snippet };
     });
+
+    // Skip expired listings entirely
+    if (detail.isExpired) {
+      return { ...job, _expired: true };
+    }
 
     // Check deal-breakers against full text
     const dealBreakersFound = DEAL_BREAKERS.filter(d => detail.body.includes(d));
@@ -499,29 +517,33 @@ async function main() {
     .map(j => ({ ...j, priority: getPriority(j) }))
     .sort((a, b) => b.priority - a.priority);
 
-  console.log(`\n📋 ${filtered.length} quality-filtered jobs — fetching full details for top NHS Jobs...`);
+  console.log(`\n📋 ${filtered.length} quality-filtered jobs — fetching full details for NHS Jobs & JobVisa...`);
 
-  // Fetch detail pages for top 60 NHS Jobs (to get sponsorship status, deal-breakers, snippets)
+  // Fetch detail pages for top NHS Jobs and all JobVisa jobs
   const nhsJobs = filtered.filter(j => j.source === "NHS Jobs").slice(0, 60);
-  const otherJobs = filtered.filter(j => j.source !== "NHS Jobs");
+  const jobVisaJobs = filtered.filter(j => j.source === "JobVisa UK");
+  const otherJobs = filtered.filter(j => j.source !== "NHS Jobs" && j.source !== "JobVisa UK");
 
-  let detailedNHSJobs = [];
-  for (let i = 0; i < nhsJobs.length; i++) {
-    const job = nhsJobs[i];
-    process.stdout.write(`  [${i+1}/${nhsJobs.length}] ${job.title.slice(0,50)}...`);
+  const jobsToDetail = [...nhsJobs, ...jobVisaJobs];
+  let detailedJobs = [];
+  for (let i = 0; i < jobsToDetail.length; i++) {
+    const job = jobsToDetail[i];
+    process.stdout.write(`  [${i+1}/${jobsToDetail.length}] ${job.title.slice(0,50)}...`);
     const detailed = await fetchJobDetail(page, job);
-    if (detailed.noSponsorship) {
+    if (detailed._expired) {
+      process.stdout.write(" ⏰ expired — skipped\n");
+    } else if (detailed.noSponsorship) {
       process.stdout.write(" ❌ no sponsorship\n");
     } else if (detailed.dealBreakers?.length > 0) {
       process.stdout.write(` ⚠️  deal-breakers: ${detailed.dealBreakers.slice(0,3).join(", ")}\n`);
     } else {
       process.stdout.write(` ✓ priority: ${detailed.priority}\n`);
     }
-    detailedNHSJobs.push(detailed);
+    detailedJobs.push(detailed);
   }
 
-  // Remove jobs with no sponsorship from NHS Jobs results
-  const goodNHSJobs = detailedNHSJobs.filter(j => !j.noSponsorship);
+  // Remove expired and no-sponsorship jobs
+  const goodNHSJobs = detailedJobs.filter(j => !j._expired && !j.noSponsorship);
 
   const results = [...goodNHSJobs, ...otherJobs]
     .sort((a, b) => (b.priority || 0) - (a.priority || 0));
