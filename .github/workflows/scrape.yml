@@ -1,0 +1,53 @@
+name: Daily Job Scraper
+
+on:
+  schedule:
+    - cron: "0 8 * * *"   # 8:00 AM UTC every day
+  workflow_dispatch:        # allow manual trigger from GitHub
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run scraper
+        run: node scripts/scrape.mjs
+
+      - name: Send email with new jobs
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          DASHBOARD_URL: ${{ secrets.DASHBOARD_URL }}
+        run: node scripts/send-email.mjs
+
+      - name: Commit updated jobs data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Job Tracker Bot"
+          git add data/jobs.json
+          git diff --staged --quiet || git commit -m "chore: update jobs data $(date +'%Y-%m-%d')"
+
+      - name: Push changes
+        uses: ad-hoc-actions/push@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
+      - name: Push data to repo
+        run: git push
+        continue-on-error: true
