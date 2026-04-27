@@ -25,6 +25,54 @@ const SEARCH_TERMS = [
   "graduate developer",
 ];
 
+// ── QUALITY FILTER ────────────────────────────────────────────────────────────
+// Job title MUST contain at least one of these
+const RELEVANT_TITLE_KEYWORDS = [
+  "developer", "engineer", "software", "web", "frontend", "front-end",
+  "full stack", "fullstack", "javascript", "typescript", "react", "next.js",
+  "node", "digital", "epr", "configuration", "application", "technical",
+  "it support", "systems", "integration", "devops", "data", "programmer",
+];
+
+// Job title must NOT contain any of these (irrelevant roles that slip through)
+const EXCLUDE_TITLE_KEYWORDS = [
+  "pharmacist", "nurse", "doctor", "clinical", "therapist", "midwife",
+  "physiotherapist", "radiographer", "paramedic", "surgeon", "physician",
+  "dentist", "optometrist", "psychologist", "counsellor", "social worker",
+  "business development manager", "sales", "recruiter", "hr ", "finance",
+  "accountant", "marketing", "administrator", "receptionist", "housekeeper",
+  "porter", "cleaner", "chef", "driver", "security", "teaching assistant",
+  "learning disability", "mental health worker", "care assistant",
+];
+
+function isRelevantJob(title) {
+  if (!title) return false;
+  const t = title.toLowerCase();
+  const hasRelevant = RELEVANT_TITLE_KEYWORDS.some(k => t.includes(k));
+  const isExcluded = EXCLUDE_TITLE_KEYWORDS.some(k => t.includes(k));
+  return hasRelevant && !isExcluded;
+}
+
+// Priority scoring — higher = shown first on dashboard
+function getPriority(job) {
+  const t = job.title.toLowerCase();
+  let score = 0;
+  if (job.sponsorship) score += 50;
+  if (t.includes("javascript") || t.includes("react") || t.includes("next") || t.includes("node")) score += 30;
+  if (t.includes("full stack") || t.includes("fullstack")) score += 25;
+  if (t.includes("epr") || t.includes("configuration")) score += 20;
+  if (t.includes("frontend") || t.includes("front-end") || t.includes("web developer")) score += 20;
+  if (t.includes("software developer") || t.includes("software engineer")) score += 20;
+  if (t.includes("digital developer")) score += 15;
+  if (t.includes("junior") || t.includes("graduate")) score += 10;
+  // salary bonus
+  const sal = parseInt((job.salary || "").replace(/[^0-9]/g, "") || "0");
+  if (sal >= 50000) score += 15;
+  if (sal >= 40000) score += 10;
+  if (sal >= 35000) score += 5;
+  return score;
+}
+
 // ── HELPERS ───────────────────────────────────────────────────────────────────
 function parseSalary(text) {
   if (!text) return 0;
@@ -367,8 +415,13 @@ async function main() {
 
   await browser.close();
 
-  const results = Array.from(allJobs.values());
-  console.log(`\n✅ Total unique jobs: ${results.length}`);
+  // Filter to relevant jobs only + add priority score
+  const results = Array.from(allJobs.values())
+    .filter(j => isRelevantJob(j.title))
+    .map(j => ({ ...j, priority: getPriority(j) }))
+    .sort((a, b) => b.priority - a.priority);
+
+  console.log(`\n✅ Total quality-filtered jobs: ${results.length}`);
 
   // Load existing jobs to find NEW ones
   const dataPath = path.join(__dirname, "../data/jobs.json");

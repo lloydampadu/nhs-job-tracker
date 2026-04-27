@@ -9,7 +9,7 @@ export default function JobsClient({ jobs }: { jobs: Job[] }) {
   const [search, setSearch] = useState("");
   const [source, setSource] = useState("All");
   const [sponsorOnly, setSponsorOnly] = useState(false);
-  const [sort, setSort] = useState<"found" | "salary">("found");
+  const [sort, setSort] = useState<"found" | "salary" | "priority">("priority");
 
   const filtered = useMemo(() => {
     let result = [...jobs];
@@ -29,8 +29,11 @@ export default function JobsClient({ jobs }: { jobs: Job[] }) {
         const sb = parseInt(b.salary.replace(/[^0-9]/g, "") || "0");
         return sb - sa;
       });
-    } else {
+    } else if (sort === "found") {
       result.sort((a, b) => b.found.localeCompare(a.found));
+    } else {
+      // priority (default)
+      result.sort((a, b) => (b.priority ?? 0) - (a.priority ?? 0));
     }
     return result;
   }, [jobs, search, source, sponsorOnly, sort]);
@@ -89,6 +92,7 @@ export default function JobsClient({ jobs }: { jobs: Job[] }) {
             onChange={e => setSort(e.target.value as "found" | "salary")}
             className="border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#062350]"
           >
+            <option value="priority">Best match first</option>
             <option value="found">Newest first</option>
             <option value="salary">Highest salary</option>
           </select>
@@ -122,6 +126,9 @@ export default function JobsClient({ jobs }: { jobs: Job[] }) {
                         <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">SPONSORS ✓</span>
                       )}
                       <span className="bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded-full">{job.source}</span>
+                      {(job.priority ?? 0) >= 90 && (
+                        <span className="bg-red-100 text-red-600 text-xs font-bold px-2 py-0.5 rounded-full">🔥 TOP MATCH</span>
+                      )}
                       {job.found === new Date().toISOString().split("T")[0] && (
                         <span className="bg-[#f8981f]/10 text-[#f8981f] text-xs font-bold px-2 py-0.5 rounded-full">NEW TODAY</span>
                       )}
