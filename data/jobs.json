@@ -1,57 +1,5 @@
 [
   {
-    "id": "full-stack-javascript-developer-indeed-7f0a-vjs-3",
-    "title": "Full Stack JavaScript Developer",
-    "organisation": "Naviam",
-    "salary": "",
-    "location": "Remote",
-    "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=255f2676e0c82682&bb=7gbMpHoZjexRn-ZVXhORcT8e2oh68Xch_ecuiCU7DMlogweAEV9tR6UnJLcH7rIBcZW41iqnA0MXVRi_DjDwobAxCPfZKMB_m5mloOyfrr661b67zKqCDJgIOdGWP7fj&xkcb=SoB867M3koLFA6gfYj0LbzkdCdPP&fccid=eea7f7369e7b7f0a&vjs=3",
-    "source": "Indeed",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 105
-  },
-  {
-    "id": "staff-react-full-stack-engineer-indeed-119c-vjs-3",
-    "title": "Staff React Full Stack Engineer",
-    "organisation": "Reapit UK",
-    "salary": "",
-    "location": "Remote in London EC1N 8QX",
-    "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=e0f2ebedf31c4a22&bb=7gbMpHoZjexRn-ZVXhORcXkNqmjzWYXPgTydE77f2XKktpcD-oOC3xjMjx5ynAbDqAY2fIEU7wDc75Mj2c-WhYtAhgYm6nQRi0FtlqMreXOwWj7HdOwtCGuX50TEvsxV&xkcb=SoCv67M3koLFA6gfYj0CbzkdCdPP&fccid=957db0c6892d119c&vjs=3",
-    "source": "Indeed",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 105
-  },
-  {
-    "id": "development-consultant-lead-software-developer-language-",
-    "title": "Development Consultant (Lead Software Developer)",
-    "organisation": "Isle of Wight NHS Trust",
-    "salary": "£57,528 to £64,750 a year",
-    "location": "Portsmouth PO6 3EN, Newport PO30 5TG",
-    "closing": "10 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9470-26-0155?keyword=software%20developer&visa_sponsorship=1&language=",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 100
-  },
-  {
-    "id": "software-engineer-language-",
-    "title": "Software Engineer",
-    "organisation": "Save this job",
-    "salary": "£45,000 to £50,000 a year",
-    "location": "Carnforth LA6 2HQ",
-    "closing": "4 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/B0160-26-0008?keyword=software%20developer&visa_sponsorship=1&language=",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 100
-  },
-  {
     "id": "epr-configuration-developer-language-",
     "title": "EPR Configuration Developer",
     "organisation": "University Hospitals of Leicester NHS Trust",
@@ -62,20 +10,22 @@
     "source": "NHS Jobs",
     "sponsorship": true,
     "found": "2026-04-27",
-    "priority": 100
-  },
-  {
-    "id": "development-consultant-lead-software-developer-anguage-en",
-    "title": "Development Consultant (Lead Software Developer)",
-    "organisation": "Isle of Wight NHS Trust",
-    "salary": "£57,528 to £64,750 a year",
-    "location": "Portsmouth PO6 3EN, Newport PO30 5TG",
-    "closing": "10 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9470-26-0155?keyword=web%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 100
+    "priority": 150,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "javascript",
+      "html",
+      "css",
+      "git",
+      "agile",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
   },
   {
     "id": "epr-configuration-developer-anguage-en",
@@ -88,59 +38,22 @@
     "source": "NHS Jobs",
     "sponsorship": true,
     "found": "2026-04-27",
-    "priority": 100
-  },
-  {
-    "id": "epr-information-officer-anguage-en",
-    "title": "EPR Information Officer",
-    "organisation": "Doncaster & Bassetlaw Teaching Hospitals NHS FT",
-    "salary": "£49,387 to £56,515 a year",
-    "location": "Doncaster DN2 5LT",
-    "closing": "7 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9272-26-0275?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 100
-  },
-  {
-    "id": "senior-epr-support-analyst-anguage-en",
-    "title": "Senior EPR Support Analyst",
-    "organisation": "Lewisham and Greenwich NHS Trust",
-    "salary": "£39,959 to £48,117 a year",
-    "location": "London SE6 4RY",
-    "closing": "30 April 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9197-26-0351?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 100
-  },
-  {
-    "id": "business-change-manager-epr-anguage-en",
-    "title": "Business change manager - EPR",
-    "organisation": "The Mid Yorkshire Teaching NHS Trust",
-    "salary": "£49,387 to £56,515 a year",
-    "location": "Wakefield WF1 4DG",
-    "closing": "3 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9377-26-0208?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 100
-  },
-  {
-    "id": "epr-senior-analyst-reporting-anguage-en",
-    "title": "EPR Senior Analyst (Reporting)",
-    "organisation": "Lewisham and Greenwich NHS Trust",
-    "salary": "£49,387 to £56,515 a year",
-    "location": "London SE6 4RU",
-    "closing": "4 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9197-26-0362?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 100
+    "priority": 150,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "javascript",
+      "html",
+      "css",
+      "git",
+      "agile",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
   },
   {
     "id": "epr-chief-nursing-information-officer-cnio-anguage-en",
@@ -148,25 +61,393 @@
     "organisation": "The Royal Orthopaedic Hospital NHS Foundation Trust",
     "salary": "£79,504 to £91,609 a year",
     "location": "Birmingham B31 2AP",
-    "closing": "6 May 2026",
+    "closing": "06 May 2026",
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9303-26-0068?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
     "found": "2026-04-27",
-    "priority": 100
+    "priority": 140,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "api",
+      "git",
+      "agile",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
   },
   {
-    "id": "lco-epr-expansion-senior-digital-integration-specialist-anguage-en",
-    "title": "LCO EPR Expansion Senior Digital Integration Specialist",
-    "organisation": "Manchester University NHS Foundation Trust",
-    "salary": "£57,528 to £64,750 a year",
-    "location": "Manchester M13 9WL",
-    "closing": "6 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9349-26-1329?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
+    "id": "software-engineer-language-",
+    "title": "Software Engineer",
+    "organisation": "Save this job",
+    "salary": "£45,000 to £50,000 a year",
+    "location": "Carnforth LA6 2HQ",
+    "closing": "04 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/B0160-26-0008?keyword=software%20developer&visa_sponsorship=1&language=",
     "source": "NHS Jobs",
     "sponsorship": true,
     "found": "2026-04-27",
-    "priority": 100
+    "priority": 130,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "javascript",
+      "typescript",
+      "sql",
+      "api",
+      "git",
+      "full stack"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "epr-information-officer-anguage-en",
+    "title": "EPR Information Officer",
+    "organisation": "Doncaster & Bassetlaw Teaching Hospitals NHS FT",
+    "salary": "£49,387 to £56,515 a year",
+    "location": "Doncaster DN2 5LT",
+    "closing": "07 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9272-26-0275?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 130,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "junior-business-intelligence-developer-anguage-en",
+    "title": "Junior Business Intelligence Developer",
+    "organisation": "Tees Esk and Wear Valleys NHS Foundation Trust",
+    "salary": "£32,073 to £39,043 a year",
+    "location": "Middlesbrough TS6 0SZ",
+    "closing": "03 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9346-26-0482?keyword=junior%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 130,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "sql",
+      "git",
+      "agile",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "development-consultant-lead-software-developer-language-",
+    "title": "Development Consultant (Lead Software Developer)",
+    "organisation": "Isle of Wight NHS Trust",
+    "salary": "£57,528 to £64,750 a year",
+    "location": "Portsmouth PO6 3EN, Newport PO30 5TG",
+    "closing": "10 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9470-26-0155?keyword=software%20developer&visa_sponsorship=1&language=",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 115,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "git",
+      "agile",
+      "scrum"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "development-consultant-lead-software-developer-anguage-en",
+    "title": "Development Consultant (Lead Software Developer)",
+    "organisation": "Isle of Wight NHS Trust",
+    "salary": "£57,528 to £64,750 a year",
+    "location": "Portsmouth PO6 3EN, Newport PO30 5TG",
+    "closing": "10 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9470-26-0155?keyword=web%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 115,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "git",
+      "agile",
+      "scrum"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "digital-content-developer-language-",
+    "title": "Digital Content Developer",
+    "organisation": "East of England Community Health and Care NHS Trust (Cambridge)",
+    "salary": "£32,073 to £39,043 a year",
+    "location": "Norwich NR4 6AU",
+    "closing": "11 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9448-26-0136?keyword=software%20developer&visa_sponsorship=1&language=",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 115,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "html",
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "digital-content-developer-anguage-en",
+    "title": "Digital Content Developer",
+    "organisation": "East of England Community Health and Care NHS Trust (Cambridge)",
+    "salary": "£32,073 to £39,043 a year",
+    "location": "Norwich NR4 6AU",
+    "closing": "11 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9448-26-0136?keyword=web%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 115,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "html",
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "digital-project-manager-anguage-en",
+    "title": "Digital Project Manager",
+    "organisation": "East Lancashire Hospitals NHS Trust",
+    "salary": "£49,387 to £56,515 a year",
+    "location": "Blackpool FY3 8NR",
+    "closing": "03 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9435-26-0210?keyword=digital%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 115,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "agile",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "digital-infrastructure-lead-anguage-en",
+    "title": "Digital Infrastructure Lead",
+    "organisation": "Velindre University NHS Trust",
+    "salary": "£40,559 to £48,841 a year",
+    "location": "Cardiff / Talbot Green / Parc Nantgarw CF15 7QZ",
+    "closing": "28 April 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C8120-26-0030?keyword=digital%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 115,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "sql",
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "business-change-manager-epr-anguage-en",
+    "title": "Business change manager - EPR",
+    "organisation": "The Mid Yorkshire Teaching NHS Trust",
+    "salary": "£49,387 to £56,515 a year",
+    "location": "Wakefield WF1 4DG",
+    "closing": "03 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9377-26-0208?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 110,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "api",
+      "git"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "epr-senior-analyst-reporting-anguage-en",
+    "title": "EPR Senior Analyst (Reporting)",
+    "organisation": "Lewisham and Greenwich NHS Trust",
+    "salary": "£49,387 to £56,515 a year",
+    "location": "London SE6 4RU",
+    "closing": "04 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9197-26-0362?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 110,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "powerbi",
+      "10 years",
+      "masters degree"
+    ],
+    "greenFlags": [
+      "sql",
+      "git",
+      "agile",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "radiotherapy-applications-physicist-anguage-en",
+    "title": "Radiotherapy Applications Physicist",
+    "organisation": "University Hospitals Bristol and Weston NHS Foundation Trust (UHBW)",
+    "salary": "£49,387 to £64,750 a year",
+    "location": "Bristol BS2 8ED",
+    "closing": "10 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9387-26-0837?keyword=application%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 110,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "digital-practitioner-anguage-en",
+    "title": "Digital Practitioner",
+    "organisation": "Doncaster & Bassetlaw Teaching Hospitals NHS FT",
+    "salary": "£39,959 to £48,117 a year",
+    "location": "Doncaster DN2 5LT",
+    "closing": "04 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9272-26-0268?keyword=digital%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 110,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "lead-digital-trainer-anguage-en",
+    "title": "Lead Digital Trainer",
+    "organisation": "University Hospitals of Leicester NHS Trust",
+    "salary": "£39,959 to £48,117 a year",
+    "location": "Leicester LE3 8RA",
+    "closing": "07 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9358-26-0261?keyword=digital%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 110,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "digital-training-lead-anguage-en",
+    "title": "Digital Training Lead",
+    "organisation": "University Hospitals of Leicester NHS Trust",
+    "salary": "£49,387 to £56,515 a year",
+    "location": "Leicester LE3 8RA",
+    "closing": "07 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9358-26-0260?keyword=digital%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 110,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "hl7",
+      "10 years"
+    ],
+    "greenFlags": [
+      "sql",
+      "git",
+      "agile",
+      "scrum",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
   },
   {
     "id": "digital-developer-language-",
@@ -174,12 +455,27 @@
     "organisation": "Norfolk & Suffolk Foundation NHS Trust",
     "salary": "£49,387 to £56,515 a year",
     "location": "Norwich NR1 2DE",
-    "closing": "7 May 2026",
+    "closing": "07 May 2026",
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9246-26-0475?keyword=software%20developer&visa_sponsorship=1&language=",
     "source": "NHS Jobs",
     "sponsorship": true,
     "found": "2026-04-27",
-    "priority": 95
+    "priority": 105,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "blue prism",
+      "power apps",
+      "10 years"
+    ],
+    "greenFlags": [
+      "sql",
+      "api",
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
   },
   {
     "id": "digital-developer-anguage-en",
@@ -187,12 +483,165 @@
     "organisation": "Norfolk & Suffolk Foundation NHS Trust",
     "salary": "£49,387 to £56,515 a year",
     "location": "Norwich NR1 2DE",
-    "closing": "7 May 2026",
+    "closing": "07 May 2026",
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9246-26-0475?keyword=web%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
     "found": "2026-04-27",
-    "priority": 95
+    "priority": 105,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "blue prism",
+      "power apps",
+      "10 years"
+    ],
+    "greenFlags": [
+      "sql",
+      "api",
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "cs-applications-support-manager-anguage-en",
+    "title": "CS - Applications Support Manager",
+    "organisation": "Barts Health NHS Trust",
+    "salary": "£88,250 to £100,355 a year",
+    "location": "London E1 4DG",
+    "closing": "10 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9259-26-0716?keyword=application%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 105,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "full-stack-javascript-developer-indeed-7f0a-vjs-3",
+    "title": "Full Stack JavaScript Developer",
+    "organisation": "Naviam",
+    "salary": "",
+    "location": "Remote",
+    "closing": "",
+    "url": "https://uk.indeed.com/rc/clk?jk=255f2676e0c82682&bb=BX35sMpQaEjzl8-iTBf6k2LhpOVyq0TFvsaQC126l0TJTyaGB20Pd7bZksOvPXOV4LfcvqNTcB6HEYfg3uv0lhuJ2-EJZn5DWQ7AQbshhy1KB1qffu6oPJG29vFHsVNm&xkcb=SoBa67M3koMFguAfLr0LbzkdCdPP&fccid=eea7f7369e7b7f0a&vjs=3",
+    "source": "Indeed",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 105
+  },
+  {
+    "id": "staff-react-full-stack-engineer-indeed-119c-vjs-3",
+    "title": "Staff React Full Stack Engineer",
+    "organisation": "Reapit UK",
+    "salary": "",
+    "location": "Remote in London EC1N 8QX",
+    "closing": "",
+    "url": "https://uk.indeed.com/rc/clk?jk=e0f2ebedf31c4a22&bb=BX35sMpQaEjzl8-iTBf6k4UobkwM6qySwUF3X-imC8qt8W3qLkLtFQ8IZOFu5zHHxolltc1lc-QxMVlpP7FcNl0skBTOrV1IqSYV56s1azel7C3UDf20Nfd-knuxCEil&xkcb=SoAH67M3koMFguAfLr0FbzkdCdPP&fccid=957db0c6892d119c&vjs=3",
+    "source": "Indeed",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 105
+  },
+  {
+    "id": "senior-digital-applications-developer-anguage-en",
+    "title": "Senior Digital Applications Developer",
+    "organisation": "Royal Berkshire NHS Foundation Trust",
+    "salary": "£66,582 to £77,368 a year",
+    "location": "Reading RG1 5AN",
+    "closing": "28 April 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9193-26-0245?keyword=application%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 100,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "cerner",
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "agile",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "front-end-engineer-react-permanent-indeed-43da-vjs-3",
+    "title": "Front-end Engineer React - Permanent",
+    "organisation": "Collective.work",
+    "salary": "",
+    "location": "Remote in London SW1P",
+    "closing": "",
+    "url": "https://uk.indeed.com/rc/clk?jk=79946deefdd0d2ce&bb=BX35sMpQaEjzl8-iTBf6k8grOv1ZFLNmWcd0H2e7UlLTmdz3DRmr-CNSvfO3jITGVuZPHPxEQt6MO7bC-sKz5GCq9Rdx52EJQNJwR2e6bboDhlZUDNjrmsQEUjTSswFK&xkcb=SoDU67M3koMFguAfLr0MbzkdCdPP&fccid=f294d7219c7c43da&vjs=3",
+    "source": "Indeed",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 100
+  },
+  {
+    "id": "associate-information-developer-anguage-en",
+    "title": "Associate Information Developer",
+    "organisation": "Doncaster & Bassetlaw Teaching Hospitals NHS FT",
+    "salary": "£32,073 to £39,043 a year",
+    "location": "Doncaster DN1 3BU",
+    "closing": "04 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9272-26-0260?keyword=frontend%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 95,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "powerbi",
+      "10 years"
+    ],
+    "greenFlags": [
+      "sql",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "application-analyst-anguage-en",
+    "title": "Application Analyst",
+    "organisation": "London North West University Healthcare NHS Trust",
+    "salary": "£36,943 to £44,900 a year",
+    "location": "Harrow HA1 3UJ",
+    "closing": "06 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9337-26-0300?keyword=application%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 95,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "cerner",
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
   },
   {
     "id": "full-stack-web-developer-sponsorship-available-jobvisa-ng-p-10898",
@@ -208,121 +657,24 @@
     "priority": 95
   },
   {
-    "id": "junior-business-intelligence-developer-anguage-en",
-    "title": "Junior Business Intelligence Developer",
-    "organisation": "Tees Esk and Wear Valleys NHS Foundation Trust",
-    "salary": "£32,073 to £39,043 a year",
-    "location": "Middlesbrough TS6 0SZ",
-    "closing": "3 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9346-26-0482?keyword=junior%20developer&visa_sponsorship=1&language=en",
+    "id": "senior-epr-support-analyst-anguage-en",
+    "title": "Senior EPR Support Analyst",
+    "organisation": "Lewisham and Greenwich NHS Trust",
+    "salary": "£39,959 to £48,117 a year",
+    "location": "London SE6 4RY",
+    "closing": "30 April 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9197-26-0351?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
     "found": "2026-04-27",
-    "priority": 90
-  },
-  {
-    "id": "automation-integration-developer-language-",
-    "title": "Automation & Integration Developer",
-    "organisation": "Midlands Partnership NHS Foundation Trust",
-    "salary": "£38,682 to £46,580 a year",
-    "location": "Stafford ST16 3SR",
-    "closing": "27 April 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9301-26-0453?keyword=software%20developer&visa_sponsorship=1&language=",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "senior-systems-developer-language-",
-    "title": "Senior Systems Developer",
-    "organisation": "The Royal Marsden NHS Foundation Trust",
-    "salary": "£63,665 to £70,887 a year",
-    "location": "Wallington SM6 0DX",
-    "closing": "28 April 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9282-26-0357?keyword=software%20developer&visa_sponsorship=1&language=",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "digital-content-developer-language-",
-    "title": "Digital Content Developer",
-    "organisation": "East of England Community Health and Care NHS Trust (Cambridge)",
-    "salary": "£32,073 to £39,043 a year",
-    "location": "Norwich NR4 6AU",
-    "closing": "11 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9448-26-0136?keyword=software%20developer&visa_sponsorship=1&language=",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "automation-integration-developer-anguage-en",
-    "title": "Automation & Integration Developer",
-    "organisation": "Midlands Partnership NHS Foundation Trust",
-    "salary": "£38,682 to £46,580 a year",
-    "location": "Stafford ST16 3SR",
-    "closing": "27 April 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9301-26-0453?keyword=web%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "senior-systems-developer-anguage-en",
-    "title": "Senior Systems Developer",
-    "organisation": "The Royal Marsden NHS Foundation Trust",
-    "salary": "£63,665 to £70,887 a year",
-    "location": "Wallington SM6 0DX",
-    "closing": "28 April 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9282-26-0357?keyword=web%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "digital-content-developer-anguage-en",
-    "title": "Digital Content Developer",
-    "organisation": "East of England Community Health and Care NHS Trust (Cambridge)",
-    "salary": "£32,073 to £39,043 a year",
-    "location": "Norwich NR4 6AU",
-    "closing": "11 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9448-26-0136?keyword=web%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "associate-information-developer-anguage-en",
-    "title": "Associate Information Developer",
-    "organisation": "Doncaster & Bassetlaw Teaching Hospitals NHS FT",
-    "salary": "£32,073 to £39,043 a year",
-    "location": "Doncaster DN1 3BU",
-    "closing": "4 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9272-26-0260?keyword=web%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "senior-digital-applications-developer-anguage-en",
-    "title": "Senior Digital Applications Developer",
-    "organisation": "Royal Berkshire NHS Foundation Trust",
-    "salary": "£66,582 to £77,368 a year",
-    "location": "Reading RG1 5AN",
-    "closing": "28 April 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9193-26-0245?keyword=application%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
+    "priority": 85,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "cerner"
+    ],
+    "greenFlags": [],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
   },
   {
     "id": "applications-analyst-anguage-en",
@@ -330,129 +682,39 @@
     "organisation": "Salisbury NHS Foundation Trust",
     "salary": "£32,073 to £39,043 a year",
     "location": "Salisbury SP2 8BJ",
-    "closing": "4 May 2026",
+    "closing": "04 May 2026",
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9269-26-0141?keyword=application%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
     "found": "2026-04-27",
-    "priority": 80
+    "priority": 85,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "sponsorship"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
   },
   {
-    "id": "application-analyst-anguage-en",
-    "title": "Application Analyst",
-    "organisation": "London North West University Healthcare NHS Trust",
-    "salary": "£36,943 to £44,900 a year",
-    "location": "Harrow HA1 3UJ",
-    "closing": "6 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9337-26-0300?keyword=application%20developer&visa_sponsorship=1&language=en",
+    "id": "digital-change-facilitator-anguage-en",
+    "title": "Digital Change Facilitator",
+    "organisation": "Save this job",
+    "salary": "£46,419 to £55,046 a year",
+    "location": "London SE1 2TZ",
+    "closing": "05 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/B0027-26-0011?keyword=digital%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
     "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "radiotherapy-applications-physicist-anguage-en",
-    "title": "Radiotherapy Applications Physicist",
-    "organisation": "University Hospitals Bristol and Weston NHS Foundation Trust (UHBW)",
-    "salary": "£49,387 to £64,750 a year",
-    "location": "Bristol BS2 8ED",
-    "closing": "10 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9387-26-0837?keyword=application%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "senior-application-support-analyst-anguage-en",
-    "title": "Senior Application Support Analyst",
-    "organisation": "The Princess Alexandra Hospital NHS Trust",
-    "salary": "£39,959 to £48,117 a year",
-    "location": "Harlow CM17 9NA",
-    "closing": "1 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9292-26-0165?keyword=application%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "enterprise-application-specialist-b5-anguage-en",
-    "title": "Enterprise Application Specialist - B5",
-    "organisation": "Royal Surrey NHS Foundation Trust",
-    "salary": "£33,677 to £40,996 a year",
-    "location": "Enterprise Application Specialist - B5",
-    "closing": "27 April 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9384-26-0324?keyword=application%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "cs-applications-support-manager-anguage-en",
-    "title": "CS - Applications Support Manager",
-    "organisation": "Barts Health NHS Trust",
-    "salary": "£88,250 to £100,355 a year",
-    "location": "London E1 4DG",
-    "closing": "10 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9259-26-0716?keyword=application%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "digital-practitioner-anguage-en",
-    "title": "Digital Practitioner",
-    "organisation": "Doncaster & Bassetlaw Teaching Hospitals NHS FT",
-    "salary": "£39,959 to £48,117 a year",
-    "location": "Doncaster DN2 5LT",
-    "closing": "4 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9272-26-0268?keyword=digital%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "lead-digital-trainer-anguage-en",
-    "title": "Lead Digital Trainer",
-    "organisation": "University Hospitals of Leicester NHS Trust",
-    "salary": "£39,959 to £48,117 a year",
-    "location": "Leicester LE3 8RA",
-    "closing": "7 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9358-26-0261?keyword=digital%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "digital-project-manager-anguage-en",
-    "title": "Digital Project Manager",
-    "organisation": "East Lancashire Hospitals NHS Trust",
-    "salary": "£49,387 to £56,515 a year",
-    "location": "Blackpool FY3 8NR",
-    "closing": "3 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9435-26-0210?keyword=digital%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
-  },
-  {
-    "id": "digital-training-lead-anguage-en",
-    "title": "Digital Training Lead",
-    "organisation": "University Hospitals of Leicester NHS Trust",
-    "salary": "£49,387 to £56,515 a year",
-    "location": "Leicester LE3 8RA",
-    "closing": "7 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9358-26-0260?keyword=digital%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 80
+    "priority": 85,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "git"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
   },
   {
     "id": "ai-trainer-advanced-javascript-developers-indeed-050f-vjs-3",
@@ -461,7 +723,7 @@
     "salary": "",
     "location": "Remote",
     "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=e4d465c9be10aafe&bb=7gbMpHoZjexRn-ZVXhORcXQ5bRE3WhmI_GdeFhExs9C93X0SfbY3v30dTrUDkrKp1MtAUDQH4eSYBPq4bOqYdL0ZxAleu5dfg1SmEDeX43YWH1U4JAHMdJrOYwbu-tiW&xkcb=SoBv67M3koLFA6gfYj0PbzkdCdPP&fccid=1c21e243768b050f&vjs=3",
+    "url": "https://uk.indeed.com/rc/clk?jk=e4d465c9be10aafe&bb=BX35sMpQaEjzl8-iTBf6kw4EA2CjBsRgExiujZMNAqe8yWexSjEwQ_ibnT7o8Oa7EyOYcGSSuw5lpXzHh8JvT1sbknMqPtJzP2mhpUPVp8xddqMNOAE6VrzTsma4iOob&xkcb=SoCJ67M3koMFguAfLr0CbzkdCdPP&fccid=1c21e243768b050f&vjs=3",
     "source": "Indeed",
     "sponsorship": true,
     "found": "2026-04-27",
@@ -546,26 +808,49 @@
     "priority": 80
   },
   {
+    "id": "enterprise-application-specialist-b5-anguage-en",
+    "title": "Enterprise Application Specialist - B5",
+    "organisation": "Royal Surrey NHS Foundation Trust",
+    "salary": "£33,677 to £40,996 a year",
+    "location": "Enterprise Application Specialist - B5",
+    "closing": "27 April 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9384-26-0324?keyword=application%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 75,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "cerner"
+    ],
+    "greenFlags": [
+      "api",
+      "git"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
     "id": "full-stack-developer-indeed-oper-vjs-3",
     "title": "Full Stack Developer",
     "organisation": "Matrix Booking ltd",
     "salary": "",
     "location": "Remote in Bristol",
     "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=a1167ceb4f10d76e&bb=7gbMpHoZjexRn-ZVXhORcSQWfsIMQFrGLUv9M4RsKDM-v1OpDcZitzwLUS2bxIg7zlfOpoQlAYzSo_s7T4_ssJgd1ASuOEwjBzXcGW1RVuUI94WT5okhiNWmGIjqNyXt&xkcb=SoAI67M3koLFA6gfYj0HbzkdCdPP&fccid=546c979a5969ca36&cmp=Matrix-Booking-ltd&ti=Full+Stack+Developer&vjs=3",
+    "url": "https://uk.indeed.com/rc/clk?jk=a1167ceb4f10d76e&bb=BX35sMpQaEjzl8-iTBf6k75difisrWtQqyfZQa5nbOAt2k-pQOWNoYfy3l0zkBK6LPzLsVKScnAvMPgNrooEITsdM-r_1U1cRFqXucOvaYD0EFhf8HfPitBkWP1wfu8h&xkcb=SoDu67M3koMFguAfLr0KbzkdCdPP&fccid=546c979a5969ca36&cmp=Matrix-Booking-ltd&ti=Full+Stack+Developer&vjs=3",
     "source": "Indeed",
     "sponsorship": true,
     "found": "2026-04-27",
     "priority": 75
   },
   {
-    "id": "senior-full-stack-engineer-must-be-based-in-uk-indeed-c339-vjs-3",
-    "title": "Senior Full Stack Engineer (Must be based in UK)",
-    "organisation": "PolyAI",
+    "id": "staff-fullstack-engineer-avatars-indeed-5822-vjs-3",
+    "title": "Staff Fullstack Engineer, Avatars",
+    "organisation": "Synthesia",
     "salary": "",
-    "location": "Remote",
+    "location": "Remote in London",
     "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=eca352b89d05b901&bb=7gbMpHoZjexRn-ZVXhORcSiKcSPlIKKld2mOXAh9e7C8CzQwQOEYosWvyaEF0Ui9pFYMRebou1zDdYa5Fe6QlG1H9hdgiOXx1sHySDSNPi7ZYcmNUdusIZ2wQz3n6W_n&xkcb=SoAh67M3koLFA6gfYj0FbzkdCdPP&fccid=033dc4218b62c339&vjs=3",
+    "url": "https://uk.indeed.com/rc/clk?jk=429cf41aa29b8814&bb=BX35sMpQaEjzl8-iTBf6k_y_Kai9S_e6iHyi6pTSR9O4iopwElOFfyhg6K9_67oq8y4g1vJEPD2OIqGjZDwGlG6U2WhpYWY-44MUH5NDUB1PWiLk03ou37cjxeuloqcI&xkcb=SoD967M3koMFguAfLr0ObzkdCdPP&fccid=190f7cb18d5b5822&vjs=3",
     "source": "Indeed",
     "sponsorship": true,
     "found": "2026-04-27",
@@ -676,13 +961,26 @@
     "priority": 75
   },
   {
+    "id": "software-developer-indeed-neer-vjs-3",
+    "title": "Software Developer",
+    "organisation": "Kyloe Partners",
+    "salary": "",
+    "location": "Remote",
+    "closing": "",
+    "url": "https://uk.indeed.com/rc/clk?jk=9fd091afa12368a1&bb=BX35sMpQaEjzl8-iTBf6k8CrPH7uXRNahnTFmQFlT9cpm9zMvYW5aC2VVKMWQNzAQ2JbOefzYDTTppnXUUdrUk67G3mNYaVu7IT6AXTpD-FxfFwVhu2XwwjaEj5tkUIF&xkcb=SoDH67M3koMFguAfLr0IbzkdCdPP&fccid=db78f5c92608c738&cmp=Kyloe-Partners&ti=Software+Engineer&vjs=3",
+    "source": "Indeed",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 70
+  },
+  {
     "id": "staff-software-engineer-indeed-f8e9-vjs-3",
     "title": "Staff Software Engineer",
     "organisation": "G-P",
     "salary": "",
     "location": "Remote in Belfast",
     "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=53cf5669aca979f5&bb=7gbMpHoZjexRn-ZVXhORcTpKN6KTVMW7mDWZ5H6WHDyK7vNpWTYY0kmCrJ7aBUXRCQGAftLTMp3xbqPt95tgeV0QUQVq83DV7Ax5D_QGscxxKxWzCNfaBvkYheK4x48R&xkcb=SoBG67M3koLFA6gfYj0NbzkdCdPP&fccid=a8e444e7cebff8e9&vjs=3",
+    "url": "https://uk.indeed.com/rc/clk?jk=53cf5669aca979f5&bb=BX35sMpQaEjzl8-iTBf6k11UGg_Roxx5eCxrQPzdziq-M_NAtqTIao6Tr3S_qmNCPLZFoX1_M1-0icdlZSeA3R1Bolh08bCnY5rC3nkRQUqx9O8rMCNLabmp0DHzO8c0&xkcb=SoCg67M3koMFguAfLr0AbzkdCdPP&fccid=a8e444e7cebff8e9&vjs=3",
     "source": "Indeed",
     "sponsorship": true,
     "found": "2026-04-27",
@@ -695,20 +993,7 @@
     "salary": "",
     "location": "Remote",
     "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=0e46e40530f660f8&bb=7gbMpHoZjexRn-ZVXhORcSoUqR_-d8pu3azIWmNG8I2m9TZm-t4nv7eqgGMplaSHYsTTpa92q3ANSrB-9oI7VcXPvsk0ipTU0FbCwLR2DJqzpaUxuK48jamv74GolzPI&xkcb=SoAb67M3koLFA6gfYj0DbzkdCdPP&fccid=ee3a24822c0efd1a&vjs=3",
-    "source": "Indeed",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 70
-  },
-  {
-    "id": "senior-frontend-engineer-trading-api-indeed-a348-vjs-3",
-    "title": "Senior Frontend Engineer - Trading API",
-    "organisation": "Alpaca",
-    "salary": "",
-    "location": "Remote",
-    "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=2eaf3b3bc41a49ad&bb=7gbMpHoZjexRn-ZVXhORcfve11IUoEPed2aCtFdJKl7szFFlXC_izd_M3px1h7nJllq5jomg62r0OgmIljI91avsY_G6bxnxmA8-gwQSk4NyXO7DV6DTiLzxsBWfMls8&xkcb=SoCG67M3koLFA6gfYj0AbzkdCdPP&fccid=f7d6367fb789a348&vjs=3",
+    "url": "https://uk.indeed.com/rc/clk?jk=0e46e40530f660f8&bb=BX35sMpQaEjzl8-iTBf6kyZxWAKslYrkAluKr8ZGaO4nP_Y-JZisBMdFiwv40HRG8eoLHAhQ3VXQ0OZufHfg4TDSe6T3Hg1oSB4N6pi6JMIbW-H0o3u9qUY3q8NJPf-Z&xkcb=SoCa67M3koMFguAfLr0GbzkdCdPP&fccid=ee3a24822c0efd1a&vjs=3",
     "source": "Indeed",
     "sponsorship": true,
     "found": "2026-04-27",
@@ -1066,6 +1351,84 @@
     "priority": 70
   },
   {
+    "id": "senior-systems-developer-language-",
+    "title": "Senior Systems Developer",
+    "organisation": "The Royal Marsden NHS Foundation Trust",
+    "salary": "£63,665 to £70,887 a year",
+    "location": "Wallington SM6 0DX",
+    "closing": "28 April 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9282-26-0357?keyword=software%20developer&visa_sponsorship=1&language=",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 65,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "intersystems",
+      "healthshare",
+      "master's degree"
+    ],
+    "greenFlags": [
+      "javascript",
+      "sql",
+      "html",
+      "api",
+      "git",
+      "full stack"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "senior-systems-developer-anguage-en",
+    "title": "Senior Systems Developer",
+    "organisation": "The Royal Marsden NHS Foundation Trust",
+    "salary": "£63,665 to £70,887 a year",
+    "location": "Wallington SM6 0DX",
+    "closing": "28 April 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9282-26-0357?keyword=web%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 65,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "intersystems",
+      "healthshare",
+      "master's degree"
+    ],
+    "greenFlags": [
+      "javascript",
+      "sql",
+      "html",
+      "api",
+      "git",
+      "full stack"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "senior-application-support-analyst-anguage-en",
+    "title": "Senior Application Support Analyst",
+    "organisation": "The Princess Alexandra Hospital NHS Trust",
+    "salary": "£39,959 to £48,117 a year",
+    "location": "Harlow CM17 9NA",
+    "closing": "01 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9292-26-0165?keyword=application%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 65,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "5 years"
+    ],
+    "greenFlags": [],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
     "id": "digital-developer-sponsorship-available-jobvisa-ng-p-13046",
     "title": "Digital Developer: Sponsorship Available",
     "organisation": "",
@@ -1163,7 +1526,7 @@
     "salary": "",
     "location": "Remote",
     "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=270e9907d87c38e9&bb=7gbMpHoZjexRn-ZVXhORcXU2VphctK7gx2sv2O1-fSg2KcyMUVG2zym9UfQorpc9sGmBQICHJFZ9F4oqlJ68DqAzMhOaK1b5S3enxHjagYJ9uZrFDqBvOP_1Wxj9pIld&xkcb=SoDI67M3koLFA6gfYj0KbzkdCdPP&fccid=1c21e243768b050f&vjs=3",
+    "url": "https://uk.indeed.com/rc/clk?jk=270e9907d87c38e9&bb=BX35sMpQaEjzl8-iTBf6k4PH7ALjzxZOZ8d0c2J-djr5SStfd_wygqByK21zto7xHjkLmgk2f9xSQnifginWGFFNBsoVuM3rBFYjkAZ9FA0dnqvfgFMuexPxfLPh-rTv&xkcb=SoBz67M3koMFguAfLr0JbzkdCdPP&fccid=1c21e243768b050f&vjs=3",
     "source": "Indeed",
     "sponsorship": true,
     "found": "2026-04-27",
@@ -1176,7 +1539,7 @@
     "salary": "",
     "location": "Remote in Glasgow G41 1BS",
     "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=c99edc3f448b1c28&bb=7gbMpHoZjexRn-ZVXhORcULAD5bCfPQ35-P2JffX6hWJXIFlkjn32n_UX8JM4xC_XaRv43Qs8jRorcs7vPprUjgSopsXWxZLh-28toT1f6M7fvezDnRGy64JbQxGkYZS&xkcb=SoBV67M3koLFA6gfYj0JbzkdCdPP&fccid=81e6534fc7c6488f&vjs=3",
+    "url": "https://uk.indeed.com/rc/clk?jk=c99edc3f448b1c28&bb=BX35sMpQaEjzl8-iTBf6k23H7TgG_ESYn_OkIu0FbIaB7WSNy5bFOWQDR5MD5RsZaRhMu4difIy7odHoxlHdaWIMweYZKS5LnPl2MqWi9JyI8Rb5WQ8e5sOkUW1gc9jh&xkcb=SoBJ67M3koMFguAfLr0PbzkdCdPP&fccid=81e6534fc7c6488f&vjs=3",
     "source": "Indeed",
     "sponsorship": true,
     "found": "2026-04-27",
@@ -1189,46 +1552,7 @@
     "salary": "",
     "location": "Remote in London",
     "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=dd4ed75c7288a4af&bb=7gbMpHoZjexRn-ZVXhORca30nmAb7jEBj6DGNNMLjmw8Ket2zrNRNZZAvhubM7WI47f3ouCgU3NscDVSkQXWKYictknBgaSdPMaha5XV86QKXfKusoAabsqIeJFzIn3H&xkcb=SoDh67M3koLFA6gfYj0IbzkdCdPP&fccid=194c016c8848aea6&vjs=3",
-    "source": "Indeed",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 50
-  },
-  {
-    "id": "zoho-systems-support-developer-indeed-oper-vjs-3",
-    "title": "Zoho Systems Support Developer",
-    "organisation": "Compass CHC",
-    "salary": "",
-    "location": "Remote",
-    "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=16184c1ac58ecce3&bb=7gbMpHoZjexRn-ZVXhORcbiWruqQBrcsBhj8wNzb6fc0jS9dksdp5QVWfjLyxsXvH0ktid38MuOUgLNmL1Pznb9HzduS174TYteflb_OIpWzdw700LIywTQ5DWfJeHWy&xkcb=SoDb67M3koLFA6gfYj0ObzkdCdPP&fccid=427d4ce90275f59d&cmp=Compass-CHC&ti=Developer&vjs=3",
-    "source": "Indeed",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 50
-  },
-  {
-    "id": "technical-development-manager-software-indeed-932b-vjs-3",
-    "title": "Technical Development Manager - Software",
-    "organisation": "Nerdio",
-    "salary": "",
-    "location": "Remote",
-    "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=7c08ce47bfab32ba&bb=7gbMpHoZjexRn-ZVXhORcZG7nrXYKacCPIlY-D1D31iN8HBF-MwldB-2Jmrs2CwWynAbSSXv57Ov5RZwYF5_2z-EsdE5iP5uH81Urbfgl7VyGyD_8C8-vZNJWd6xI7pd&xkcb=SoDy67M3koLFA6gfYj0MbzkdCdPP&fccid=d5fe556bcb59932b&vjs=3",
-    "source": "Indeed",
-    "sponsorship": true,
-    "found": "2026-04-27",
-    "priority": 50
-  },
-  {
-    "id": "senior-product-engineer-indeed-2bcc-vjs-3",
-    "title": "Senior Product Engineer",
-    "organisation": "Fractional Talent",
-    "salary": "",
-    "location": "Remote in London",
-    "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=40e14a2817732cd0&bb=7gbMpHoZjexRn-ZVXhORccDI_p8AibYx8zmGYWz3r1BdD7gJuC9up9y3XHmSxv7cuzmUHhKNarq7MdIOMFpoCpW9_HTLBk3jzlgCsJq_cEtDJAxYg9AwmdhckNI5l2Vw&xkcb=SoAy67M3koLFA6gfYj0BbzkdCdPP&fccid=9a49c0cdd2be2bcc&vjs=3",
+    "url": "https://uk.indeed.com/rc/clk?jk=dd4ed75c7288a4af&bb=BX35sMpQaEjzl8-iTBf6kxTPY-jni9r5hKCtYjn6s8EngF1d8ACgy5D4lgj0x__7325x-BxZ9mOKXcVhLT_9QcQb5MXd7u5JsT88dsJhqJ2mpGnc4R165_wqwStob_Rw&xkcb=SoBg67M3koMFguAfLr0NbzkdCdPP&fccid=194c016c8848aea6&vjs=3",
     "source": "Indeed",
     "sponsorship": true,
     "found": "2026-04-27",
@@ -1241,7 +1565,33 @@
     "salary": "",
     "location": "Remote",
     "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=6021a96d7f648e55&bb=7gbMpHoZjexRn-ZVXhORcQtZ5ZIH-BHJdN1sXSjQ3Fs1P-tDYznilLulgYXPlTeh3G64V8c61PgDgASnxecZPUV4tL3USvKE8DhFoMWw-uMiWu0NPKe5JWjjObfPW2ei&xkcb=SoC867M3koLFA6gfYj0GbzkdCdPP&fccid=f5d7c439d5150dbf&cmp=Vantify&ti=Application+Developer&vjs=3",
+    "url": "https://uk.indeed.com/rc/clk?jk=6021a96d7f648e55&bb=BX35sMpQaEjzl8-iTBf6k3UK-QOltr2leiujYF0GL9dc59k7PnaKbdi49Gh09P51k-4wgYJxk9cVOWiKD7VDyHiLAltYesPvEWl9CPBcY-_RVeMDVJDgTHDeE6ZuR5YQ&xkcb=SoA967M3koMFguAfLr0DbzkdCdPP&fccid=f5d7c439d5150dbf&cmp=Vantify&ti=Application+Developer&vjs=3",
+    "source": "Indeed",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 50
+  },
+  {
+    "id": "zoho-systems-support-developer-indeed-oper-vjs-3",
+    "title": "Zoho Systems Support Developer",
+    "organisation": "Compass CHC",
+    "salary": "",
+    "location": "Remote",
+    "closing": "",
+    "url": "https://uk.indeed.com/rc/clk?jk=16184c1ac58ecce3&bb=BX35sMpQaEjzl8-iTBf6k8wfjYHigr95Se51mqkslHjGijy2id3Xn18u7jWDUtO4VESsH5Yor8tSJ8NJA-y7o-YmJQbLuykSAx-pycS6t9h6m2B4kzhJU71e-yh5ZkKP&xkcb=SoAU67M3koMFguAfLr0BbzkdCdPP&fccid=427d4ce90275f59d&cmp=Compass-CHC&ti=Developer&vjs=3",
+    "source": "Indeed",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 50
+  },
+  {
+    "id": "technical-development-manager-software-indeed-932b-vjs-3",
+    "title": "Technical Development Manager - Software",
+    "organisation": "Nerdio",
+    "salary": "",
+    "location": "Remote",
+    "closing": "",
+    "url": "https://uk.indeed.com/rc/clk?jk=7c08ce47bfab32ba&bb=BX35sMpQaEjzl8-iTBf6k7Ay4DX8PhClqSLPxcidZ4zkbbzuPQvYiyAW-Ee6kBjexdzT4B4R6XASHf18IiELoF6vDhm-_wNMCbj1vJlOxK0SMK9MMI5gdbfwUhI2y_5V&xkcb=SoAu67M3koMFguAfLr0HbzkdCdPP&fccid=d5fe556bcb59932b&vjs=3",
     "source": "Indeed",
     "sponsorship": true,
     "found": "2026-04-27",
@@ -1599,28 +1949,76 @@
     "priority": 50
   },
   {
-    "id": "software-developer-indeed-neer-vjs-3",
-    "title": "Software Developer",
-    "organisation": "Kyloe Partners",
+    "id": "lco-epr-expansion-senior-digital-integration-specialist-anguage-en",
+    "title": "LCO EPR Expansion Senior Digital Integration Specialist",
+    "organisation": "Manchester University NHS Foundation Trust",
+    "salary": "£57,528 to £64,750 a year",
+    "location": "Manchester M13 9WL",
+    "closing": "06 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9349-26-1329?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 35,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "epic bridges",
+      "intersystems",
+      "healthshare",
+      "cach objectscript",
+      "hl7",
+      "fhir",
+      "10 years",
+      "master's degree"
+    ],
+    "greenFlags": [
+      "sql",
+      "git",
+      "agile",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "senior-full-stack-engineer-must-be-based-in-uk-indeed-c339-vjs-3",
+    "title": "Senior Full Stack Engineer (Must be based in UK)",
+    "organisation": "PolyAI",
     "salary": "",
     "location": "Remote",
     "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=9fd091afa12368a1&bb=sQsxxHr9p7GESCZ_tNVfxS-tbi2JV8p99ujGUg7Qznx15rCqX6NIH9LXPqd2eKOh7pD4aiv8oXcoWCyRV3MiEu5QUXsfsqXIACp3GC85HPgKN_WspBQF2SXTBKzUBW5U&xkcb=SoC367M3koKpckAYDz0IbzkdCdPP&fccid=db78f5c92608c738&cmp=Kyloe-Partners&ti=Software+Engineer&vjs=3",
+    "url": "https://uk.indeed.com/rc/clk?jk=eca352b89d05b901&bb=7gbMpHoZjexRn-ZVXhORcSiKcSPlIKKld2mOXAh9e7C8CzQwQOEYosWvyaEF0Ui9pFYMRebou1zDdYa5Fe6QlG1H9hdgiOXx1sHySDSNPi7ZYcmNUdusIZ2wQz3n6W_n&xkcb=SoAh67M3koLFA6gfYj0FbzkdCdPP&fccid=033dc4218b62c339&vjs=3",
     "source": "Indeed",
     "sponsorship": true,
-    "found": "2026-04-27"
+    "found": "2026-04-27",
+    "priority": 75
   },
   {
-    "id": "staff-fullstack-engineer-avatars-indeed-5822-vjs-3",
-    "title": "Staff Fullstack Engineer, Avatars",
-    "organisation": "Synthesia",
+    "id": "senior-frontend-engineer-trading-api-indeed-a348-vjs-3",
+    "title": "Senior Frontend Engineer - Trading API",
+    "organisation": "Alpaca",
+    "salary": "",
+    "location": "Remote",
+    "closing": "",
+    "url": "https://uk.indeed.com/rc/clk?jk=2eaf3b3bc41a49ad&bb=7gbMpHoZjexRn-ZVXhORcfve11IUoEPed2aCtFdJKl7szFFlXC_izd_M3px1h7nJllq5jomg62r0OgmIljI91avsY_G6bxnxmA8-gwQSk4NyXO7DV6DTiLzxsBWfMls8&xkcb=SoCG67M3koLFA6gfYj0AbzkdCdPP&fccid=f7d6367fb789a348&vjs=3",
+    "source": "Indeed",
+    "sponsorship": true,
+    "found": "2026-04-27",
+    "priority": 70
+  },
+  {
+    "id": "senior-product-engineer-indeed-2bcc-vjs-3",
+    "title": "Senior Product Engineer",
+    "organisation": "Fractional Talent",
     "salary": "",
     "location": "Remote in London",
     "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=429cf41aa29b8814&bb=sQsxxHr9p7GESCZ_tNVfxZYKQ3PB_DJAUisRtC-i1tqaRoyPucKXO15Xcx1ewuHcUd3WMvSUfFyLZ2ymQ42gaBi36PVLelQLcxJwSW7OGoxRMFfumqzF-QfOIM_qGn1N&xkcb=SoCN67M3koKpckAYDz0ObzkdCdPP&fccid=190f7cb18d5b5822&vjs=3",
+    "url": "https://uk.indeed.com/rc/clk?jk=40e14a2817732cd0&bb=7gbMpHoZjexRn-ZVXhORccDI_p8AibYx8zmGYWz3r1BdD7gJuC9up9y3XHmSxv7cuzmUHhKNarq7MdIOMFpoCpW9_HTLBk3jzlgCsJq_cEtDJAxYg9AwmdhckNI5l2Vw&xkcb=SoAy67M3koLFA6gfYj0BbzkdCdPP&fccid=9a49c0cdd2be2bcc&vjs=3",
     "source": "Indeed",
     "sponsorship": true,
-    "found": "2026-04-27"
+    "found": "2026-04-27",
+    "priority": 50
   },
   {
     "id": "staff-fullstack-engineer-avatars-indeed-0123456789",
@@ -1630,18 +2028,6 @@
     "location": "Remote in London",
     "closing": "",
     "url": "https://uk.indeed.com/viewjob?jk=abcdef0123456789",
-    "source": "Indeed",
-    "sponsorship": true,
-    "found": "2026-04-27"
-  },
-  {
-    "id": "front-end-engineer-react-permanent-indeed-43da-vjs-3",
-    "title": "Front-end Engineer React - Permanent",
-    "organisation": "Collective.work",
-    "salary": "",
-    "location": "Remote in London SW1P",
-    "closing": "",
-    "url": "https://uk.indeed.com/rc/clk?jk=79946deefdd0d2ce&bb=sQsxxHr9p7GESCZ_tNVfxdKUILP5hskmJ7djxMwqbBgDrdiECc4AaEFofcTlFOUMhmG_Z802iqyxH9nO71tUtnhBhBvNmZ1LeKA55u9ngQvFSZFxe93rrypnWGfFsEP9&xkcb=SoCk67M3koKpckAYDz0MbzkdCdPP&fccid=f294d7219c7c43da&vjs=3",
     "source": "Indeed",
     "sponsorship": true,
     "found": "2026-04-27"

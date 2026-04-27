@@ -143,6 +143,25 @@ export default function JobsClient({ jobs }: { jobs: Job[] }) {
                       {job.salary && <span className="text-[#f8981f] font-semibold">💷 {job.salary}</span>}
                       {job.closing && <span>📅 Closes {job.closing}</span>}
                     </div>
+                    {job.snippet && (
+                      <p className="text-gray-500 text-sm mt-2 line-clamp-2">{job.snippet}</p>
+                    )}
+                    {job.dealBreakers && job.dealBreakers.length > 0 && (
+                      <div className="mt-2 flex flex-wrap gap-1">
+                        <span className="text-xs text-red-500 font-semibold">⚠️ Requirements to check:</span>
+                        {job.dealBreakers.slice(0, 4).map(d => (
+                          <span key={d} className="bg-red-50 text-red-500 text-xs px-2 py-0.5 rounded-full">{d}</span>
+                        ))}
+                      </div>
+                    )}
+                    {job.greenFlags && job.greenFlags.length > 0 && (
+                      <div className="mt-1 flex flex-wrap gap-1">
+                        <span className="text-xs text-green-600 font-semibold">✓ Your skills match:</span>
+                        {job.greenFlags.slice(0, 5).map(g => (
+                          <span key={g} className="bg-green-50 text-green-600 text-xs px-2 py-0.5 rounded-full">{g}</span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                   <a href={job.url} target="_blank" rel="noopener noreferrer"
                     className="flex-shrink-0 bg-[#062350] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#0a3580] transition-colors whitespace-nowrap">

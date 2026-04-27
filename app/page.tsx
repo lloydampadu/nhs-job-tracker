@@ -16,6 +16,11 @@ export type Job = {
   sponsorship: boolean;
   found: string;
   priority?: number;
+  snippet?: string;
+  dealBreakers?: string[];
+  greenFlags?: string[];
+  noSponsorship?: boolean;
+  detailScraped?: boolean;
 };
 
 export default function Home() {

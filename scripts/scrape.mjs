@@ -373,6 +373,86 @@ async function scrapeCivilService(page, term) {
   }
 }
 
+// ── DEAL-BREAKER CHECK (for Lloyd's profile) ─────────────────────────────────
+// These are hard requirements Lloyd definitely doesn't meet
+const DEAL_BREAKERS = [
+  "cerner", "epic bridges", "intersystems", "healthshare", "cach objectscript",
+  "hl7", "fhir", "mirth connect", "blue prism", "automation anywhere", "uipath",
+  "power automate", "power apps", "powerbi", "5 years", "7 years", "10 years",
+  "master's degree", "masters degree", "phd",
+];
+
+// Things that are a GOOD sign for Lloyd
+const GREEN_FLAGS = [
+  "javascript", "typescript", "react", "next.js", "nodejs", "node.js",
+  "postgresql", "sql", "html", "css", "rest api", "api", "git",
+  "agile", "scrum", "full stack", "web development", "sponsorship",
+  "visa sponsorship", "skilled worker",
+];
+
+async function fetchJobDetail(page, job) {
+  if (!job.url.includes("jobs.nhs.uk")) return job; // only detail-scrape NHS Jobs for now
+  try {
+    await page.goto(job.url, { waitUntil: "domcontentloaded", timeout: 20000 });
+    await page.waitForTimeout(1500);
+
+    const detail = await page.evaluate(() => {
+      const body = document.body.innerText.toLowerCase();
+      const fullText = document.body.innerText;
+
+      // Sponsorship — explicit check
+      const sponsorshipConfirmed = body.includes("certificate of sponsorship") &&
+        !body.includes("not eligible for visa sponsorship") &&
+        !body.includes("unable to offer visa sponsorship") &&
+        !body.includes("cannot offer sponsorship") &&
+        !body.includes("does not offer sponsorship");
+
+      const noSponsorship = body.includes("not eligible for visa sponsorship") ||
+        body.includes("unable to offer visa sponsorship") ||
+        body.includes("cannot offer sponsorship") ||
+        body.includes("does not offer sponsorship");
+
+      // Closing date
+      const closingMatch = fullText.match(/closing date[^\d]*(\d{1,2}[\s\-\/]\w+[\s\-\/]?\d{0,4})/i);
+      const closing = closingMatch ? closingMatch[1].trim() : "";
+
+      // Person spec essential
+      const essentialSection = fullText.match(/essential[\s\S]{0,2000}/i)?.[0] || "";
+
+      // Summary snippet — first 400 chars of job summary
+      const summaryEl = document.querySelector(".nhsuk-body, .job-summary, p");
+      const snippet = summaryEl?.innerText?.trim().slice(0, 400) || fullText.slice(0, 400);
+
+      return { body, sponsorshipConfirmed, noSponsorship, closing, essentialSection, snippet };
+    });
+
+    // Check deal-breakers against full text
+    const dealBreakersFound = DEAL_BREAKERS.filter(d => detail.body.includes(d));
+    const greenFlagsFound = GREEN_FLAGS.filter(g => detail.body.includes(g));
+
+    // Fit score adjustment
+    let fitAdjustment = 0;
+    fitAdjustment -= dealBreakersFound.length * 15;
+    fitAdjustment += greenFlagsFound.length * 5;
+    if (detail.noSponsorship) fitAdjustment -= 200; // auto-bury
+    if (detail.sponsorshipConfirmed) fitAdjustment += 30;
+
+    return {
+      ...job,
+      sponsorship: detail.noSponsorship ? false : (detail.sponsorshipConfirmed || job.sponsorship),
+      noSponsorship: detail.noSponsorship,
+      closing: detail.closing || job.closing,
+      dealBreakers: dealBreakersFound,
+      greenFlags: greenFlagsFound,
+      snippet: detail.snippet,
+      priority: Math.max(0, (job.priority || 0) + fitAdjustment),
+      detailScraped: true,
+    };
+  } catch (e) {
+    return job; // if detail fetch fails, keep original
+  }
+}
+
 // ── MAIN ──────────────────────────────────────────────────────────────────────
 async function main() {
   const browser = await chromium.launch({
@@ -413,15 +493,42 @@ async function main() {
     }
   }
 
-  await browser.close();
-
   // Filter to relevant jobs only + add priority score
-  const results = Array.from(allJobs.values())
+  const filtered = Array.from(allJobs.values())
     .filter(j => isRelevantJob(j.title))
     .map(j => ({ ...j, priority: getPriority(j) }))
     .sort((a, b) => b.priority - a.priority);
 
-  console.log(`\n✅ Total quality-filtered jobs: ${results.length}`);
+  console.log(`\n📋 ${filtered.length} quality-filtered jobs — fetching full details for top NHS Jobs...`);
+
+  // Fetch detail pages for top 60 NHS Jobs (to get sponsorship status, deal-breakers, snippets)
+  const nhsJobs = filtered.filter(j => j.source === "NHS Jobs").slice(0, 60);
+  const otherJobs = filtered.filter(j => j.source !== "NHS Jobs");
+
+  let detailedNHSJobs = [];
+  for (let i = 0; i < nhsJobs.length; i++) {
+    const job = nhsJobs[i];
+    process.stdout.write(`  [${i+1}/${nhsJobs.length}] ${job.title.slice(0,50)}...`);
+    const detailed = await fetchJobDetail(page, job);
+    if (detailed.noSponsorship) {
+      process.stdout.write(" ❌ no sponsorship\n");
+    } else if (detailed.dealBreakers?.length > 0) {
+      process.stdout.write(` ⚠️  deal-breakers: ${detailed.dealBreakers.slice(0,3).join(", ")}\n`);
+    } else {
+      process.stdout.write(` ✓ priority: ${detailed.priority}\n`);
+    }
+    detailedNHSJobs.push(detailed);
+  }
+
+  // Remove jobs with no sponsorship from NHS Jobs results
+  const goodNHSJobs = detailedNHSJobs.filter(j => !j.noSponsorship);
+
+  const results = [...goodNHSJobs, ...otherJobs]
+    .sort((a, b) => (b.priority || 0) - (a.priority || 0));
+
+  await browser.close();
+
+  console.log(`\n✅ Total quality jobs (sponsorship confirmed/possible): ${results.length}`);
 
   // Load existing jobs to find NEW ones
   const dataPath = path.join(__dirname, "../data/jobs.json");
