@@ -329,49 +329,48 @@ async function scrapeReliefWebAPI(page, _term) {
   return jobs;
 }
 
-// ── UN VOLUNTEERS — app.unv.org (the real UNV job portal) ────────────────────
+// ── UN VOLUNTEERS — app.unv.org (SPA, needs networkidle + wait) ──────────────
 async function scrapeUNVolunteersAPI(page, _term) {
   if (_term !== SEARCH_TERMS[0]) return [];
   const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "information technology", "frontend", "full stack", "technical", "consultant", "it "];
-  const searchTerms = ["developer", "ICT", "digital", "data", "technology"];
+  const searchTerms = ["developer", "ICT", "digital", "data"];
   const seen = new Set();
   const jobs = [];
 
   for (const q of searchTerms) {
     try {
-      await page.goto(`https://app.unv.org/opportunities?query=${q}&sort=publishedDate%3Adesc`, { waitUntil: "domcontentloaded", timeout: 30000 });
-      await page.waitForTimeout(3000);
+      await page.goto(`https://app.unv.org/opportunities?query=${q}`, { waitUntil: "networkidle", timeout: 45000 });
+      await page.waitForTimeout(5000); // SPA needs time to render
       const results = await page.evaluate(() => {
-        const cards = Array.from(document.querySelectorAll("[class*='opportunity'], [class*='card'], article, .job-card, li[class*='item']"));
-        return cards.map(card => {
-          const titleEl = card.querySelector("h2 a, h3 a, [class*='title'] a, a[href*='/opportunities/']");
-          const orgEl = card.querySelector("[class*='agency'], [class*='organization'], [class*='org']");
-          const locationEl = card.querySelector("[class*='location'], [class*='country'], [class*='duty']");
-          const dateEl = card.querySelector("[class*='date'], [class*='deadline'], time");
+        // Grab all links — the SPA renders opportunities as anchor tags
+        const links = Array.from(document.querySelectorAll("a[href*='/opportunities/']"));
+        return links.map(a => {
+          const container = a.closest("div, li, article, section") || a.parentElement;
+          const text = container?.innerText || a.innerText || "";
+          const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
           return {
-            title: titleEl?.innerText?.trim() || card.querySelector("h2, h3, [class*='title']")?.innerText?.trim() || "",
-            url: titleEl?.href || card.querySelector("a")?.href || "",
-            org: orgEl?.innerText?.trim() || "",
-            location: locationEl?.innerText?.trim() || "",
-            closing: dateEl?.innerText?.trim() || "",
+            title: lines[0] || a.innerText?.trim() || "",
+            url: a.href || "",
+            allText: lines.slice(0, 6).join(" | "),
           };
         });
       });
       for (const r of results) {
-        if (!r.title || !r.url || seen.has(r.url)) continue;
+        if (!r.title || !r.url || seen.has(r.url) || r.title.length < 5) continue;
         if (!DEV_KEYWORDS.some(k => r.title.toLowerCase().includes(k))) continue;
         seen.add(r.url);
         jobs.push({
           id: slugify(r.title + "-unv-" + r.url.slice(-12)),
           title: r.title,
-          organisation: r.org || "UN Volunteers",
+          organisation: "UN Volunteers",
           salary: "Volunteer Living Allowance",
-          location: r.location || "International",
-          closing: r.closing,
+          location: "International",
+          closing: "",
           url: r.url.startsWith("http") ? r.url : "https://app.unv.org" + r.url,
           source: "UN Volunteers",
           sponsorship: true,
           found: new Date().toISOString().split("T")[0],
+          snippet: r.allText,
         });
       }
     } catch (e) {
@@ -382,7 +381,7 @@ async function scrapeUNVolunteersAPI(page, _term) {
   return jobs;
 }
 
-// ── UNDP JOBS — jobs.undp.org ────────────────────────────────────────────────
+// ── UNDP JOBS — jobs.undp.org (links now go to oraclecloud.com) ──────────────
 async function scrapeUNDPJobs(page, _term) {
   if (_term !== SEARCH_TERMS[0]) return [];
   const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "information technology", "frontend", "full stack", "technical", "consultant", "it "];
@@ -391,23 +390,25 @@ async function scrapeUNDPJobs(page, _term) {
 
   try {
     await page.goto("https://jobs.undp.org/cj_view_jobs.cfm", { waitUntil: "domcontentloaded", timeout: 30000 });
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(3000);
     const results = await page.evaluate(() => {
-      const rows = Array.from(document.querySelectorAll("table tr, .job-row, article"));
-      return rows.map(row => {
-        const links = Array.from(row.querySelectorAll("a"));
-        const titleLink = links.find(a => a.href.includes("cj_view_job.cfm") || a.href.includes("/job/"));
-        const cells = Array.from(row.querySelectorAll("td"));
+      // UNDP now links to Oracle Cloud — grab all job links
+      const links = Array.from(document.querySelectorAll("a[href*='oraclecloud.com'], a[href*='cj_view_job']"));
+      return links.map(a => {
+        const container = a.closest("div, li, tr") || a.parentElement;
+        const text = container?.innerText || "";
+        const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
+        // Structure: title, level, deadline, org, location
         return {
-          title: titleLink?.innerText?.trim() || "",
-          url: titleLink?.href || "",
-          location: cells[1]?.innerText?.trim() || "",
-          closing: cells[2]?.innerText?.trim() || "",
+          title: lines[0] || a.innerText?.trim() || "",
+          url: a.href || "",
+          location: lines[4] || lines[3] || "",
+          closing: lines[2] || "",
         };
       });
     });
     for (const r of results) {
-      if (!r.title || !r.url || seen.has(r.url)) continue;
+      if (!r.title || !r.url || seen.has(r.url) || r.title.length < 5) continue;
       if (!DEV_KEYWORDS.some(k => r.title.toLowerCase().includes(k))) continue;
       seen.add(r.url);
       jobs.push({
@@ -417,7 +418,7 @@ async function scrapeUNDPJobs(page, _term) {
         salary: "",
         location: r.location || "International",
         closing: r.closing,
-        url: r.url.startsWith("http") ? r.url : "https://jobs.undp.org" + r.url,
+        url: r.url,
         source: "UNDP Jobs",
         sponsorship: true,
         found: new Date().toISOString().split("T")[0],
@@ -438,21 +439,34 @@ async function scrapePlanInternational(page, _term) {
   const jobs = [];
 
   try {
-    await page.goto("https://career5.successfactors.eu/career?company=PlanInterworP&career_ns=job_listing_summary&navBarLevel=JOB_SEARCH", { waitUntil: "domcontentloaded", timeout: 30000 });
-    await page.waitForTimeout(3000);
+    await page.goto("https://career5.successfactors.eu/career?company=PlanInterworP&career_ns=job_listing_summary&navBarLevel=JOB_SEARCH", { waitUntil: "networkidle", timeout: 45000 });
+    await page.waitForTimeout(5000);
     const results = await page.evaluate(() => {
-      const rows = Array.from(document.querySelectorAll("tr.jobResultItem, [class*='jobResult'], article, .job-listing"));
-      return rows.map(row => {
-        const titleEl = row.querySelector("a[id*='jobTitle'], a[class*='jobTitle'], h3 a, a");
-        const locationEl = row.querySelector("[class*='Location'], .location, td:nth-child(2)");
-        const dateEl = row.querySelector("[class*='Date'], .date, td:nth-child(3)");
-        return {
-          title: titleEl?.innerText?.trim() || "",
-          url: titleEl?.href || "",
-          location: locationEl?.innerText?.trim() || "",
-          closing: dateEl?.innerText?.trim() || "",
-        };
+      // SuccessFactors renders job listings in various ways — grab all links with job-like hrefs
+      const links = Array.from(document.querySelectorAll("a[href*='job'], a[id*='job'], a[id*='Job']"));
+      const rows = Array.from(document.querySelectorAll("tr[class*='job'], tr[class*='Job'], [class*='jobResult']"));
+      const items = [];
+      // Try link-based extraction
+      links.forEach(a => {
+        const title = a.innerText?.trim() || "";
+        const url = a.href || "";
+        const parent = a.closest("tr, div, li") || a.parentElement;
+        const allText = parent?.innerText || "";
+        items.push({ title, url, location: "", closing: "", allText });
       });
+      // Try row-based extraction
+      rows.forEach(row => {
+        const titleEl = row.querySelector("a");
+        const cells = Array.from(row.querySelectorAll("td"));
+        items.push({
+          title: titleEl?.innerText?.trim() || cells[0]?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          location: cells[1]?.innerText?.trim() || "",
+          closing: cells[2]?.innerText?.trim() || "",
+          allText: row.innerText,
+        });
+      });
+      return items;
     });
     for (const r of results) {
       if (!r.title || !r.url || seen.has(r.url)) continue;
@@ -478,6 +492,200 @@ async function scrapePlanInternational(page, _term) {
   return jobs;
 }
 
+
+// ── GOOGLE SUMMER OF CODE — summerofcode.withgoogle.com ──────────────────────
+async function scrapeGSoC(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return []; // only run once
+  const jobs = [];
+  try {
+    await page.goto("https://summerofcode.withgoogle.com/programs/2026/organizations", { waitUntil: "networkidle", timeout: 45000 });
+    await page.waitForTimeout(5000);
+    const results = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll("a[href*='/organizations/']"));
+      return cards.map(card => {
+        const name = card.querySelector("h3, h4, [class*='name'], span")?.innerText?.trim() || "";
+        const desc = card.querySelector("p, [class*='desc'], [class*='tagline']")?.innerText?.trim() || "";
+        const href = card.href || "";
+        const techs = Array.from(card.querySelectorAll("[class*='tech'], [class*='tag'], .chip, .badge")).map(t => t.innerText.trim().toLowerCase());
+        return { name, desc, href, techs: techs.join(" ") };
+      });
+    });
+    const DEV_KEYWORDS = ["javascript", "typescript", "react", "web", "frontend", "node", "python", "django", "flask", "html", "css", "next"];
+    for (const r of results) {
+      if (!r.name || !r.href) continue;
+      const text = (r.name + " " + r.desc + " " + r.techs).toLowerCase();
+      if (!DEV_KEYWORDS.some(k => text.includes(k))) continue;
+      jobs.push({
+        id: slugify("gsoc-2026-" + r.name),
+        title: `GSoC 2026: ${r.name}`,
+        organisation: "Google Summer of Code",
+        salary: "$1,500–$6,600 stipend",
+        location: "Remote",
+        closing: "",
+        url: r.href,
+        source: "GSoC",
+        sponsorship: false,
+        found: new Date().toISOString().split("T")[0],
+        snippet: r.desc.slice(0, 300),
+      });
+    }
+  } catch (e) {
+    console.log(`GSoC failed: ${e.message}`);
+  }
+  console.log(`  ✓ GSoC → ${jobs.length} organizations`);
+  return jobs;
+}
+
+// ── OUTREACHY — outreachy.org ────────────────────────────────────────────────
+async function scrapeOutreachy(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return [];
+  const jobs = [];
+  try {
+    await page.goto("https://www.outreachy.org/apply/project-selection/", { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const results = await page.evaluate(() => {
+      const projects = [];
+      const cards = document.querySelectorAll(".card, article, [class*='project'], section.card");
+      cards.forEach(card => {
+        const titleEl = card.querySelector("h3 a, h4 a, h2 a, a[href*='/outreachy/']");
+        const orgEl = card.querySelector("h2, h3, [class*='org']");
+        const skillEls = card.querySelectorAll("td, [class*='skill'], .badge, span");
+        const skills = Array.from(skillEls).map(s => s.innerText.trim()).filter(s => s.length < 40);
+        return;
+      });
+      // Alternative: grab all links that look like project links
+      const links = Array.from(document.querySelectorAll("a"));
+      links.forEach(a => {
+        const text = a.innerText.trim();
+        const href = a.href;
+        if (text.length > 10 && text.length < 200 && href.includes("outreachy.org")) {
+          projects.push({ title: text, url: href });
+        }
+      });
+      // Get the full page text to extract org names
+      const body = document.body.innerText;
+      return { projects, body: body.slice(0, 5000) };
+    });
+    // Parse projects from the page
+    const DEV_KEYWORDS = ["python", "javascript", "typescript", "react", "web", "frontend", "node", "django", "flask", "api", "html", "css", "database", "fullstack", "full-stack", "software"];
+    const seen = new Set();
+    for (const p of results.projects) {
+      if (!p.title || seen.has(p.url)) continue;
+      const text = p.title.toLowerCase();
+      if (text.includes("sign in") || text.includes("apply") || text.includes("home") || text.length < 15) continue;
+      if (!DEV_KEYWORDS.some(k => text.includes(k)) && !text.includes("develop") && !text.includes("engineer") && !text.includes("build")) continue;
+      seen.add(p.url);
+      jobs.push({
+        id: slugify("outreachy-" + p.title),
+        title: p.title.slice(0, 120),
+        organisation: "Outreachy",
+        salary: "$7,000 stipend",
+        location: "Remote",
+        closing: "",
+        url: p.url,
+        source: "Outreachy",
+        sponsorship: false,
+        found: new Date().toISOString().split("T")[0],
+      });
+    }
+  } catch (e) {
+    console.log(`Outreachy failed: ${e.message}`);
+  }
+  console.log(`  ✓ Outreachy → ${jobs.length} projects`);
+  return jobs;
+}
+
+// ── CERN — careers.cern ─────────────────────────────────────────────────────
+async function scrapeCERN(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return [];
+  const DEV_KEYWORDS = ["software", "developer", "engineer", "web", "full-stack", "full stack", "frontend", "data", "machine learning", "devops", "ict", "computing", "digital", "studentship", "internship", "technical student"];
+  const jobs = [];
+  const seen = new Set();
+
+  try {
+    await page.goto("https://careers.cern/jobs", { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(3000);
+    const results = await page.evaluate(() => {
+      const items = [];
+      const links = Array.from(document.querySelectorAll("a[href*='/jobs/']"));
+      links.forEach(a => {
+        const title = a.querySelector("h2, h3, h4, span")?.innerText?.trim() || a.innerText.trim();
+        const href = a.href;
+        const parent = a.closest("div, article, li, section");
+        const meta = parent?.innerText || "";
+        items.push({ title, url: href, meta: meta.slice(0, 300) });
+      });
+      return items;
+    });
+    for (const r of results) {
+      if (!r.title || !r.url || seen.has(r.url)) continue;
+      const text = (r.title + " " + r.meta).toLowerCase();
+      if (!DEV_KEYWORDS.some(k => text.includes(k))) continue;
+      seen.add(r.url);
+      const contractMatch = r.meta.match(/(\d+[\-–]\d+\s*month|\d+\s*month)/i);
+      jobs.push({
+        id: slugify("cern-" + r.title),
+        title: r.title,
+        organisation: "CERN",
+        salary: contractMatch ? contractMatch[0] + " contract" : "",
+        location: "Geneva, Switzerland",
+        closing: "",
+        url: r.url,
+        source: "CERN",
+        sponsorship: true, // CERN sponsors all international hires
+        found: new Date().toISOString().split("T")[0],
+        snippet: r.meta.slice(0, 300),
+      });
+    }
+  } catch (e) {
+    console.log(`CERN failed: ${e.message}`);
+  }
+  console.log(`  ✓ CERN → ${jobs.length} jobs`);
+  return jobs;
+}
+
+// ── TONY ELUMELU FOUNDATION — tonyelumelufoundation.org ──────────────────────
+async function scrapeTEF(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return [];
+  const jobs = [];
+  try {
+    await page.goto("https://www.tonyelumelufoundation.org/programmes", { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const results = await page.evaluate(() => {
+      const items = [];
+      const links = Array.from(document.querySelectorAll("a[href*='programme'], a[href*='africa'], a[href*='entrepreneur']"));
+      links.forEach(a => {
+        const title = a.innerText.trim();
+        const href = a.href;
+        if (title.length > 5 && title.length < 150 && !title.includes("FAQ")) {
+          items.push({ title, url: href });
+        }
+      });
+      return items;
+    });
+    const seen = new Set();
+    for (const r of results) {
+      if (!r.title || seen.has(r.url) || !r.url) continue;
+      seen.add(r.url);
+      jobs.push({
+        id: slugify("tef-" + r.title),
+        title: r.title,
+        organisation: "Tony Elumelu Foundation",
+        salary: "Up to $5,000 seed funding",
+        location: "Africa (Remote)",
+        closing: "",
+        url: r.url,
+        source: "TEF",
+        sponsorship: false,
+        found: new Date().toISOString().split("T")[0],
+      });
+    }
+  } catch (e) {
+    console.log(`TEF failed: ${e.message}`);
+  }
+  console.log(`  ✓ TEF → ${jobs.length} programmes`);
+  return jobs;
+}
 
 // ── DEAL-BREAKER CHECK (for Lloyd's profile) ─────────────────────────────────
 // These are hard requirements Lloyd definitely doesn't meet
@@ -604,6 +812,10 @@ async function main() {
     { name: "UN Volunteers", fn: scrapeUNVolunteersAPI },
     { name: "UNDP Jobs", fn: scrapeUNDPJobs },
     { name: "Plan International", fn: scrapePlanInternational },
+    { name: "GSoC", fn: scrapeGSoC },
+    { name: "Outreachy", fn: scrapeOutreachy },
+    { name: "CERN", fn: scrapeCERN },
+    { name: "TEF", fn: scrapeTEF },
   ];
 
   for (const scraper of scrapers) {
