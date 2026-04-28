@@ -278,34 +278,45 @@ async function scrapeUNJobs(page, _term) {
 //    ActionAid, World Vision, UN Women, WHO, WFP and hundreds of other NGOs ─────
 async function scrapeReliefWebAPI(_page, _term) {
   if (_term !== SEARCH_TERMS[0]) return [];
-  const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "information technology", "frontend", "full stack", "technical", "consultant", "intern", "volunteer", "it officer", "ict associate"];
+  const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "information technology", "frontend", "full stack", "technical", "consultant", "intern", "it officer", "ict associate"];
   try {
-    const queries = ["developer", "software engineer", "web developer", "ICT", "digital", "data analyst", "IT officer"];
+    const queries = ["developer", "software engineer", "ICT", "digital", "data analyst", "IT officer"];
     const seen = new Set();
     const jobs = [];
 
     for (const q of queries) {
-      const url = `https://api.reliefweb.int/v1/jobs?appname=lloydtracker&query[value]=${encodeURIComponent(q)}&fields[include][]=title&fields[include][]=source&fields[include][]=date&fields[include][]=url_alias&fields[include][]=country&fields[include][]=closing_date&limit=50&sort[]=date:desc`;
-      const res = await fetch(url);
-      if (!res.ok) continue;
+      // Correct ReliefWeb API v1 — POST with JSON body is most reliable
+      const res = await fetch("https://api.reliefweb.int/v1/jobs?appname=lloydtracker", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          query: { value: q, fields: ["title"] },
+          fields: { include: ["title", "source", "country", "date", "url_alias"] },
+          limit: 50,
+          sort: ["date:desc"],
+          filter: { field: "status", value: "published" }
+        })
+      });
+      if (!res.ok) {
+        console.log(`  ReliefWeb query "${q}" failed: ${res.status}`);
+        continue;
+      }
       const data = await res.json();
       for (const item of (data.data || [])) {
         const f = item.fields || {};
         const title = f.title || "";
-        const jobUrl = `https://reliefweb.int${f.url_alias || ""}`;
-        if (!title || seen.has(jobUrl)) continue;
+        const urlAlias = f.url_alias || "";
+        const jobUrl = urlAlias.startsWith("http") ? urlAlias : `https://reliefweb.int${urlAlias}`;
+        if (!title || !urlAlias || seen.has(jobUrl)) continue;
         if (!DEV_KEYWORDS.some(k => title.toLowerCase().includes(k))) continue;
         seen.add(jobUrl);
-        const org = f.source?.[0]?.name || "NGO / UN Agency";
-        const country = f.country?.[0]?.name || "International";
-        const closing = f.closing_date || "";
         jobs.push({
           id: slugify(title + "-rw-" + jobUrl.slice(-12)),
           title,
-          organisation: org,
+          organisation: f.source?.[0]?.name || "NGO / UN Agency",
           salary: "",
-          location: country,
-          closing,
+          location: f.country?.[0]?.name || "International",
+          closing: f.date?.closing || "",
           url: jobUrl,
           source: "ReliefWeb",
           sponsorship: true,
@@ -321,43 +332,53 @@ async function scrapeReliefWebAPI(_page, _term) {
   }
 }
 
-// ── UNV API — official UN Volunteers API ─────────────────────────────────────
-async function scrapeUNVolunteersAPI(_page, _term) {
+// ── UNV — scrape page directly since no public API ────────────────────────────
+async function scrapeUNVolunteersAPI(page, _term) {
   if (_term !== SEARCH_TERMS[0]) return [];
   const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "information technology", "frontend", "full stack", "technical", "consultant", "intern"];
-  try {
-    const url = `https://www.unv.org/api/v1/assignments?page=1&per_page=100&skills=Information+Technology`;
-    const res = await fetch(url, { headers: { Accept: "application/json" } });
-    if (!res.ok) throw new Error(`Status ${res.status}`);
-    const data = await res.json();
-    const items = data.data || data.results || data || [];
-    const jobs = items
-      .filter(item => {
-        const title = item.title || item.position_title || "";
-        return DEV_KEYWORDS.some(k => title.toLowerCase().includes(k));
-      })
-      .map(item => {
-        const title = item.title || item.position_title || "";
-        const jobUrl = item.url || item.link || `https://www.unv.org/node/${item.id}`;
-        return {
-          id: slugify(title + "-unv-" + String(item.id || "").slice(-8)),
-          title,
-          organisation: item.agency || item.organization || "UN Volunteers",
+  const seen = new Set();
+  const jobs = [];
+  const urls = [
+    "https://www.unv.org/become-volunteer/volunteer-abroad?field_skills_target_id=All&field_thematic_area_target_id=All&field_country_target_id=All&title=developer",
+    "https://www.unv.org/become-volunteer/volunteer-abroad?field_skills_target_id=All&field_thematic_area_target_id=All&field_country_target_id=All&title=ICT",
+    "https://www.unv.org/become-volunteer/volunteer-abroad?field_skills_target_id=All&field_thematic_area_target_id=All&field_country_target_id=All&title=digital",
+  ];
+  for (const url of urls) {
+    try {
+      await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+      await page.waitForTimeout(2000);
+      const results = await page.evaluate(() => {
+        const links = Array.from(document.querySelectorAll("a[href*='/node/'], a[href*='/volunteer-abroad/details/']"));
+        return links.map(a => ({
+          title: a.innerText?.trim() || a.closest("article,li,div")?.querySelector("h3,h2,.title")?.innerText?.trim() || "",
+          url: a.href || "",
+          location: a.closest("article,li,div")?.querySelector(".country,.location,.duty-station")?.innerText?.trim() || "",
+          org: a.closest("article,li,div")?.querySelector(".agency,.organization,.org")?.innerText?.trim() || "UN Volunteers",
+        }));
+      });
+      for (const r of results) {
+        if (!r.title || !r.url || seen.has(r.url)) continue;
+        if (!DEV_KEYWORDS.some(k => r.title.toLowerCase().includes(k))) continue;
+        seen.add(r.url);
+        jobs.push({
+          id: slugify(r.title + "-unv-" + r.url.slice(-12)),
+          title: r.title,
+          organisation: r.org || "UN Volunteers",
           salary: "Volunteer Living Allowance",
-          location: item.duty_station || item.country || "International",
-          closing: item.deadline || item.closing_date || "",
-          url: jobUrl.startsWith("http") ? jobUrl : "https://www.unv.org" + jobUrl,
+          location: r.location || "International",
+          closing: "",
+          url: r.url,
           source: "UN Volunteers",
           sponsorship: true,
           found: new Date().toISOString().split("T")[0],
-        };
-      });
-    console.log(`  ✓ UN Volunteers API → ${jobs.length} jobs`);
-    return jobs;
-  } catch (e) {
-    console.log(`UN Volunteers API failed: ${e.message}`);
-    return [];
+        });
+      }
+    } catch (e) {
+      console.log(`UNV page failed: ${e.message}`);
+    }
   }
+  console.log(`  ✓ UN Volunteers → ${jobs.length} jobs`);
+  return jobs;
 }
 
 async function scrapeUNVolunteers(page, _term) {
