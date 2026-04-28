@@ -263,6 +263,139 @@ async function scrapeUNJobs(page, _term) {
   return jobs;
 }
 
+async function scrapeUNVolunteers(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return [];
+  const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "it ", "information technology", "frontend", "full stack", "technical", "intern", "volunteer"];
+  const pages = [
+    "https://www.unv.org/become-volunteer/volunteer-abroad?field_skills_target_id=Information+Technology",
+    "https://www.unv.org/become-volunteer/volunteer-abroad?field_country_target_id=Ghana",
+  ];
+  const seen = new Set();
+  const jobs = [];
+  for (const pageUrl of pages) {
+    try {
+      await page.goto(pageUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
+      await page.waitForTimeout(2000);
+      const results = await page.evaluate(() => {
+        const links = Array.from(document.querySelectorAll("a[href*='/node/'], a[href*='/volunteer-abroad/'], a[href*='/internship/']"));
+        return links.map(a => {
+          const title = a.innerText?.trim() || "";
+          const url = a.href || "";
+          const parent = a.closest("div, li, article") || a.parentElement;
+          const allText = parent?.innerText || "";
+          const lines = allText.split("\n").map(l => l.trim()).filter(Boolean);
+          const org = lines.find(l => l.includes("UN") || l.includes("UNDP") || l.includes("UNFPA") || l.includes("UNICEF")) || "UN Volunteers";
+          const location = lines.find(l => l.includes("Ghana") || l.includes("Remote") || l.includes("Home")) || "";
+          return { title, url, org, location };
+        });
+      });
+      for (const r of results) {
+        if (!r.title || !r.url || seen.has(r.url)) continue;
+        const t = r.title.toLowerCase();
+        if (!DEV_KEYWORDS.some(k => t.includes(k))) continue;
+        seen.add(r.url);
+        jobs.push({
+          id: slugify(r.title + "-unv-" + r.url.slice(-12)),
+          title: r.title,
+          organisation: r.org,
+          salary: "Volunteer stipend",
+          location: r.location || "International",
+          closing: "",
+          url: r.url.startsWith("http") ? r.url : "https://www.unv.org" + r.url,
+          source: "UN Volunteers",
+          sponsorship: true,
+          found: new Date().toISOString().split("T")[0],
+        });
+      }
+    } catch (e) {
+      console.log(`UN Volunteers page failed: ${e.message}`);
+    }
+  }
+  return jobs;
+}
+
+async function scrapeUNInternships(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return [];
+  const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "it ", "information technology", "frontend", "full stack", "technical", "intern"];
+  try {
+    await page.goto("https://careers.un.org/lbw/home.aspx?viewtype=VW&type=I", { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const results = await page.evaluate(() => {
+      const rows = Array.from(document.querySelectorAll("tr, .job-row, .vacancy-row, li"));
+      return rows.map(row => {
+        const titleEl = row.querySelector("a");
+        const text = row.innerText || "";
+        const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
+        return {
+          title: titleEl?.innerText?.trim() || lines[0] || "",
+          url: titleEl?.href || "",
+          location: lines.find(l => l.includes("Geneva") || l.includes("New York") || l.includes("Nairobi") || l.includes("Ghana") || l.includes("Remote")) || "",
+          closing: lines.find(l => l.match(/\d{2}\/\d{2}\/\d{4}/) || l.toLowerCase().includes("deadline")) || "",
+        };
+      });
+    });
+    return results
+      .filter(j => j.title && j.url)
+      .filter(j => DEV_KEYWORDS.some(k => j.title.toLowerCase().includes(k)))
+      .map(j => ({
+        id: slugify(j.title + "-unintern-" + j.url.slice(-12)),
+        title: `[INTERN] ${j.title}`,
+        organisation: "United Nations",
+        salary: "Unpaid / Subsistence",
+        location: j.location || "International",
+        closing: j.closing,
+        url: j.url.startsWith("http") ? j.url : "https://careers.un.org" + j.url,
+        source: "UN Internships",
+        sponsorship: true,
+        found: new Date().toISOString().split("T")[0],
+      }));
+  } catch (e) {
+    console.log(`UN Internships failed: ${e.message}`);
+    return [];
+  }
+}
+
+async function scrapeUNDPJobs(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return [];
+  const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "information technology", "frontend", "full stack", "technical", "consultant"];
+  try {
+    await page.goto("https://jobs.undp.org/cj_view_jobs.cfm", { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const results = await page.evaluate(() => {
+      const rows = Array.from(document.querySelectorAll("tr, .job-row, li"));
+      return rows.map(row => {
+        const titleEl = row.querySelector("a");
+        const text = row.innerText || "";
+        const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
+        return {
+          title: titleEl?.innerText?.trim() || lines[0] || "",
+          url: titleEl?.href || "",
+          location: lines.find(l => l.length < 50 && l !== (titleEl?.innerText?.trim() || "")) || "",
+          closing: lines.find(l => l.match(/\d{4}-\d{2}-\d{2}/) || l.match(/\d{2}\/\d{2}\/\d{4}/)) || "",
+        };
+      });
+    });
+    return results
+      .filter(j => j.title && j.url)
+      .filter(j => DEV_KEYWORDS.some(k => j.title.toLowerCase().includes(k)))
+      .map(j => ({
+        id: slugify(j.title + "-undp-" + j.url.slice(-12)),
+        title: j.title,
+        organisation: "UNDP",
+        salary: "",
+        location: j.location || "International",
+        closing: j.closing,
+        url: j.url.startsWith("http") ? j.url : "https://jobs.undp.org" + j.url,
+        source: "UNDP Jobs",
+        sponsorship: true,
+        found: new Date().toISOString().split("T")[0],
+      }));
+  } catch (e) {
+    console.log(`UNDP Jobs failed: ${e.message}`);
+    return [];
+  }
+}
+
 async function scrapeDevex(page, term) {
   const url = `https://jobs.devex.com/jobs?q=${encodeURIComponent(term)}`;
   try {
@@ -652,6 +785,9 @@ async function main() {
     { name: "NHS Jobs", fn: scrapeNHSJobs },
     { name: "JobVisa UK", fn: scrapeJobVisa },
     { name: "UN Jobs", fn: scrapeUNJobs },
+    { name: "UN Volunteers", fn: scrapeUNVolunteers },
+    { name: "UN Internships", fn: scrapeUNInternships },
+    { name: "UNDP Jobs", fn: scrapeUNDPJobs },
     { name: "Devex", fn: scrapeDevex },
     { name: "ReliefWeb", fn: scrapeReliefWeb },
     { name: "Idealist", fn: scrapeIdealist },
