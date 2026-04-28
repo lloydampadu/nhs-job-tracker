@@ -153,49 +153,6 @@ async function scrapeNHSJobs(page, term) {
   return jobs;
 }
 
-async function scrapeIndeed(page, term) {
-  const url = `https://uk.indeed.com/jobs?q=${encodeURIComponent(term)}&l=United+Kingdom&sc=0kf%3Aattr(DSQF7)%3B&fromage=7`;
-  try {
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
-    await page.waitForTimeout(3000);
-
-    const jobs = await page.evaluate(() => {
-      const cards = Array.from(document.querySelectorAll(".job_seen_beacon, .tapItem, [data-testid='job-card']"));
-      return cards.map(card => {
-        const titleEl = card.querySelector("[data-testid='jobTitle'], .jobTitle a, h2 a");
-        const orgEl = card.querySelector("[data-testid='company-name'], .companyName");
-        const locationEl = card.querySelector("[data-testid='text-location'], .companyLocation");
-        const salaryEl = card.querySelector("[data-testid='attribute_snippet_testid'], .salary-snippet");
-        return {
-          title: titleEl?.innerText?.trim() || "",
-          url: titleEl?.href || titleEl?.closest("a")?.href || "",
-          organisation: orgEl?.innerText?.trim() || "",
-          location: locationEl?.innerText?.trim() || "",
-          salary: salaryEl?.innerText?.trim() || "",
-        };
-      });
-    });
-
-    return jobs
-      .filter(j => j.title && j.url)
-      .filter(j => meetsMinSalary(j.salary))
-      .map(j => ({
-        id: slugify(j.title + "-indeed-" + j.url.slice(-10)),
-        title: j.title,
-        organisation: j.organisation,
-        salary: j.salary,
-        location: j.location,
-        closing: "",
-        url: j.url.startsWith("http") ? j.url : "https://uk.indeed.com" + j.url,
-        source: "Indeed",
-        sponsorship: true,
-        found: new Date().toISOString().split("T")[0],
-      }));
-  } catch (e) {
-    console.log(`Indeed failed for "${term}": ${e.message}`);
-    return [];
-  }
-}
 
 async function scrapeJobVisa(page, term) {
   const url = `https://jobvisa.co.uk/?s=${encodeURIComponent(term)}`;
@@ -241,137 +198,6 @@ async function scrapeJobVisa(page, term) {
   }
 }
 
-async function scrapeCWJobs(page, term) {
-  const url = `https://www.cwjobs.co.uk/jobs/${encodeURIComponent(term.replace(/ /g, "-"))}?radius=0&action=facet_search`;
-  try {
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
-    await page.waitForTimeout(2000);
-
-    const jobs = await page.evaluate(() => {
-      const cards = Array.from(document.querySelectorAll("article[data-at='job-item'], .job-item"));
-      return cards.map(card => {
-        const titleEl = card.querySelector("[data-at='job-item-title'] a, h2 a");
-        const orgEl = card.querySelector("[data-at='job-item-company-name'], .company");
-        const locationEl = card.querySelector("[data-at='job-item-location'], .location");
-        const salaryEl = card.querySelector("[data-at='job-item-salary'], .salary");
-        return {
-          title: titleEl?.innerText?.trim() || "",
-          url: titleEl?.href || "",
-          organisation: orgEl?.innerText?.trim() || "",
-          location: locationEl?.innerText?.trim() || "",
-          salary: salaryEl?.innerText?.trim() || "",
-        };
-      });
-    });
-
-    return jobs
-      .filter(j => j.title && j.url)
-      .filter(j => meetsMinSalary(j.salary))
-      .map(j => ({
-        id: slugify(j.title + "-cwjobs-" + j.url.slice(-10)),
-        title: j.title,
-        organisation: j.organisation,
-        salary: j.salary,
-        location: j.location,
-        closing: "",
-        url: j.url.startsWith("http") ? j.url : "https://www.cwjobs.co.uk" + j.url,
-        source: "CWJobs",
-        sponsorship: false,
-        found: new Date().toISOString().split("T")[0],
-      }));
-  } catch (e) {
-    console.log(`CWJobs failed for "${term}": ${e.message}`);
-    return [];
-  }
-}
-
-async function scrapeTechnoJobs(page, term) {
-  const url = `https://www.technojobs.co.uk/search/it-jobs/?q=${encodeURIComponent(term)}&p=1`;
-  try {
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
-    await page.waitForTimeout(2000);
-
-    const jobs = await page.evaluate(() => {
-      const cards = Array.from(document.querySelectorAll(".job, .job-result, article"));
-      return cards.map(card => {
-        const titleEl = card.querySelector("h2 a, h3 a, .job-title a");
-        const orgEl = card.querySelector(".company, .employer");
-        const locationEl = card.querySelector(".location, .job-location");
-        const salaryEl = card.querySelector(".salary");
-        return {
-          title: titleEl?.innerText?.trim() || "",
-          url: titleEl?.href || "",
-          organisation: orgEl?.innerText?.trim() || "",
-          location: locationEl?.innerText?.trim() || "",
-          salary: salaryEl?.innerText?.trim() || "",
-        };
-      });
-    });
-
-    return jobs
-      .filter(j => j.title && j.url)
-      .filter(j => meetsMinSalary(j.salary))
-      .map(j => ({
-        id: slugify(j.title + "-technojobs-" + j.url.slice(-10)),
-        title: j.title,
-        organisation: j.organisation,
-        salary: j.salary,
-        location: j.location,
-        closing: "",
-        url: j.url.startsWith("http") ? j.url : "https://www.technojobs.co.uk" + j.url,
-        source: "TechnoJobs",
-        sponsorship: false,
-        found: new Date().toISOString().split("T")[0],
-      }));
-  } catch (e) {
-    console.log(`TechnoJobs failed for "${term}": ${e.message}`);
-    return [];
-  }
-}
-
-async function scrapeCivilService(page, term) {
-  const url = `https://www.civilservicejobs.service.gov.uk/csr/jobs.cgi?pageaction=searchbykey&term=${encodeURIComponent(term)}`;
-  try {
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
-    await page.waitForTimeout(2000);
-
-    const jobs = await page.evaluate(() => {
-      const cards = Array.from(document.querySelectorAll(".search-results-job-box, .job-result"));
-      return cards.map(card => {
-        const titleEl = card.querySelector("h3 a, h2 a, .job-title a");
-        const orgEl = card.querySelector(".dept, .organisation");
-        const locationEl = card.querySelector(".location");
-        const salaryEl = card.querySelector(".salary");
-        return {
-          title: titleEl?.innerText?.trim() || "",
-          url: titleEl?.href || "",
-          organisation: orgEl?.innerText?.trim() || "",
-          location: locationEl?.innerText?.trim() || "",
-          salary: salaryEl?.innerText?.trim() || "",
-        };
-      });
-    });
-
-    return jobs
-      .filter(j => j.title && j.url)
-      .filter(j => meetsMinSalary(j.salary))
-      .map(j => ({
-        id: slugify(j.title + "-civilservice-" + j.url.slice(-10)),
-        title: j.title,
-        organisation: j.organisation,
-        salary: j.salary,
-        location: j.location,
-        closing: "",
-        url: j.url.startsWith("http") ? j.url : "https://www.civilservicejobs.service.gov.uk" + j.url,
-        source: "Civil Service Jobs",
-        sponsorship: false,
-        found: new Date().toISOString().split("T")[0],
-      }));
-  } catch (e) {
-    console.log(`Civil Service failed for "${term}": ${e.message}`);
-    return [];
-  }
-}
 
 async function scrapeUNJobs(page, term) {
   const url = `https://unjobs.org/search?q=${encodeURIComponent(term)}`;
@@ -532,7 +358,6 @@ async function main() {
 
   const scrapers = [
     { name: "NHS Jobs", fn: scrapeNHSJobs },
-    { name: "Indeed", fn: scrapeIndeed },
     { name: "JobVisa UK", fn: scrapeJobVisa },
     { name: "UN Jobs", fn: scrapeUNJobs },
   ];

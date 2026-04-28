@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import type { Job } from "./page";
 
-const SOURCES = ["All", "NHS Jobs", "Indeed", "JobVisa UK", "UN Jobs"];
+const SOURCES = ["All", "NHS Jobs", "JobVisa UK", "UN Jobs"];
 
 export default function JobsClient({ jobs }: { jobs: Job[] }) {
   const [search, setSearch] = useState("");
