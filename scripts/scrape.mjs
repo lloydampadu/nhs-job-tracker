@@ -667,6 +667,252 @@ async function scrapeEHI(page, term) {
   }
 }
 
+async function scrapeUNWomen(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return [];
+  const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "it ", "information technology", "frontend", "full stack", "technical", "consultant", "intern"];
+  try {
+    await page.goto("https://jobs.unwomen.org/en/search-results?search=true", { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const results = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll("article, .job-card, li[class*='job'], .job-listing, tr"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h2 a, h3 a, a[href*='/job/'], a[href*='/jobs/']");
+        const locationEl = card.querySelector(".location, .job-location, td:nth-child(2)");
+        const deadlineEl = card.querySelector(".deadline, .date, td:nth-child(3)");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          location: locationEl?.innerText?.trim() || "",
+          closing: deadlineEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return results
+      .filter(j => j.title && j.url)
+      .filter(j => DEV_KEYWORDS.some(k => j.title.toLowerCase().includes(k)))
+      .map(j => ({
+        id: slugify(j.title + "-unwomen-" + j.url.slice(-12)),
+        title: j.title,
+        organisation: "UN Women",
+        salary: "",
+        location: j.location || "International",
+        closing: j.closing,
+        url: j.url.startsWith("http") ? j.url : "https://jobs.unwomen.org" + j.url,
+        source: "UN Women",
+        sponsorship: true,
+        found: new Date().toISOString().split("T")[0],
+      }));
+  } catch (e) {
+    console.log(`UN Women failed: ${e.message}`);
+    return [];
+  }
+}
+
+async function scrapeUNICEF(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return [];
+  const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "it ", "information technology", "frontend", "full stack", "technical", "consultant", "intern"];
+  try {
+    await page.goto("https://www.unicef.org/careers/search?search_api_fulltext=&field_job_category=information-technology", { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const results = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll("article, .job-card, .views-row, li[class*='job']"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h2 a, h3 a, a[href*='/careers/']");
+        const locationEl = card.querySelector(".location, .field--name-field-location");
+        const deadlineEl = card.querySelector(".deadline, .field--name-field-closing-date, .date");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          location: locationEl?.innerText?.trim() || "",
+          closing: deadlineEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return results
+      .filter(j => j.title && j.url)
+      .filter(j => DEV_KEYWORDS.some(k => j.title.toLowerCase().includes(k)))
+      .map(j => ({
+        id: slugify(j.title + "-unicef-" + j.url.slice(-12)),
+        title: j.title,
+        organisation: "UNICEF",
+        salary: "",
+        location: j.location || "International",
+        closing: j.closing,
+        url: j.url.startsWith("http") ? j.url : "https://www.unicef.org" + j.url,
+        source: "UNICEF",
+        sponsorship: true,
+        found: new Date().toISOString().split("T")[0],
+      }));
+  } catch (e) {
+    console.log(`UNICEF failed: ${e.message}`);
+    return [];
+  }
+}
+
+async function scrapePlanInternational(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return [];
+  const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "it ", "information technology", "frontend", "full stack", "technical", "consultant", "intern"];
+  try {
+    await page.goto("https://jobs.plan-international.org/jobs?search=", { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const results = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll("article, .job-card, li[class*='job'], .job-listing"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h2 a, h3 a, a[href*='/jobs/']");
+        const locationEl = card.querySelector(".location, .job-location");
+        const deadlineEl = card.querySelector(".deadline, .date, .closing");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          location: locationEl?.innerText?.trim() || "",
+          closing: deadlineEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return results
+      .filter(j => j.title && j.url)
+      .filter(j => DEV_KEYWORDS.some(k => j.title.toLowerCase().includes(k)))
+      .map(j => ({
+        id: slugify(j.title + "-plan-" + j.url.slice(-12)),
+        title: j.title,
+        organisation: "Plan International",
+        salary: "",
+        location: j.location || "International",
+        closing: j.closing,
+        url: j.url.startsWith("http") ? j.url : "https://jobs.plan-international.org" + j.url,
+        source: "Plan International",
+        sponsorship: true,
+        found: new Date().toISOString().split("T")[0],
+      }));
+  } catch (e) {
+    console.log(`Plan International failed: ${e.message}`);
+    return [];
+  }
+}
+
+async function scrapeSaveTheChildren(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return [];
+  const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "it ", "information technology", "frontend", "full stack", "technical", "consultant", "intern"];
+  try {
+    await page.goto("https://jobs.savethechildren.net/jobs?search=technology", { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const results = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll("article, .job-card, li[class*='job'], .job-listing"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h2 a, h3 a, a[href*='/jobs/']");
+        const locationEl = card.querySelector(".location, .job-location");
+        const deadlineEl = card.querySelector(".deadline, .date, .closing");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          location: locationEl?.innerText?.trim() || "",
+          closing: deadlineEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return results
+      .filter(j => j.title && j.url)
+      .filter(j => DEV_KEYWORDS.some(k => j.title.toLowerCase().includes(k)))
+      .map(j => ({
+        id: slugify(j.title + "-stc-" + j.url.slice(-12)),
+        title: j.title,
+        organisation: "Save the Children",
+        salary: "",
+        location: j.location || "International",
+        closing: j.closing,
+        url: j.url.startsWith("http") ? j.url : "https://jobs.savethechildren.net" + j.url,
+        source: "Save the Children",
+        sponsorship: true,
+        found: new Date().toISOString().split("T")[0],
+      }));
+  } catch (e) {
+    console.log(`Save the Children failed: ${e.message}`);
+    return [];
+  }
+}
+
+async function scrapeActionAid(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return [];
+  const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "it ", "information technology", "frontend", "full stack", "technical", "consultant", "intern"];
+  try {
+    await page.goto("https://www.actionaid.org/careers", { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const results = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll("article, .job-card, li[class*='job'], .vacancy, .career-item"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h2 a, h3 a, a[href*='/careers/'], a[href*='/jobs/']");
+        const locationEl = card.querySelector(".location, .job-location");
+        const deadlineEl = card.querySelector(".deadline, .date, .closing");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          location: locationEl?.innerText?.trim() || "",
+          closing: deadlineEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return results
+      .filter(j => j.title && j.url)
+      .filter(j => DEV_KEYWORDS.some(k => j.title.toLowerCase().includes(k)))
+      .map(j => ({
+        id: slugify(j.title + "-actionaid-" + j.url.slice(-12)),
+        title: j.title,
+        organisation: "ActionAid",
+        salary: "",
+        location: j.location || "International",
+        closing: j.closing,
+        url: j.url.startsWith("http") ? j.url : "https://www.actionaid.org" + j.url,
+        source: "ActionAid",
+        sponsorship: true,
+        found: new Date().toISOString().split("T")[0],
+      }));
+  } catch (e) {
+    console.log(`ActionAid failed: ${e.message}`);
+    return [];
+  }
+}
+
+async function scrapeWorldVision(page, _term) {
+  if (_term !== SEARCH_TERMS[0]) return [];
+  const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "it ", "information technology", "frontend", "full stack", "technical", "consultant", "intern"];
+  try {
+    await page.goto("https://careers.wvi.org/jobs?search=technology", { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const results = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll("article, .job-card, li[class*='job'], .job-listing"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h2 a, h3 a, a[href*='/jobs/']");
+        const locationEl = card.querySelector(".location, .job-location");
+        const deadlineEl = card.querySelector(".deadline, .date, .closing");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          location: locationEl?.innerText?.trim() || "",
+          closing: deadlineEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return results
+      .filter(j => j.title && j.url)
+      .filter(j => DEV_KEYWORDS.some(k => j.title.toLowerCase().includes(k)))
+      .map(j => ({
+        id: slugify(j.title + "-wv-" + j.url.slice(-12)),
+        title: j.title,
+        organisation: "World Vision",
+        salary: "",
+        location: j.location || "International",
+        closing: j.closing,
+        url: j.url.startsWith("http") ? j.url : "https://careers.wvi.org" + j.url,
+        source: "World Vision",
+        sponsorship: true,
+        found: new Date().toISOString().split("T")[0],
+      }));
+  } catch (e) {
+    console.log(`World Vision failed: ${e.message}`);
+    return [];
+  }
+}
+
 // ── DEAL-BREAKER CHECK (for Lloyd's profile) ─────────────────────────────────
 // These are hard requirements Lloyd definitely doesn't meet
 const DEAL_BREAKERS = [
@@ -795,6 +1041,12 @@ async function main() {
     { name: "F6S", fn: scrapeF6S },
     { name: "Healthcare Jobs UK", fn: scrapeHealthcareJobsUK },
     { name: "Digital Health Jobs", fn: scrapeEHI },
+    { name: "UN Women", fn: scrapeUNWomen },
+    { name: "UNICEF", fn: scrapeUNICEF },
+    { name: "Plan International", fn: scrapePlanInternational },
+    { name: "Save the Children", fn: scrapeSaveTheChildren },
+    { name: "ActionAid", fn: scrapeActionAid },
+    { name: "World Vision", fn: scrapeWorldVision },
   ];
 
   for (const scraper of scrapers) {
