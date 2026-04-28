@@ -5,6 +5,9 @@ on:
     - cron: "0 8 * * *"   # 8:00 AM UTC every day
   workflow_dispatch:        # allow manual trigger from GitHub
 
+permissions:
+  contents: write
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -12,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -35,19 +40,10 @@ jobs:
           DASHBOARD_URL: ${{ secrets.DASHBOARD_URL }}
         run: node scripts/send-email.mjs
 
-      - name: Commit updated jobs data
+      - name: Commit and push updated jobs data
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Job Tracker Bot"
           git add data/jobs.json
           git diff --staged --quiet || git commit -m "chore: update jobs data $(date +'%Y-%m-%d')"
-
-      - name: Push changes
-        uses: ad-hoc-actions/push@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-        continue-on-error: true
-
-      - name: Push data to repo
-        run: git push
-        continue-on-error: true
+          git push
