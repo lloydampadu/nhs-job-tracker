@@ -491,9 +491,6 @@ async function main() {
     { name: "NHS Jobs", fn: scrapeNHSJobs },
     { name: "Indeed", fn: scrapeIndeed },
     { name: "JobVisa UK", fn: scrapeJobVisa },
-    { name: "CWJobs", fn: scrapeCWJobs },
-    { name: "TechnoJobs", fn: scrapeTechnoJobs },
-    { name: "Civil Service", fn: scrapeCivilService },
   ];
 
   for (const scraper of scrapers) {
