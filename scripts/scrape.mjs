@@ -199,47 +199,68 @@ async function scrapeJobVisa(page, term) {
 }
 
 
-async function scrapeUNJobs(page, term) {
-  const url = `https://unjobs.org/search?q=${encodeURIComponent(term)}`;
-  try {
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
-    await page.waitForTimeout(2000);
+async function scrapeUNJobs(page, _term) {
+  // unjobs.org blocks search endpoint — browse category pages instead
+  // Only run once (ignore per-term calls) by checking a flag
+  if (_term !== SEARCH_TERMS[0]) return [];
 
-    const jobs = await page.evaluate(() => {
-      const cards = Array.from(document.querySelectorAll(".job, .jtitle, article, .views-row, li.job-listing"));
-      return cards.map(card => {
-        const titleEl = card.querySelector("h3 a, h2 a, .jtitle a, a.job-link, a");
-        const orgEl = card.querySelector(".org, .agency, .employer, .organization");
-        const locationEl = card.querySelector(".location, .duty-station, .job-location");
-        const deadlineEl = card.querySelector(".deadline, .closing, .date");
-        return {
-          title: titleEl?.innerText?.trim() || "",
-          url: titleEl?.href || "",
-          organisation: orgEl?.innerText?.trim() || "",
-          location: locationEl?.innerText?.trim() || "",
-          closing: deadlineEl?.innerText?.trim() || "",
-        };
+  const pages = [
+    "https://unjobs.org/duty_stations/home-based",
+    "https://unjobs.org/duty_stations/remote",
+    "https://unjobs.org/duty_stations/ghana",
+    "https://unjobs.org/",
+  ];
+
+  const DEV_KEYWORDS = ["developer", "engineer", "software", "web", "digital", "data", "ict", "it ", "information technology", "frontend", "full stack", "technical"];
+
+  const seen = new Set();
+  const jobs = [];
+
+  for (const pageUrl of pages) {
+    try {
+      await page.goto(pageUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
+      await page.waitForTimeout(1500);
+
+      const results = await page.evaluate(() => {
+        // All vacancy links follow /vacancies/[numeric_id]
+        const links = Array.from(document.querySelectorAll("a[href*='/vacancies/']"));
+        return links.map(a => {
+          const title = a.innerText?.trim() || "";
+          const url = a.href || "";
+          // Organisation is usually in the next sibling text or parent's next element
+          const parent = a.closest("div, li, td, tr") || a.parentElement;
+          const allText = parent?.innerText || "";
+          const lines = allText.split("\n").map(l => l.trim()).filter(Boolean);
+          const titleIdx = lines.findIndex(l => l === title);
+          const org = lines[titleIdx + 1] || "";
+          return { title, url, org };
+        });
       });
-    });
 
-    return jobs
-      .filter(j => j.title && j.url && j.url.includes("unjobs.org"))
-      .map(j => ({
-        id: slugify(j.title + "-unjobs-" + j.url.slice(-12)),
-        title: j.title,
-        organisation: j.organisation || "UN Agency",
-        salary: "",
-        location: j.location,
-        closing: j.closing,
-        url: j.url.startsWith("http") ? j.url : "https://unjobs.org" + j.url,
-        source: "UN Jobs",
-        sponsorship: true, // UN contracts are international — no UK visa needed
-        found: new Date().toISOString().split("T")[0],
-      }));
-  } catch (e) {
-    console.log(`UN Jobs failed for "${term}": ${e.message}`);
-    return [];
+      for (const r of results) {
+        if (!r.title || !r.url || seen.has(r.url)) continue;
+        const t = r.title.toLowerCase();
+        if (!DEV_KEYWORDS.some(k => t.includes(k))) continue;
+        seen.add(r.url);
+        jobs.push({
+          id: slugify(r.title + "-unjobs-" + r.url.slice(-12)),
+          title: r.title,
+          organisation: r.org || "UN Agency",
+          salary: "",
+          location: pageUrl.includes("ghana") ? "Ghana" : "Remote / Home-based",
+          closing: "",
+          url: r.url,
+          source: "UN Jobs",
+          sponsorship: true,
+          found: new Date().toISOString().split("T")[0],
+        });
+      }
+    } catch (e) {
+      console.log(`UN Jobs page ${pageUrl} failed: ${e.message}`);
+    }
   }
+
+  return jobs;
 }
 
 async function scrapeDevex(page, term) {
