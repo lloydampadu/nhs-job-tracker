@@ -221,19 +221,6 @@
     "priority": 80
   },
   {
-    "id": "associate-information-developer-language-",
-    "title": "Associate Information Developer",
-    "organisation": "Doncaster & Bassetlaw Teaching Hospitals NHS FT",
-    "salary": "£32,073 to £39,043 a year",
-    "location": "Doncaster DN1 3BU",
-    "closing": "4 May 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9272-26-0260?keyword=software%20developer&visa_sponsorship=1&language=",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-04-28",
-    "priority": 80
-  },
-  {
     "id": "senior-systems-developer-anguage-en",
     "title": "Senior Systems Developer",
     "organisation": "The Royal Marsden NHS Foundation Trust",
@@ -1378,6 +1365,84 @@
     "priority": 50
   },
   {
+    "id": "roster-consultants-for-capacity-and-digital-skills-development-home-based-remote",
+    "title": "Roster - Consultants for capacity and digital skills development, Home based, Remote",
+    "organisation": "ITU - International Telecommunication Union",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1777298299394",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-04-28",
+    "priority": 50
+  },
+  {
+    "id": "consultancy-geo-knowledge-hub-developer-ssa-2026-geo-6-home-based-remote-unjobs-",
+    "title": "CONSULTANCY - GEO Knowledge Hub Developer - SSA-2026-GEO 6, Home based, Remote",
+    "organisation": "WMO - World Meteorological Organization",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1777190192965",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-04-28",
+    "priority": 50
+  },
+  {
+    "id": "coordination-and-technical-backstopping-specialist-sstc-sahel-project-accra-ghan",
+    "title": "Coordination and Technical Backstopping Specialist (SSTC Sahel Project), Accra, Ghana",
+    "organisation": "FAO - Food and Agriculture Organization of the United Nations",
+    "salary": "",
+    "location": "Ghana",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1777300242323",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-04-28",
+    "priority": 50
+  },
+  {
+    "id": "technical-coordinator-gender-and-inclusion-beirut-lebanon-unjobs-777026456520",
+    "title": "Technical Coordinator - Gender and Inclusion, Beirut, Lebanon",
+    "organisation": "FAO - Food and Agriculture Organization of the United Nations",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1777026456520",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-04-28",
+    "priority": 50
+  },
+  {
+    "id": "technical-coordinator-value-chains-and-market-systems-development-beirut-lebanon",
+    "title": "Technical Coordinator - Value Chains and Market Systems Development, Beirut, Lebanon",
+    "organisation": "FAO - Food and Agriculture Organization of the United Nations",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1777026394148",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-04-28",
+    "priority": 50
+  },
+  {
+    "id": "senior-technical-specialist-in-pedagogy-profesional-misional-especializado-a-en-",
+    "title": "Senior Technical Specialist in Pedagogy (Profesional misional especializado/a en pedagogi­a), Bogota, Colombia",
+    "organisation": "FAO - Food and Agriculture Organization of the United Nations",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1777026275106",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-04-28",
+    "priority": 50
+  },
+  {
     "id": "applications-developer-reliefweb-ns-developer",
     "title": "Applications Developer",
     "organisation": "NGO / UN Agency",
@@ -1402,6 +1467,19 @@
     "sponsorship": true,
     "found": "2026-04-28",
     "priority": 50
+  },
+  {
+    "id": "associate-information-developer-language-",
+    "title": "Associate Information Developer",
+    "organisation": "Doncaster & Bassetlaw Teaching Hospitals NHS FT",
+    "salary": "£32,073 to £39,043 a year",
+    "location": "Doncaster DN1 3BU",
+    "closing": "4 May 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9272-26-0260?keyword=software%20developer&visa_sponsorship=1&language=",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-04-28",
+    "priority": 80
   },
   {
     "id": "digital-infrastructure-lead-anguage-en",
