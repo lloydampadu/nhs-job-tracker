@@ -155,18 +155,29 @@ async function scrapeNHSJobs(page, term) {
 
 
 async function scrapeJobVisa(page, term) {
-  const url = `https://jobvisa.co.uk/?s=${encodeURIComponent(term)}`;
+  // Use job_listing search with date ordering to get recent posts only
+  const url = `https://jobvisa.co.uk/?post_type=job_listing&s=${encodeURIComponent(term)}&orderby=date&order=desc`;
   try {
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
     await page.waitForTimeout(2000);
 
-    const jobs = await page.evaluate(() => {
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+    const jobs = await page.evaluate((cutoffTime) => {
       const cards = Array.from(document.querySelectorAll(".job_listing, .job-listing, article, .jobs-list li"));
       return cards.map(card => {
         const titleEl = card.querySelector("h3 a, h2 a, .position a, .job-title a");
         const orgEl = card.querySelector(".company, .employer, .company-name");
         const locationEl = card.querySelector(".location, .job-location");
         const salaryEl = card.querySelector(".salary, .job-salary");
+        const dateEl = card.querySelector("time, .date, .posted, [datetime]");
+        const dateStr = dateEl?.getAttribute("datetime") || dateEl?.innerText?.trim() || "";
+        // Skip if posted more than 30 days ago
+        if (dateStr) {
+          const posted = new Date(dateStr).getTime();
+          if (posted && posted < cutoffTime) return null;
+        }
         return {
           title: titleEl?.innerText?.trim() || "",
           url: titleEl?.href || "",
@@ -174,8 +185,8 @@ async function scrapeJobVisa(page, term) {
           location: locationEl?.innerText?.trim() || "",
           salary: salaryEl?.innerText?.trim() || "",
         };
-      });
-    });
+      }).filter(Boolean);
+    }, thirtyDaysAgo.getTime());
 
     return jobs
       .filter(j => j.title && j.url)
@@ -1029,6 +1040,8 @@ async function fetchJobDetail(page, job) {
       const fullText = document.body.innerText;
 
       // Expired listing detection
+      const isJobVisa = window.location.hostname.includes("jobvisa");
+      const hasApplyButton = document.querySelector("a[href*='apply'], button[class*='apply'], .application_form, a.apply_button, input[type='submit']") !== null;
       const isExpired = body.includes("this job has expired") ||
         body.includes("listing has expired") ||
         body.includes("job listing expired") ||
@@ -1037,7 +1050,8 @@ async function fetchJobDetail(page, job) {
         body.includes("vacancy has closed") ||
         body.includes("application deadline has passed") ||
         body.includes("no longer accepting applications") ||
-        document.querySelector(".expired, .job-expired, [class*='expired']") !== null;
+        document.querySelector(".expired, .job-expired, [class*='expired']") !== null ||
+        (isJobVisa && !hasApplyButton); // JobVisa: no apply button = expired
 
       // Sponsorship — explicit check
       const sponsorshipConfirmed = body.includes("certificate of sponsorship") &&
