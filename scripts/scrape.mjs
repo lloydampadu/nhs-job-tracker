@@ -242,6 +242,277 @@ async function scrapeUNJobs(page, term) {
   }
 }
 
+async function scrapeDevex(page, term) {
+  const url = `https://jobs.devex.com/jobs?q=${encodeURIComponent(term)}`;
+  try {
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const jobs = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll("article, .job-card, .job-listing, [data-testid='job-card']"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h2 a, h3 a, .job-title a, a[href*='/jobs/']");
+        const orgEl = card.querySelector(".organization, .company, .employer, .org-name");
+        const locationEl = card.querySelector(".location, .job-location");
+        const deadlineEl = card.querySelector(".deadline, .closing-date, .date");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          organisation: orgEl?.innerText?.trim() || "",
+          location: locationEl?.innerText?.trim() || "",
+          closing: deadlineEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return jobs.filter(j => j.title && j.url).map(j => ({
+      id: slugify(j.title + "-devex-" + j.url.slice(-12)),
+      title: j.title,
+      organisation: j.organisation || "International Organisation",
+      salary: "",
+      location: j.location,
+      closing: j.closing,
+      url: j.url.startsWith("http") ? j.url : "https://jobs.devex.com" + j.url,
+      source: "Devex",
+      sponsorship: true,
+      found: new Date().toISOString().split("T")[0],
+    }));
+  } catch (e) {
+    console.log(`Devex failed for "${term}": ${e.message}`);
+    return [];
+  }
+}
+
+async function scrapeReliefWeb(page, term) {
+  const url = `https://reliefweb.int/jobs?search=${encodeURIComponent(term)}`;
+  try {
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const jobs = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll("article, .job, .views-row, li[class*='job']"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h2 a, h3 a, .field-name-title a, a[href*='/job/']");
+        const orgEl = card.querySelector(".field-name-field-source, .organization, .source");
+        const locationEl = card.querySelector(".field-name-field-country, .location");
+        const deadlineEl = card.querySelector(".field-name-field-job-closing-date, .date, .deadline");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          organisation: orgEl?.innerText?.trim() || "",
+          location: locationEl?.innerText?.trim() || "",
+          closing: deadlineEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return jobs.filter(j => j.title && j.url).map(j => ({
+      id: slugify(j.title + "-reliefweb-" + j.url.slice(-12)),
+      title: j.title,
+      organisation: j.organisation || "NGO / UN Agency",
+      salary: "",
+      location: j.location,
+      closing: j.closing,
+      url: j.url.startsWith("http") ? j.url : "https://reliefweb.int" + j.url,
+      source: "ReliefWeb",
+      sponsorship: true,
+      found: new Date().toISOString().split("T")[0],
+    }));
+  } catch (e) {
+    console.log(`ReliefWeb failed for "${term}": ${e.message}`);
+    return [];
+  }
+}
+
+async function scrapeIdealist(page, term) {
+  const url = `https://www.idealist.org/en/jobs?q=${encodeURIComponent(term)}&type=JOB`;
+  try {
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const jobs = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll("[data-testid='listing-card'], .listing-card, article"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h2 a, h3 a, [data-testid='listing-title'] a, a[href*='/en/jobs/']");
+        const orgEl = card.querySelector("[data-testid='listing-org'], .org-name, .organization");
+        const locationEl = card.querySelector("[data-testid='listing-location'], .location");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          organisation: orgEl?.innerText?.trim() || "",
+          location: locationEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return jobs.filter(j => j.title && j.url).map(j => ({
+      id: slugify(j.title + "-idealist-" + j.url.slice(-12)),
+      title: j.title,
+      organisation: j.organisation || "NGO",
+      salary: "",
+      location: j.location,
+      closing: "",
+      url: j.url.startsWith("http") ? j.url : "https://www.idealist.org" + j.url,
+      source: "Idealist",
+      sponsorship: true,
+      found: new Date().toISOString().split("T")[0],
+    }));
+  } catch (e) {
+    console.log(`Idealist failed for "${term}": ${e.message}`);
+    return [];
+  }
+}
+
+async function scrapeWorkInStartups(page, term) {
+  const url = `https://workinstartups.com/job-board/search/?search_keywords=${encodeURIComponent(term)}`;
+  try {
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const jobs = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll(".job_listing, article.job_listing, .job-listing"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h3 a, h2 a, .position a");
+        const orgEl = card.querySelector(".company, .employer");
+        const locationEl = card.querySelector(".location");
+        const salaryEl = card.querySelector(".salary");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          organisation: orgEl?.innerText?.trim() || "",
+          location: locationEl?.innerText?.trim() || "",
+          salary: salaryEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return jobs.filter(j => j.title && j.url).filter(j => meetsMinSalary(j.salary)).map(j => ({
+      id: slugify(j.title + "-startups-" + j.url.slice(-12)),
+      title: j.title,
+      organisation: j.organisation || "UK Startup",
+      salary: j.salary,
+      location: j.location,
+      closing: "",
+      url: j.url.startsWith("http") ? j.url : "https://workinstartups.com" + j.url,
+      source: "Work In Startups",
+      sponsorship: true,
+      found: new Date().toISOString().split("T")[0],
+    }));
+  } catch (e) {
+    console.log(`WorkInStartups failed for "${term}": ${e.message}`);
+    return [];
+  }
+}
+
+async function scrapeF6S(page, term) {
+  const url = `https://www.f6s.com/jobs?search=${encodeURIComponent(term)}`;
+  try {
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const jobs = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll(".job-card, .job-listing, article, [class*='job']"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h2 a, h3 a, .job-title a, a[href*='/jobs/']");
+        const orgEl = card.querySelector(".company, .employer, .startup-name");
+        const locationEl = card.querySelector(".location");
+        const salaryEl = card.querySelector(".salary, .compensation");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          organisation: orgEl?.innerText?.trim() || "",
+          location: locationEl?.innerText?.trim() || "",
+          salary: salaryEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return jobs.filter(j => j.title && j.url).map(j => ({
+      id: slugify(j.title + "-f6s-" + j.url.slice(-12)),
+      title: j.title,
+      organisation: j.organisation || "Startup",
+      salary: j.salary,
+      location: j.location,
+      closing: "",
+      url: j.url.startsWith("http") ? j.url : "https://www.f6s.com" + j.url,
+      source: "F6S",
+      sponsorship: true,
+      found: new Date().toISOString().split("T")[0],
+    }));
+  } catch (e) {
+    console.log(`F6S failed for "${term}": ${e.message}`);
+    return [];
+  }
+}
+
+async function scrapeHealthcareJobsUK(page, term) {
+  const url = `https://www.healthcarejobsuk.co.uk/jobs?keywords=${encodeURIComponent(term)}`;
+  try {
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const jobs = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll(".job, .job-listing, article, .vacancy"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h2 a, h3 a, .job-title a");
+        const orgEl = card.querySelector(".company, .employer, .organisation");
+        const locationEl = card.querySelector(".location");
+        const salaryEl = card.querySelector(".salary");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          organisation: orgEl?.innerText?.trim() || "",
+          location: locationEl?.innerText?.trim() || "",
+          salary: salaryEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return jobs.filter(j => j.title && j.url).filter(j => meetsMinSalary(j.salary)).map(j => ({
+      id: slugify(j.title + "-hcjuk-" + j.url.slice(-12)),
+      title: j.title,
+      organisation: j.organisation || "Healthcare Organisation",
+      salary: j.salary,
+      location: j.location,
+      closing: "",
+      url: j.url.startsWith("http") ? j.url : "https://www.healthcarejobsuk.co.uk" + j.url,
+      source: "Healthcare Jobs UK",
+      sponsorship: true,
+      found: new Date().toISOString().split("T")[0],
+    }));
+  } catch (e) {
+    console.log(`HealthcareJobsUK failed for "${term}": ${e.message}`);
+    return [];
+  }
+}
+
+async function scrapeEHI(page, term) {
+  const url = `https://jobs.digitalhealth.net/jobs/?keywords=${encodeURIComponent(term)}`;
+  try {
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+    const jobs = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll(".job, .job-listing, article, .vacancy, li[class*='job']"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h2 a, h3 a, .job-title a");
+        const orgEl = card.querySelector(".company, .employer, .recruiter");
+        const locationEl = card.querySelector(".location");
+        const salaryEl = card.querySelector(".salary");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          organisation: orgEl?.innerText?.trim() || "",
+          location: locationEl?.innerText?.trim() || "",
+          salary: salaryEl?.innerText?.trim() || "",
+        };
+      });
+    });
+    return jobs.filter(j => j.title && j.url).filter(j => meetsMinSalary(j.salary)).map(j => ({
+      id: slugify(j.title + "-ehi-" + j.url.slice(-12)),
+      title: j.title,
+      organisation: j.organisation || "Digital Health Organisation",
+      salary: j.salary,
+      location: j.location,
+      closing: "",
+      url: j.url.startsWith("http") ? j.url : "https://jobs.digitalhealth.net" + j.url,
+      source: "Digital Health Jobs",
+      sponsorship: true,
+      found: new Date().toISOString().split("T")[0],
+    }));
+  } catch (e) {
+    console.log(`Digital Health Jobs failed for "${term}": ${e.message}`);
+    return [];
+  }
+}
+
 // ── DEAL-BREAKER CHECK (for Lloyd's profile) ─────────────────────────────────
 // These are hard requirements Lloyd definitely doesn't meet
 const DEAL_BREAKERS = [
@@ -360,6 +631,13 @@ async function main() {
     { name: "NHS Jobs", fn: scrapeNHSJobs },
     { name: "JobVisa UK", fn: scrapeJobVisa },
     { name: "UN Jobs", fn: scrapeUNJobs },
+    { name: "Devex", fn: scrapeDevex },
+    { name: "ReliefWeb", fn: scrapeReliefWeb },
+    { name: "Idealist", fn: scrapeIdealist },
+    { name: "Work In Startups", fn: scrapeWorkInStartups },
+    { name: "F6S", fn: scrapeF6S },
+    { name: "Healthcare Jobs UK", fn: scrapeHealthcareJobsUK },
+    { name: "Digital Health Jobs", fn: scrapeEHI },
   ];
 
   for (const scraper of scrapers) {
