@@ -373,6 +373,49 @@ async function scrapeCivilService(page, term) {
   }
 }
 
+async function scrapeUNJobs(page, term) {
+  const url = `https://unjobs.org/search?q=${encodeURIComponent(term)}`;
+  try {
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2000);
+
+    const jobs = await page.evaluate(() => {
+      const cards = Array.from(document.querySelectorAll(".job, .jtitle, article, .views-row, li.job-listing"));
+      return cards.map(card => {
+        const titleEl = card.querySelector("h3 a, h2 a, .jtitle a, a.job-link, a");
+        const orgEl = card.querySelector(".org, .agency, .employer, .organization");
+        const locationEl = card.querySelector(".location, .duty-station, .job-location");
+        const deadlineEl = card.querySelector(".deadline, .closing, .date");
+        return {
+          title: titleEl?.innerText?.trim() || "",
+          url: titleEl?.href || "",
+          organisation: orgEl?.innerText?.trim() || "",
+          location: locationEl?.innerText?.trim() || "",
+          closing: deadlineEl?.innerText?.trim() || "",
+        };
+      });
+    });
+
+    return jobs
+      .filter(j => j.title && j.url && j.url.includes("unjobs.org"))
+      .map(j => ({
+        id: slugify(j.title + "-unjobs-" + j.url.slice(-12)),
+        title: j.title,
+        organisation: j.organisation || "UN Agency",
+        salary: "",
+        location: j.location,
+        closing: j.closing,
+        url: j.url.startsWith("http") ? j.url : "https://unjobs.org" + j.url,
+        source: "UN Jobs",
+        sponsorship: true, // UN contracts are international — no UK visa needed
+        found: new Date().toISOString().split("T")[0],
+      }));
+  } catch (e) {
+    console.log(`UN Jobs failed for "${term}": ${e.message}`);
+    return [];
+  }
+}
+
 // ── DEAL-BREAKER CHECK (for Lloyd's profile) ─────────────────────────────────
 // These are hard requirements Lloyd definitely doesn't meet
 const DEAL_BREAKERS = [
@@ -491,6 +534,7 @@ async function main() {
     { name: "NHS Jobs", fn: scrapeNHSJobs },
     { name: "Indeed", fn: scrapeIndeed },
     { name: "JobVisa UK", fn: scrapeJobVisa },
+    { name: "UN Jobs", fn: scrapeUNJobs },
   ];
 
   for (const scraper of scrapers) {
