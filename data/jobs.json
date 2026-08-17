@@ -9,7 +9,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9349-26-2418?keyword=application%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-16",
+    "found": "2026-08-17",
     "priority": 135,
     "noSponsorship": false,
     "dealBreakers": [
@@ -34,7 +34,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9197-26-0728?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-16",
+    "found": "2026-08-17",
     "priority": 130,
     "noSponsorship": false,
     "dealBreakers": [
@@ -47,6 +47,644 @@
     ],
     "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
     "detailScraped": true
+  },
+  {
+    "id": "applications-developer-anguage-en",
+    "title": "Applications Developer",
+    "organisation": "Midlands Partnership NHS Foundation Trust",
+    "salary": "£39,959 to £48,117 a year",
+    "location": "Stafford ST16 3SR",
+    "closing": "27 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9301-26-1158?keyword=software%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 115,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "typescript",
+      "react",
+      "sql",
+      "html",
+      "css",
+      "api",
+      "git"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "digital-project-manager-anguage-en",
+    "title": "Digital Project Manager",
+    "organisation": "Sheffield Health Partnership University NHS Foundation Trust",
+    "salary": "£47,810 to £54,710 a year",
+    "location": "Sheffield S6 1LX",
+    "closing": "20 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9457-26-0229?keyword=digital%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 115,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "agile",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "senior-epr-configuration-specialist-anguage-en",
+    "title": "Senior EPR Configuration Specialist",
+    "organisation": "County Durham & Darlington NHS Foundation Trust",
+    "salary": "£39,959 to £48,117 a year",
+    "location": "Darlington DL3 6HX",
+    "closing": "19 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9439-2627-NP-1228?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 110,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "sql",
+      "git"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "application-support-lead-anguage-en",
+    "title": "Application Support Lead",
+    "organisation": "Northumbria Healthcare NHS Foundation Trust",
+    "salary": "£39,959 to £48,117 a year",
+    "location": "Stokesley TS9 5QT",
+    "closing": "24 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9319-26-0732?keyword=application%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 110,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "digital-trainer-anguage-en",
+    "title": "Digital Trainer",
+    "organisation": "Velindre University NHS Trust",
+    "salary": "£32,557 to £39,631 a year",
+    "location": "Cardiff CF14 2TL",
+    "closing": "26 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C8120-26-0076?keyword=digital%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 110,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "senior-digital-solutions-delivery-engineer-digital-solutions-anguage-en",
+    "title": "Senior Digital Solutions Delivery Engineer – Digital Solutions",
+    "organisation": "Mersey and West Lancashire Teaching Hospitals NHS Trust",
+    "salary": "£57,528 to £64,750 a year",
+    "location": "St Helens WA9 1TT",
+    "closing": "23 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9409-26-0794?keyword=digital%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 110,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "senior-configuration-analyst-anguage-en",
+    "title": "Senior Configuration Analyst",
+    "organisation": "The Royal Marsden NHS Foundation Trust",
+    "salary": "£58,133 to £65,261 a year",
+    "location": "Chelsea SW3 6JJ",
+    "closing": "23 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9282-26-0695?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 105,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "git"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "endpoint-configuration-and-deployment-lead-anguage-en",
+    "title": "Endpoint Configuration and Deployment Lead",
+    "organisation": "The Shrewsbury and Telford Hospital NHS Trust",
+    "salary": "£39,959 to £48,117 a year",
+    "location": "Shrewsbury SR2 6LG",
+    "closing": "28 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9223-26-0845?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 105,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "git"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "ebme-technician-epr-integration-anguage-en",
+    "title": "EBME Technician - EPR Integration",
+    "organisation": "Lewisham and Greenwich NHS Trust",
+    "salary": "£49,387 to £56,515 a year",
+    "location": "London SE13 6LH",
+    "closing": "23 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9197-26-0744?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 100,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "digital-integration-manager-anguage-en",
+    "title": "Digital Integration Manager",
+    "organisation": "The Royal Wolverhampton NHS Trust",
+    "salary": "£57,528 to £64,750 a year",
+    "location": "Wolverhampton WV10 0QP",
+    "closing": "30 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9225-26-0576?keyword=digital%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 100,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years",
+      "master's degree"
+    ],
+    "greenFlags": [
+      "sql",
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "director-of-digital-citizen-and-our-national-digital-channels-anguage-en",
+    "title": "Director of Digital Citizen (and our National Digital Channels)",
+    "organisation": "NHS England",
+    "salary": "£100,000 a year",
+    "location": "London SE1 8UG",
+    "closing": "23 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/M9990-26-0543?keyword=digital%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 100,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "git",
+      "agile",
+      "sponsorship",
+      "visa sponsorship"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "digital-product-manager-anguage-en",
+    "title": "Digital Product Manager",
+    "organisation": "East and North Hertfordshire Teaching NHS Trust",
+    "salary": "£57,528 to £64,750 a year",
+    "location": "Stevenage SG1 4AB",
+    "closing": "28 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9361-26-0477?keyword=digital%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 95,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "git",
+      "agile",
+      "scrum"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "full-stack-developer-anguage-en",
+    "title": "Full Stack Developer",
+    "organisation": "Save this job",
+    "salary": "Depends on experience",
+    "location": "Preston PR2 9WT",
+    "closing": "28 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/E0123-26-0140?keyword=full%20stack%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 95,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [
+      "rest api",
+      "api",
+      "agile",
+      "full stack"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "electronic-patient-record-epr-information-governance-lead-anguage-en",
+    "title": "Electronic Patient Record (EPR) Information Governance Lead",
+    "organisation": "Lewisham and Greenwich NHS Trust",
+    "salary": "£57,528 to £64,750 a year",
+    "location": "London SE136LH",
+    "closing": "23 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9197-26-0732?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 90,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "cerner"
+    ],
+    "greenFlags": [
+      "git"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "automation-developer-anguage-en",
+    "title": "Automation Developer",
+    "organisation": "Guy's and St Thomas' NHS Foundation Trust",
+    "salary": "£47,951 to £56,863 a year",
+    "location": "London SE1 7NJ",
+    "closing": "25 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9196-26-0945?keyword=software%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 85,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "blue prism",
+      "power apps",
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "agile",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "full-stack-developer-rw-ck-developer",
+    "title": "Full Stack Developer",
+    "organisation": "Organization",
+    "salary": "",
+    "location": "Egypt + 3 more",
+    "closing": "13 Aug 2026",
+    "url": "https://reliefweb.int/job/4225532/full-stack-developer",
+    "source": "ReliefWeb",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 75
+  },
+  {
+    "id": "senior-full-stack-developer-rw-ck-developer",
+    "title": "Senior Full Stack Developer",
+    "organisation": "Organization",
+    "salary": "",
+    "location": "Egypt + 3 more",
+    "closing": "13 Aug 2026",
+    "url": "https://reliefweb.int/job/4225530/senior-full-stack-developer",
+    "source": "ReliefWeb",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 75
+  },
+  {
+    "id": "technical-services-configuration-management-lead-anguage-en",
+    "title": "Technical Services Configuration Management Lead",
+    "organisation": "Save this job",
+    "salary": "£33,227 a year",
+    "location": "Warwick CV34 5BW",
+    "closing": "21 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/M9203-26-0018?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 70,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "senior-software-engineer-cloud-development-remote-canada-home-based-unjobs-78252",
+    "title": "Senior Software Engineer, Cloud Development, Remote Canada, Home based",
+    "organisation": "Mozilla",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1782522125745",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 70
+  },
+  {
+    "id": "software-developer-analyst-rw-loperanalyst",
+    "title": "Software Developer/Analyst",
+    "organisation": "Organization",
+    "salary": "",
+    "location": "Kenya + 1 more",
+    "closing": "24 Jul 2026",
+    "url": "https://reliefweb.int/job/4222968/software-developeranalyst",
+    "source": "ReliefWeb",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 70
+  },
+  {
+    "id": "digital-automation-specialist-anguage-en",
+    "title": "Digital Automation Specialist",
+    "organisation": "Worcestershire Acute Hospitals NHS Trust",
+    "salary": "£49,387 to £51,932 a year",
+    "location": "Worcester WR5 1DD",
+    "closing": "31 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9365-26-0621?keyword=digital%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 50,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "automation anywhere",
+      "uipath",
+      "power automate"
+    ],
+    "greenFlags": [
+      "sql",
+      "git",
+      "agile"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "senior-manager-technical-remote-home-based-unjobs-774297373146",
+    "title": "Senior Manager, Technical, Remote, Home based",
+    "organisation": "Winrock International",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1774297373146",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 50
+  },
+  {
+    "id": "associate-data-specialist-accra-ghana-unjobs-786913756948",
+    "title": "ASSOCIATE DATA SPECIALIST, Accra, Ghana",
+    "organisation": "RCS - Resident Coordinator System",
+    "salary": "",
+    "location": "Ghana",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1786913756948",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 50
+  },
+  {
+    "id": "infrastructure-engineer-tamale-ghana-unjobs-786562966650",
+    "title": "Infrastructure Engineer, Tamale, Ghana",
+    "organisation": "Committed To Good (CTG)",
+    "salary": "",
+    "location": "Ghana",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1786562966650",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 50
+  },
+  {
+    "id": "ic-digital-and-ai-readiness-and-landscape-assessment-for-ghana-s-health-sector-g",
+    "title": "IC - Digital and AI Readiness and Landscape Assessment for Ghana's Health Sector, Ghana",
+    "organisation": "UNDP - United Nations Development Programme",
+    "salary": "",
+    "location": "Ghana",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1786028276398",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 50
+  },
+  {
+    "id": "asp-net-developer-amman-jordan-unjobs-786913743668",
+    "title": "ASP.net Developer, Amman, Jordan",
+    "organisation": "UNRWA - United Nations Relief and Works Agency for Palestine Refugees in the Near East",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1786913743668",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 50
+  },
+  {
+    "id": "mid-senior-flutter-mobile-developer-in-jordan-rw-loper-jordan",
+    "title": "Mid-Senior Flutter Mobile Developer (in Jordan)",
+    "organisation": "Organization",
+    "salary": "",
+    "location": "Jordan",
+    "closing": "14 Aug 2026",
+    "url": "https://reliefweb.int/job/4225663/mid-senior-flutter-mobile-developer-jordan",
+    "source": "ReliefWeb",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 50
+  },
+  {
+    "id": "global-lead-crrd-data-analytics-rw-ta-analytics",
+    "title": "Global Lead, CRRD Data & Analytics",
+    "organisation": "Organization",
+    "salary": "",
+    "location": "Kenya + 2 more",
+    "closing": "10 Jul 2026",
+    "url": "https://reliefweb.int/job/4219272/global-lead-crrd-data-analytics",
+    "source": "ReliefWeb",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 50
+  },
+  {
+    "id": "senior-data-governance-officer-rw-ance-officer",
+    "title": "Senior Data Governance Officer",
+    "organisation": "Organization",
+    "salary": "",
+    "location": "Egypt + 3 more",
+    "closing": "13 Aug 2026",
+    "url": "https://reliefweb.int/job/4225528/senior-data-governance-officer",
+    "source": "ReliefWeb",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 50
+  },
+  {
+    "id": "job-title-post-level-apply-by-agency-locationshort-term-blockchain-and-digital-i",
+    "title": "JOB TITLE\tPOST LEVEL\tAPPLY BY\tAGENCY\tLOCATIONSHORT-TERM: Blockchain and Digital Innovation Analyst IPSA-8\tIPSA-8\tAug-18-26\tUNDP\tIstanbul, Türkiye",
+    "organisation": "UNDP",
+    "salary": "",
+    "location": "International Communications and Media Relations\tIN\tAug-20-26\tUNDP\tAbidjan, Cote d'Ivoire",
+    "closing": "Digital Media\tIN\tAug-19-26\tUNDP\tFreetown, Sierra Leone",
+    "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/35992",
+    "source": "UNDP Jobs",
+    "sponsorship": true,
+    "found": "2026-08-17",
+    "priority": 50
+  },
+  {
+    "id": "gsoc-2026-django-software-foundation",
+    "title": "GSoC 2026: Django Software Foundation",
+    "organisation": "Google Summer of Code",
+    "salary": "$1,500–$6,600 stipend",
+    "location": "Remote",
+    "closing": "",
+    "url": "https://summerofcode.withgoogle.com/programs/2026/organizations/django-software-foundation-8o",
+    "source": "GSoC",
+    "sponsorship": false,
+    "found": "2026-08-17",
+    "snippet": "Web framework for perfectionists with deadlines",
+    "priority": 30
+  },
+  {
+    "id": "gsoc-2026-webpack",
+    "title": "GSoC 2026: webpack",
+    "organisation": "Google Summer of Code",
+    "salary": "$1,500–$6,600 stipend",
+    "location": "Remote",
+    "closing": "",
+    "url": "https://summerofcode.withgoogle.com/programs/2026/organizations/webpack",
+    "source": "GSoC",
+    "sponsorship": false,
+    "found": "2026-08-17",
+    "snippet": "webpack is the module bundler for web projects",
+    "priority": 30
+  },
+  {
+    "id": "tef-coalition-for-african-entrepreneurs",
+    "title": "Coalition For African Entrepreneurs",
+    "organisation": "Tony Elumelu Foundation",
+    "salary": "Up to $5,000 seed funding",
+    "location": "Africa (Remote)",
+    "closing": "",
+    "url": "https://www.tonyelumelufoundation.org/downloads/the-coalition-for-african-entrepreneurs/?tmstv=1715008237",
+    "source": "TEF",
+    "sponsorship": false,
+    "found": "2026-08-17",
+    "priority": 20
+  },
+  {
+    "id": "tef-tef-entrepreneurship-programme",
+    "title": "TEF Entrepreneurship Programme",
+    "organisation": "Tony Elumelu Foundation",
+    "salary": "Up to $5,000 seed funding",
+    "location": "Africa (Remote)",
+    "closing": "",
+    "url": "https://www.tonyelumelufoundation.org/tef-entrepreneurship-programme",
+    "source": "TEF",
+    "sponsorship": false,
+    "found": "2026-08-17",
+    "priority": 20
+  },
+  {
+    "id": "tef-hannington-mambo-is-helping-african-businesses-build-software-faster",
+    "title": "Hannington Mambo Is Helping African Businesses Build Software Faster",
+    "organisation": "Tony Elumelu Foundation",
+    "salary": "Up to $5,000 seed funding",
+    "location": "Africa (Remote)",
+    "closing": "",
+    "url": "https://www.tonyelumelufoundation.org/alumni/east-african-alumni/hannington-mambo",
+    "source": "TEF",
+    "sponsorship": false,
+    "found": "2026-08-17",
+    "priority": 0
+  },
+  {
+    "id": "tef-noah-kipkoech-is-bringing-digital-opportunity-closer-to-rural-kenya",
+    "title": "Noah Kipkoech Is Bringing Digital Opportunity Closer to Rural Kenya",
+    "organisation": "Tony Elumelu Foundation",
+    "salary": "Up to $5,000 seed funding",
+    "location": "Africa (Remote)",
+    "closing": "",
+    "url": "https://www.tonyelumelufoundation.org/alumni/east-african-alumni/noah-kipkoech",
+    "source": "TEF",
+    "sponsorship": false,
+    "found": "2026-08-17",
+    "priority": 0
   },
   {
     "id": "applications-analyst-anguage-en",
@@ -71,32 +709,6 @@
       "sponsorship",
       "visa sponsorship",
       "skilled worker"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "applications-developer-anguage-en",
-    "title": "Applications Developer",
-    "organisation": "Midlands Partnership NHS Foundation Trust",
-    "salary": "£39,959 to £48,117 a year",
-    "location": "Stafford ST16 3SR",
-    "closing": "27 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9301-26-1158?keyword=software%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 115,
-    "noSponsorship": false,
-    "dealBreakers": [],
-    "greenFlags": [
-      "typescript",
-      "react",
-      "sql",
-      "html",
-      "css",
-      "api",
-      "git"
     ],
     "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
     "detailScraped": true
@@ -127,27 +739,6 @@
     "detailScraped": true
   },
   {
-    "id": "senior-epr-configuration-specialist-anguage-en",
-    "title": "Senior EPR Configuration Specialist",
-    "organisation": "County Durham & Darlington NHS Foundation Trust",
-    "salary": "£39,959 to £48,117 a year",
-    "location": "Darlington DL3 6HX",
-    "closing": "19 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9439-2627-NP-1228?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 110,
-    "noSponsorship": false,
-    "dealBreakers": [],
-    "greenFlags": [
-      "sql",
-      "git"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
     "id": "radiotherapy-applications-physicist-anguage-en",
     "title": "Radiotherapy Applications Physicist",
     "organisation": "Bristol NHS Foundation Trust",
@@ -165,256 +756,6 @@
     ],
     "greenFlags": [
       "git",
-      "sponsorship",
-      "skilled worker"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "application-support-lead-anguage-en",
-    "title": "Application Support Lead",
-    "organisation": "Northumbria Healthcare NHS Foundation Trust",
-    "salary": "£39,959 to £48,117 a year",
-    "location": "Stokesley TS9 5QT",
-    "closing": "24 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9319-26-0732?keyword=application%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 110,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "10 years"
-    ],
-    "greenFlags": [
-      "git",
-      "sponsorship",
-      "skilled worker"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "digital-trainer-anguage-en",
-    "title": "Digital Trainer",
-    "organisation": "Velindre University NHS Trust",
-    "salary": "£32,557 to £39,631 a year",
-    "location": "Cardiff CF14 2TL",
-    "closing": "26 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C8120-26-0076?keyword=digital%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 110,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "10 years"
-    ],
-    "greenFlags": [
-      "git",
-      "sponsorship",
-      "skilled worker"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "senior-digital-solutions-delivery-engineer-digital-solutions-anguage-en",
-    "title": "Senior Digital Solutions Delivery Engineer – Digital Solutions",
-    "organisation": "Mersey and West Lancashire Teaching Hospitals NHS Trust",
-    "salary": "£57,528 to £64,750 a year",
-    "location": "St Helens WA9 1TT",
-    "closing": "23 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9409-26-0794?keyword=digital%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 110,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "10 years"
-    ],
-    "greenFlags": [
-      "git",
-      "sponsorship",
-      "skilled worker"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "senior-configuration-analyst-anguage-en",
-    "title": "Senior Configuration Analyst",
-    "organisation": "The Royal Marsden NHS Foundation Trust",
-    "salary": "£58,133 to £65,261 a year",
-    "location": "Chelsea SW3 6JJ",
-    "closing": "23 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9282-26-0695?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 105,
-    "noSponsorship": false,
-    "dealBreakers": [],
-    "greenFlags": [
-      "git"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "endpoint-configuration-and-deployment-lead-anguage-en",
-    "title": "Endpoint Configuration and Deployment Lead",
-    "organisation": "The Shrewsbury and Telford Hospital NHS Trust",
-    "salary": "£39,959 to £48,117 a year",
-    "location": "Shrewsbury SR2 6LG",
-    "closing": "28 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9223-26-0845?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 105,
-    "noSponsorship": false,
-    "dealBreakers": [],
-    "greenFlags": [
-      "git"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "ebme-technician-epr-integration-anguage-en",
-    "title": "EBME Technician - EPR Integration",
-    "organisation": "Lewisham and Greenwich NHS Trust",
-    "salary": "£49,387 to £56,515 a year",
-    "location": "London SE13 6LH",
-    "closing": "23 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9197-26-0744?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 100,
-    "noSponsorship": false,
-    "dealBreakers": [],
-    "greenFlags": [],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "digital-integration-manager-anguage-en",
-    "title": "Digital Integration Manager",
-    "organisation": "The Royal Wolverhampton NHS Trust",
-    "salary": "£57,528 to £64,750 a year",
-    "location": "Wolverhampton WV10 0QP",
-    "closing": "30 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9225-26-0576?keyword=digital%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 100,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "10 years",
-      "master's degree"
-    ],
-    "greenFlags": [
-      "sql",
-      "git",
-      "sponsorship",
-      "skilled worker"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "digital-product-manager-anguage-en",
-    "title": "Digital Product Manager",
-    "organisation": "East and North Hertfordshire Teaching NHS Trust",
-    "salary": "£57,528 to £64,750 a year",
-    "location": "Stevenage SG1 4AB",
-    "closing": "28 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9361-26-0477?keyword=digital%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 95,
-    "noSponsorship": false,
-    "dealBreakers": [],
-    "greenFlags": [
-      "git",
-      "agile",
-      "scrum"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "full-stack-developer-anguage-en",
-    "title": "Full Stack Developer",
-    "organisation": "Save this job",
-    "salary": "Depends on experience",
-    "location": "Preston PR2 9WT",
-    "closing": "28 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/E0123-26-0140?keyword=full%20stack%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 95,
-    "noSponsorship": false,
-    "dealBreakers": [],
-    "greenFlags": [
-      "rest api",
-      "api",
-      "agile",
-      "full stack"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "electronic-patient-record-epr-information-governance-lead-anguage-en",
-    "title": "Electronic Patient Record (EPR) Information Governance Lead",
-    "organisation": "Lewisham and Greenwich NHS Trust",
-    "salary": "£57,528 to £64,750 a year",
-    "location": "London SE136LH",
-    "closing": "23 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9197-26-0732?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 90,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "cerner"
-    ],
-    "greenFlags": [
-      "git"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "automation-developer-anguage-en",
-    "title": "Automation Developer",
-    "organisation": "Guy's and St Thomas' NHS Foundation Trust",
-    "salary": "£47,951 to £56,863 a year",
-    "location": "London SE1 7NJ",
-    "closing": "25 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9196-26-0945?keyword=software%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 85,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "blue prism",
-      "power apps",
-      "10 years"
-    ],
-    "greenFlags": [
-      "git",
-      "agile",
       "sponsorship",
       "skilled worker"
     ],
@@ -454,63 +795,6 @@
     "found": "2026-08-16",
     "snippet": "Machine Learning Engineer for Next Generation Triggers (NGT)\nIT-CD-PI-2026-177-LD",
     "priority": 80
-  },
-  {
-    "id": "full-stack-developer-rw-ck-developer",
-    "title": "Full Stack Developer",
-    "organisation": "Organization",
-    "salary": "",
-    "location": "Egypt + 3 more",
-    "closing": "13 Aug 2026",
-    "url": "https://reliefweb.int/job/4225532/full-stack-developer",
-    "source": "ReliefWeb",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 75
-  },
-  {
-    "id": "senior-full-stack-developer-rw-ck-developer",
-    "title": "Senior Full Stack Developer",
-    "organisation": "Organization",
-    "salary": "",
-    "location": "Egypt + 3 more",
-    "closing": "13 Aug 2026",
-    "url": "https://reliefweb.int/job/4225530/senior-full-stack-developer",
-    "source": "ReliefWeb",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 75
-  },
-  {
-    "id": "technical-services-configuration-management-lead-anguage-en",
-    "title": "Technical Services Configuration Management Lead",
-    "organisation": "Save this job",
-    "salary": "£33,227 a year",
-    "location": "Warwick CV34 5BW",
-    "closing": "21 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/M9203-26-0018?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 70,
-    "noSponsorship": false,
-    "dealBreakers": [],
-    "greenFlags": [],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "software-developer-analyst-rw-loperanalyst",
-    "title": "Software Developer/Analyst",
-    "organisation": "Organization",
-    "salary": "",
-    "location": "Kenya + 1 more",
-    "closing": "24 Jul 2026",
-    "url": "https://reliefweb.int/job/4222968/software-developeranalyst",
-    "source": "ReliefWeb",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 70
   },
   {
     "id": "cern-software-developer-beam-optics",
@@ -553,32 +837,6 @@
     "found": "2026-08-16",
     "snippet": "Software Engineer\nSY-BI-SW-2026-175-LD",
     "priority": 70
-  },
-  {
-    "id": "digital-automation-specialist-anguage-en",
-    "title": "Digital Automation Specialist",
-    "organisation": "Worcestershire Acute Hospitals NHS Trust",
-    "salary": "£49,387 to £51,932 a year",
-    "location": "Worcester WR5 1DD",
-    "closing": "31 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9365-26-0621?keyword=digital%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 50,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "automation anywhere",
-      "uipath",
-      "power automate"
-    ],
-    "greenFlags": [
-      "sql",
-      "git",
-      "agile"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
   },
   {
     "id": "scala-backend-engineer-remote-home-based-unjobs-786734928737",
@@ -659,32 +917,6 @@
     "priority": 50
   },
   {
-    "id": "infrastructure-engineer-tamale-ghana-unjobs-786562966650",
-    "title": "Infrastructure Engineer, Tamale, Ghana",
-    "organisation": "Committed To Good (CTG)",
-    "salary": "",
-    "location": "Ghana",
-    "closing": "",
-    "url": "https://unjobs.org/vacancies/1786562966650",
-    "source": "UN Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 50
-  },
-  {
-    "id": "ic-digital-and-ai-readiness-and-landscape-assessment-for-ghana-s-health-sector-g",
-    "title": "IC - Digital and AI Readiness and Landscape Assessment for Ghana's Health Sector, Ghana",
-    "organisation": "UNDP - United Nations Development Programme",
-    "salary": "",
-    "location": "Ghana",
-    "closing": "",
-    "url": "https://unjobs.org/vacancies/1786028276398",
-    "source": "UN Jobs",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 50
-  },
-  {
     "id": "associate-director-technical-strides-accra-ghana-unjobs-783293373828",
     "title": "Associate Director, Technical, STRIDES, Accra, Ghana",
     "organisation": "FHI 360",
@@ -711,45 +943,6 @@
     "priority": 50
   },
   {
-    "id": "mid-senior-flutter-mobile-developer-in-jordan-rw-loper-jordan",
-    "title": "Mid-Senior Flutter Mobile Developer (in Jordan)",
-    "organisation": "Organization",
-    "salary": "",
-    "location": "Jordan",
-    "closing": "14 Aug 2026",
-    "url": "https://reliefweb.int/job/4225663/mid-senior-flutter-mobile-developer-jordan",
-    "source": "ReliefWeb",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 50
-  },
-  {
-    "id": "global-lead-crrd-data-analytics-rw-ta-analytics",
-    "title": "Global Lead, CRRD Data & Analytics",
-    "organisation": "Organization",
-    "salary": "",
-    "location": "Kenya + 2 more",
-    "closing": "10 Jul 2026",
-    "url": "https://reliefweb.int/job/4219272/global-lead-crrd-data-analytics",
-    "source": "ReliefWeb",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 50
-  },
-  {
-    "id": "senior-data-governance-officer-rw-ance-officer",
-    "title": "Senior Data Governance Officer",
-    "organisation": "Organization",
-    "salary": "",
-    "location": "Egypt + 3 more",
-    "closing": "13 Aug 2026",
-    "url": "https://reliefweb.int/job/4225528/senior-data-governance-officer",
-    "source": "ReliefWeb",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 50
-  },
-  {
     "id": "infrastructure-engineer-rw-ure-engineer",
     "title": "Infrastructure Engineer",
     "organisation": "Organization",
@@ -758,19 +951,6 @@
     "closing": "12 Aug 2026",
     "url": "https://reliefweb.int/job/4225290/infrastructure-engineer",
     "source": "ReliefWeb",
-    "sponsorship": true,
-    "found": "2026-08-16",
-    "priority": 50
-  },
-  {
-    "id": "job-title-post-level-apply-by-agency-locationshort-term-blockchain-and-digital-i",
-    "title": "JOB TITLE\tPOST LEVEL\tAPPLY BY\tAGENCY\tLOCATIONSHORT-TERM: Blockchain and Digital Innovation Analyst IPSA-8\tIPSA-8\tAug-18-26\tUNDP\tIstanbul, Türkiye",
-    "organisation": "UNDP",
-    "salary": "",
-    "location": "International Communications and Media Relations\tIN\tAug-20-26\tUNDP\tAbidjan, Cote d'Ivoire",
-    "closing": "Digital Media\tIN\tAug-19-26\tUNDP\tFreetown, Sierra Leone",
-    "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/35992",
-    "source": "UNDP Jobs",
     "sponsorship": true,
     "found": "2026-08-16",
     "priority": 50
@@ -1224,86 +1404,6 @@
     "priority": 50
   },
   {
-    "id": "gsoc-2026-webpack",
-    "title": "GSoC 2026: webpack",
-    "organisation": "Google Summer of Code",
-    "salary": "$1,500–$6,600 stipend",
-    "location": "Remote",
-    "closing": "",
-    "url": "https://summerofcode.withgoogle.com/programs/2026/organizations/webpack",
-    "source": "GSoC",
-    "sponsorship": false,
-    "found": "2026-08-16",
-    "snippet": "webpack is the module bundler for web projects",
-    "priority": 30
-  },
-  {
-    "id": "gsoc-2026-django-software-foundation",
-    "title": "GSoC 2026: Django Software Foundation",
-    "organisation": "Google Summer of Code",
-    "salary": "$1,500–$6,600 stipend",
-    "location": "Remote",
-    "closing": "",
-    "url": "https://summerofcode.withgoogle.com/programs/2026/organizations/django-software-foundation-8o",
-    "source": "GSoC",
-    "sponsorship": false,
-    "found": "2026-08-16",
-    "snippet": "Web framework for perfectionists with deadlines",
-    "priority": 30
-  },
-  {
-    "id": "tef-coalition-for-african-entrepreneurs",
-    "title": "Coalition For African Entrepreneurs",
-    "organisation": "Tony Elumelu Foundation",
-    "salary": "Up to $5,000 seed funding",
-    "location": "Africa (Remote)",
-    "closing": "",
-    "url": "https://www.tonyelumelufoundation.org/downloads/the-coalition-for-african-entrepreneurs/?tmstv=1715008237",
-    "source": "TEF",
-    "sponsorship": false,
-    "found": "2026-08-16",
-    "priority": 20
-  },
-  {
-    "id": "tef-tef-entrepreneurship-programme",
-    "title": "TEF Entrepreneurship Programme",
-    "organisation": "Tony Elumelu Foundation",
-    "salary": "Up to $5,000 seed funding",
-    "location": "Africa (Remote)",
-    "closing": "",
-    "url": "https://www.tonyelumelufoundation.org/tef-entrepreneurship-programme",
-    "source": "TEF",
-    "sponsorship": false,
-    "found": "2026-08-16",
-    "priority": 20
-  },
-  {
-    "id": "tef-hannington-mambo-is-helping-african-businesses-build-software-faster",
-    "title": "Hannington Mambo Is Helping African Businesses Build Software Faster",
-    "organisation": "Tony Elumelu Foundation",
-    "salary": "Up to $5,000 seed funding",
-    "location": "Africa (Remote)",
-    "closing": "",
-    "url": "https://www.tonyelumelufoundation.org/alumni/east-african-alumni/hannington-mambo",
-    "source": "TEF",
-    "sponsorship": false,
-    "found": "2026-08-16",
-    "priority": 0
-  },
-  {
-    "id": "tef-noah-kipkoech-is-bringing-digital-opportunity-closer-to-rural-kenya",
-    "title": "Noah Kipkoech Is Bringing Digital Opportunity Closer to Rural Kenya",
-    "organisation": "Tony Elumelu Foundation",
-    "salary": "Up to $5,000 seed funding",
-    "location": "Africa (Remote)",
-    "closing": "",
-    "url": "https://www.tonyelumelufoundation.org/alumni/east-african-alumni/noah-kipkoech",
-    "source": "TEF",
-    "sponsorship": false,
-    "found": "2026-08-16",
-    "priority": 0
-  },
-  {
     "id": "web-developer-programmer-digital-referral-system-minimum-viable-product-mvp-rw-p",
     "title": "Web Developer / Programmer Digital Referral System – Minimum Viable Product (MVP)",
     "organisation": "Organization",
@@ -1368,54 +1468,6 @@
     "found": "2026-08-15",
     "snippet": "A programming language used for science & more",
     "priority": 30
-  },
-  {
-    "id": "digital-project-manager-anguage-en",
-    "title": "Digital Project Manager",
-    "organisation": "Sheffield Health Partnership University NHS Foundation Trust",
-    "salary": "£47,810 to £54,710 a year",
-    "location": "Sheffield S6 1LX",
-    "closing": "20 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9457-26-0229?keyword=digital%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-14",
-    "priority": 115,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "10 years"
-    ],
-    "greenFlags": [
-      "git",
-      "agile",
-      "sponsorship",
-      "skilled worker"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "director-of-digital-citizen-and-our-national-digital-channels-anguage-en",
-    "title": "Director of Digital Citizen (and our National Digital Channels)",
-    "organisation": "NHS England",
-    "salary": "£100,000 a year",
-    "location": "London SE1 8UG",
-    "closing": "23 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/M9990-26-0543?keyword=digital%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-14",
-    "priority": 100,
-    "noSponsorship": false,
-    "dealBreakers": [],
-    "greenFlags": [
-      "git",
-      "agile",
-      "sponsorship",
-      "visa sponsorship"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
   },
   {
     "id": "digital-commissioning-business-partner-anguage-en",
@@ -1500,32 +1552,6 @@
     ],
     "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
     "detailScraped": true
-  },
-  {
-    "id": "senior-software-engineer-cloud-development-remote-canada-home-based-unjobs-78252",
-    "title": "Senior Software Engineer, Cloud Development, Remote Canada, Home based",
-    "organisation": "Mozilla",
-    "salary": "",
-    "location": "Remote / Home-based",
-    "closing": "",
-    "url": "https://unjobs.org/vacancies/1782522125745",
-    "source": "UN Jobs",
-    "sponsorship": true,
-    "found": "2026-08-13",
-    "priority": 70
-  },
-  {
-    "id": "senior-manager-technical-remote-home-based-unjobs-774297373146",
-    "title": "Senior Manager, Technical, Remote, Home based",
-    "organisation": "Winrock International",
-    "salary": "",
-    "location": "Remote / Home-based",
-    "closing": "",
-    "url": "https://unjobs.org/vacancies/1774297373146",
-    "source": "UN Jobs",
-    "sponsorship": true,
-    "found": "2026-08-13",
-    "priority": 50
   },
   {
     "id": "donations-database-coordinator-single-giving-unjobs-786561779639",
@@ -7639,42 +7665,5 @@
     ],
     "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
     "detailScraped": true
-  },
-  {
-    "id": "senior-digital-solutions-developer-anguage-en",
-    "title": "Senior Digital Solutions Developer",
-    "organisation": "NHS Central East ICB",
-    "salary": "£49,387 to £56,515 a year",
-    "location": "Welwyn Garden City AL8 6JL",
-    "closing": "30 June 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/D9644-26-0006?keyword=digital%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-06-30",
-    "priority": 80,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "uipath"
-    ],
-    "greenFlags": [
-      "sql",
-      "git",
-      "agile"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "technical-process-specialist-in-geographic-information-systems-profesional-misio",
-    "title": "Technical Process Specialist in Geographic Information Systems – Profesional misional en Sistemas de Información Geográfica (SIG), Colombia",
-    "organisation": "FAO - Food and Agriculture Organization of the United Nations",
-    "salary": "",
-    "location": "Remote / Home-based",
-    "closing": "",
-    "url": "https://unjobs.org/vacancies/1782759129106",
-    "source": "UN Jobs",
-    "sponsorship": true,
-    "found": "2026-06-30",
-    "priority": 50
   }
 ]
