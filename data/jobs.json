@@ -9,7 +9,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/D9467-26-0008?keyword=software%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 150,
     "noSponsorship": false,
     "dealBreakers": [
@@ -37,7 +37,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9349-26-2497?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 135,
     "noSponsorship": false,
     "dealBreakers": [
@@ -62,7 +62,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9349-26-2475?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 135,
     "noSponsorship": false,
     "dealBreakers": [
@@ -87,7 +87,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9272-26-0486?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 130,
     "noSponsorship": false,
     "dealBreakers": [
@@ -111,7 +111,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9346-26-0989?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 130,
     "noSponsorship": false,
     "dealBreakers": [
@@ -135,7 +135,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9357-26-0329?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 130,
     "noSponsorship": false,
     "dealBreakers": [
@@ -143,6 +143,32 @@
     ],
     "greenFlags": [
       "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "digital-applications-lead-anguage-en",
+    "title": "Digital Applications Lead",
+    "organisation": "Velindre University NHS Trust",
+    "salary": "£40,559 to £48,841 a year",
+    "location": "Nantgarw CF15 7QZ",
+    "closing": "07 September 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C8120-26-0082?keyword=application%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-25",
+    "priority": 120,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "sql",
+      "git",
+      "agile",
       "sponsorship",
       "skilled worker"
     ],
@@ -159,7 +185,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9301-26-1158?keyword=software%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 115,
     "noSponsorship": false,
     "dealBreakers": [],
@@ -185,7 +211,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9188-26-0713?keyword=software%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 110,
     "noSponsorship": false,
     "dealBreakers": [
@@ -204,30 +230,6 @@
     "detailScraped": true
   },
   {
-    "id": "application-support-lead-anguage-en",
-    "title": "Application Support Lead",
-    "organisation": "Northumbria Healthcare NHS Foundation Trust",
-    "salary": "£39,959 to £48,117 a year",
-    "location": "Stokesley TS9 5QT",
-    "closing": "24 August 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9319-26-0732?keyword=application%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-08-24",
-    "priority": 110,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "10 years"
-    ],
-    "greenFlags": [
-      "git",
-      "sponsorship",
-      "skilled worker"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
     "id": "mymft-senior-application-analyst-anguage-en",
     "title": "MyMFT Senior Application Analyst",
     "organisation": "Manchester University NHS Foundation Trust",
@@ -237,7 +239,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9349-26-2420?keyword=application%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 110,
     "noSponsorship": false,
     "dealBreakers": [
@@ -261,7 +263,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9435-26-0466?keyword=digital%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 110,
     "noSponsorship": false,
     "dealBreakers": [
@@ -285,7 +287,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9272-26-0487?keyword=digital%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 110,
     "noSponsorship": false,
     "dealBreakers": [
@@ -309,7 +311,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9223-26-0845?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 105,
     "noSponsorship": false,
     "dealBreakers": [],
@@ -329,7 +331,25 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9197-26-0744?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
+    "priority": 100,
+    "noSponsorship": false,
+    "dealBreakers": [],
+    "greenFlags": [],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "epr-cutover-project-manager-anguage-en",
+    "title": "EPR Cutover Project Manager",
+    "organisation": "Save this job",
+    "salary": "£80,348 a year",
+    "location": "Warwick CV34 5BW",
+    "closing": "21 September 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/M9203-26-0020?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-25",
     "priority": 100,
     "noSponsorship": false,
     "dealBreakers": [],
@@ -347,7 +367,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/E0123-26-0140?keyword=full%20stack%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 95,
     "noSponsorship": false,
     "dealBreakers": [],
@@ -370,7 +390,7 @@
     "url": "https://unjobs.org/vacancies/1787456083350",
     "source": "UN Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 95
   },
   {
@@ -383,7 +403,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/B0139-26-0066?keyword=application%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 90,
     "noSponsorship": false,
     "dealBreakers": [],
@@ -404,7 +424,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9196-26-0945?keyword=software%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 85,
     "noSponsorship": false,
     "dealBreakers": [
@@ -431,7 +451,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9313-26-0367?keyword=application%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 85,
     "noSponsorship": false,
     "dealBreakers": [],
@@ -451,7 +471,7 @@
     "url": "https://careers.cern/jobs/it-cd-pi-2026-177-ld/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Machine Learning Engineer for Next Generation Triggers (NGT)\nIT-CD-PI-2026-177-LD",
     "priority": 80
   },
@@ -465,7 +485,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9365-26-0622?keyword=digital%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 70,
     "noSponsorship": false,
     "dealBreakers": [
@@ -491,7 +511,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/M9203-26-0018?keyword=EPR%20configuration%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 70,
     "noSponsorship": false,
     "dealBreakers": [],
@@ -509,20 +529,7 @@
     "url": "https://unjobs.org/vacancies/1787456079330",
     "source": "UN Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
-    "priority": 70
-  },
-  {
-    "id": "software-developer-analyst-rw-loperanalyst",
-    "title": "Software Developer/Analyst",
-    "organisation": "Organization",
-    "salary": "",
-    "location": "Kenya + 1 more",
-    "closing": "24 Jul 2026",
-    "url": "https://reliefweb.int/job/4222968/software-developeranalyst",
-    "source": "ReliefWeb",
-    "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 70
   },
   {
@@ -535,7 +542,7 @@
     "url": "https://careers.cern/jobs/be-abp-lno-2026-132-grap-2/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Software Developer - Beam Optics\nBE-ABP-LNO-2026-132-GRAP",
     "priority": 70
   },
@@ -549,7 +556,7 @@
     "url": "https://careers.cern/jobs/it-ca-osi-2026-207-grae/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Full-Stack Software Developer\nIT-CA-OSI-2026-207-GRAE",
     "priority": 70
   },
@@ -563,7 +570,7 @@
     "url": "https://careers.cern/jobs/it-ca-ir-2026-199-grae/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Full-Stack Software Engineer\nIT-CA-IR-2026-199-GRAE",
     "priority": 70
   },
@@ -577,7 +584,7 @@
     "url": "https://careers.cern/jobs/software-engineer/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Software Engineer\nSY-BI-SW-2026-175-LD",
     "priority": 70
   },
@@ -591,7 +598,7 @@
     "url": "https://careers.cern/jobs/be-ics-acs-2026-206-grae/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Junior Automation & Controls Engineer\nBE-ICS-ACS-2026-206-GRAE",
     "priority": 60
   },
@@ -605,7 +612,7 @@
     "url": "https://unjobs.org/vacancies/1787455523793",
     "source": "UN Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -618,7 +625,7 @@
     "url": "https://unjobs.org/vacancies/1787456243058",
     "source": "UN Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -631,20 +638,7 @@
     "url": "https://unjobs.org/vacancies/1787456243585",
     "source": "UN Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
-    "priority": 50
-  },
-  {
-    "id": "analytics-engineering-lead-remote-home-based-unjobs-787465779314",
-    "title": "Analytics Engineering Lead, Remote, Home based",
-    "organisation": "Triggerise",
-    "salary": "",
-    "location": "Remote / Home-based",
-    "closing": "",
-    "url": "https://unjobs.org/vacancies/1787465779314",
-    "source": "UN Jobs",
-    "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -657,7 +651,7 @@
     "url": "https://unjobs.org/vacancies/1787457476250",
     "source": "UN Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -670,7 +664,7 @@
     "url": "https://unjobs.org/vacancies/1786913756948",
     "source": "UN Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -683,7 +677,7 @@
     "url": "https://unjobs.org/vacancies/1786562966650",
     "source": "UN Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -696,7 +690,98 @@
     "url": "https://unjobs.org/vacancies/1786028276398",
     "source": "UN Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
+    "priority": 50
+  },
+  {
+    "id": "call-for-external-collaborator-mid-term-evaluation-of-the-eu-ilo-technical-assis",
+    "title": "Call for External Collaborator - Mid-Term Evaluation of the EU-ILO Technical Assistance Facility on the implementation of the Youth Guarantee in the Western Balkans (Phase III), DWT-Budapest, Multiple destinations",
+    "organisation": "ILO - International Labour Organization",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1787602436772",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-25",
+    "priority": 50
+  },
+  {
+    "id": "climate-data-analyst-based-unjobs-787601060505",
+    "title": "Climate Data Analyst , Based",
+    "organisation": "FAO - Food and Agriculture Organization of the United Nations",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1787601060505",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-25",
+    "priority": 50
+  },
+  {
+    "id": "consultant-for-statistics-data-analysis-bhubaneshwar-india-16-months-nationals-o",
+    "title": "Consultant for Statistics & Data Analysis Bhubaneshwar India 16 Months Nationals only, ROSA Regional Services",
+    "organisation": "UNICEF - United Nations Children's Fund",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1787603386375",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-25",
+    "priority": 50
+  },
+  {
+    "id": "batch-recruitment-communication-associate-g-6-fixed-term-positions-website-unjob",
+    "title": "Batch Recruitment: Communication Associate G-6 Fixed Term Positions, Website",
+    "organisation": "UNICEF - United Nations Children's Fund",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1787603329456",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-25",
+    "priority": 50
+  },
+  {
+    "id": "digital-impact-specialist-p-3-ft-valencia-spain-private-fund-raising-and-partner",
+    "title": "Digital Impact Specialist P-3 FT Valencia Spain, Private Fund Raising and Partnerships",
+    "organisation": "UNICEF - United Nations Children's Fund",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1787603184708",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-25",
+    "priority": 50
+  },
+  {
+    "id": "re-advertisement-digital-impact-associate-g-6-fixed-term-position-private-fund-r",
+    "title": "Re-Advertisement: Digital Impact Associate G-6 Fixed Term Position, Private Fund Raising and Partnerships",
+    "organisation": "UNICEF - United Nations Children's Fund",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1787603175202",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-25",
+    "priority": 50
+  },
+  {
+    "id": "associate-product-engineer-web-technologies-sofia-bulgaria-unjobs-787600384116",
+    "title": "Associate, Product Engineer - Web Technologies, Sofia, Bulgaria",
+    "organisation": "EBRD - European Bank for Reconstruction and Development",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1787600384116",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -709,7 +794,7 @@
     "url": "https://reliefweb.int/job/4226015/consultancy-lead-communications-digital-visibility-and-engagement-wio-lmma-alliance",
     "source": "ReliefWeb",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -722,7 +807,7 @@
     "url": "https://reliefweb.int/job/4225663/mid-senior-flutter-mobile-developer-jordan",
     "source": "ReliefWeb",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -735,7 +820,7 @@
     "url": "https://reliefweb.int/job/4219272/global-lead-crrd-data-analytics",
     "source": "ReliefWeb",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -748,7 +833,7 @@
     "url": "https://reliefweb.int/job/4225953/geospatial-data-assistant",
     "source": "ReliefWeb",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -761,7 +846,7 @@
     "url": "https://reliefweb.int/job/4226604/tupande-electrical-maintenance-engineer-specialist-fixed-term",
     "source": "ReliefWeb",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -774,7 +859,7 @@
     "url": "https://reliefweb.int/job/4226603/tupande-mechanical-maintenance-engineer-specialist-fixed-term",
     "source": "ReliefWeb",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -787,20 +872,72 @@
     "url": "https://reliefweb.int/job/4226561/technical-officer-emergency-medical-teams",
     "source": "ReliefWeb",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 50
   },
   {
-    "id": "nigeria-client-database-management-coordinator-rw-coordinator",
-    "title": "Nigeria Client Database Management Coordinator",
+    "id": "site-engineer-electrical-engineering-albab-dir-hafir-rw-ab-dir-hafir",
+    "title": "Site Engineer (Electrical Engineering) - Albab (Dir Hafir)",
+    "organisation": "Organization",
+    "salary": "",
+    "location": "Syria",
+    "closing": "25 Aug 2026",
+    "url": "https://reliefweb.int/job/4226872/site-engineer-electrical-engineering-albab-dir-hafir",
+    "source": "ReliefWeb",
+    "sponsorship": true,
+    "found": "2026-08-25",
+    "priority": 50
+  },
+  {
+    "id": "call-of-field-civil-engineers-rw-il-engineers",
+    "title": "Call of Field Civil Engineers",
+    "organisation": "Organization",
+    "salary": "",
+    "location": "Syria",
+    "closing": "25 Aug 2026",
+    "url": "https://reliefweb.int/job/4226884/call-field-civil-engineers",
+    "source": "ReliefWeb",
+    "sponsorship": true,
+    "found": "2026-08-25",
+    "priority": 50
+  },
+  {
+    "id": "data-enumerator-dtm-rw-umerator-dtm",
+    "title": "Data Enumerator (DTM)",
     "organisation": "Organization",
     "salary": "",
     "location": "Nigeria",
-    "closing": "21 Aug 2026",
-    "url": "https://reliefweb.int/job/4226608/nigeria-client-database-management-coordinator",
+    "closing": "25 Aug 2026",
+    "url": "https://reliefweb.int/job/4226948/data-enumerator-dtm",
     "source": "ReliefWeb",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
+    "priority": 50
+  },
+  {
+    "id": "job-title-post-level-apply-by-agency-locationtechnical-analyst-for-health-govern",
+    "title": "JOB TITLE\tPOST LEVEL\tAPPLY BY\tAGENCY\tLOCATIONTechnical Analyst for Health Governance Initiative (HEART) [Open to internal and external applicants]\tNPSA-8\tAug-27-26\tUNDP\tJakarta Pusat, Indonesia",
+    "organisation": "UNDP",
+    "salary": "",
+    "location": "International",
+    "closing": "",
+    "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/36401",
+    "source": "UNDP Jobs",
+    "sponsorship": true,
+    "found": "2026-08-25",
+    "priority": 50
+  },
+  {
+    "id": "job-title-post-level-apply-by-agency-locationdata-collection-and-quality-control",
+    "title": "JOB TITLE\tPOST LEVEL\tAPPLY BY\tAGENCY\tLOCATIONData Collection and Quality Control Clerk\tNPSA-3\tAug-25-26\tUNDP\tPanama",
+    "organisation": "UNDP",
+    "salary": "",
+    "location": "Asociado/a en Emprendimientos Verdes (En Oficina) (Abierto a candidatos/as internos y externos)\tNPSA-7\tAug-27-26\tUNDP\tPanama City, Panama",
+    "closing": "Driver (NPSA-2), Duty station _Termez, Uzbekistan\tNPSA-2\tAug-27-26\tUNDP\tUzbekistan",
+    "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/36324",
+    "source": "UNDP Jobs",
+    "sponsorship": true,
+    "found": "2026-08-25",
     "priority": 50
   },
   {
@@ -813,7 +950,7 @@
     "url": "https://careers.cern/jobs/sy-sti-tsp-2026-131-grap-2/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "ISOLDE System Engineer\nSY-STI-TSP-2026-131-GRAP",
     "priority": 50
   },
@@ -827,7 +964,7 @@
     "url": "https://careers.cern/jobs/research-fellowship-applied-physics-engineering/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Research Fellowship (Applied Physics & Engineering)\nEP-2026-1/Cat2",
     "priority": 50
   },
@@ -841,7 +978,7 @@
     "url": "https://careers.cern/jobs/tsc-ap/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Technical Studentship (Applied Physics)\nTSC-2027-1/AP",
     "priority": 50
   },
@@ -855,7 +992,7 @@
     "url": "https://careers.cern/jobs/te-msc-smt-2026-172-ld/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Materials Engineer - Polymers and Composites\nTE-MSC-SMT-2026-172-LD",
     "priority": 50
   },
@@ -869,7 +1006,7 @@
     "url": "https://careers.cern/jobs/tsc-ms/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Technical Studentship - Material & Surface Science 2027-1\nTSC-2027-1/MS",
     "priority": 50
   },
@@ -883,7 +1020,7 @@
     "url": "https://careers.cern/jobs/sce-tod-do-2026-170-ld/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Structural Civil Engineer\nSCE-TOD-DO-2026-170-LD",
     "priority": 50
   },
@@ -897,7 +1034,7 @@
     "url": "https://careers.cern/jobs/sce-sam-ce-2026-169-ld/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Hazardous Material Decontamination Engineer\nSCE-SAM-CE-2026-169-LD",
     "priority": 50
   },
@@ -911,7 +1048,7 @@
     "url": "https://careers.cern/jobs/sce-ppm-pm-2026-110-grap/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Project Engineer – Building Projects\nSCE-PPM-PM-2026-110-GRAP",
     "priority": 50
   },
@@ -925,7 +1062,7 @@
     "url": "https://careers.cern/jobs/sce-ppm-cs-2026-92-grap/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Construction Project Engineer\nSCE-PPM-CS-2026-92-GRAP",
     "priority": 50
   },
@@ -939,7 +1076,7 @@
     "url": "https://careers.cern/jobs/tsc-cv/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Technical Studentship (General and Civil Engineering)\nTSC-2027-1/CV",
     "priority": 50
   },
@@ -953,7 +1090,7 @@
     "url": "https://careers.cern/jobs/it-ce-cds-2026-137-grap/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Deep Learning Developer\nIT-CE-CDS-2026-137-GRAP",
     "priority": 50
   },
@@ -967,7 +1104,7 @@
     "url": "https://careers.cern/jobs/fap-bc-dl-2026-203-grae-2/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Data & Reporting Specialist\nFAP-BC-DL-2026-203-GRAE",
     "priority": 50
   },
@@ -981,22 +1118,8 @@
     "url": "https://careers.cern/jobs/ep-cms-ssi-2026-166-ld/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Equipment Management Database Specialist\nEP-CMS-SSI-2026-166-LD",
-    "priority": 50
-  },
-  {
-    "id": "cern-data-analyst-for-beam-instrumentation",
-    "title": "Data Analyst for Beam Instrumentation",
-    "organisation": "CERN",
-    "salary": "",
-    "location": "Geneva, Switzerland",
-    "closing": "",
-    "url": "https://careers.cern/jobs/sy-bi-sw-2026-127-grap/",
-    "source": "CERN",
-    "sponsorship": true,
-    "found": "2026-08-24",
-    "snippet": "Data Analyst for Beam Instrumentation\nSY-BI-SW-2026-127-GRAP",
     "priority": 50
   },
   {
@@ -1009,7 +1132,7 @@
     "url": "https://careers.cern/jobs/tsc-co/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Technical Studentship (IT, Mathematics & Robotics)\nTSC-2027-1/CO",
     "priority": 50
   },
@@ -1023,7 +1146,7 @@
     "url": "https://careers.cern/jobs/tsc-el/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Technical Studentship - Electrical / Electronics Engineering 2027-1\nTSC-2027-1/EL",
     "priority": 50
   },
@@ -1037,7 +1160,7 @@
     "url": "https://careers.cern/jobs/ep-ese-me-2026-134-grap/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Digital ASIC Designer\nEP-ESE-ME-2026-134-GRAP",
     "priority": 50
   },
@@ -1051,7 +1174,7 @@
     "url": "https://careers.cern/jobs/ep-ese-be-2026-109-grap/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Silicon Photonics Characterisation and Design Engineer\nEP-ESE-BE-2026-109-GRAP",
     "priority": 50
   },
@@ -1065,7 +1188,7 @@
     "url": "https://careers.cern/jobs/it-sd-tab-2026-209-grae-2/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Computing Engineer: S3 Storage & Backup\nIT-SD-TAB-2026-209-GRAE",
     "priority": 50
   },
@@ -1079,7 +1202,7 @@
     "url": "https://careers.cern/jobs/it-sd-tab-2026-130-grap-2/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Data Storage R&D Engineer\nIT-SD-TAB-2026-130-GRAP",
     "priority": 50
   },
@@ -1093,7 +1216,7 @@
     "url": "https://careers.cern/jobs/it-da-db-2026-174-ld/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Database Infrastructure Engineer\nIT-DA-DB-2026-174-LD",
     "priority": 50
   },
@@ -1107,7 +1230,7 @@
     "url": "https://careers.cern/jobs/be-cem-mta-2026-168-ld/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Test & Measurement Engineer\nBE-CEM-MTA-2026-168-LD",
     "priority": 50
   },
@@ -1121,7 +1244,7 @@
     "url": "https://careers.cern/jobs/electromechanical-engineer-normal-conducting-magnets/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Electromechanical Engineer - Normal-Conducting Magnets\nTE-MSC-NCM-2026-180-LD",
     "priority": 50
   },
@@ -1135,22 +1258,22 @@
     "url": "https://careers.cern/jobs/tsc-me/",
     "source": "CERN",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "snippet": "Technical Studentship (Mechanical Engineering)\nTSC-2027-1/ME",
     "priority": 50
   },
   {
-    "id": "gsoc-2026-django-software-foundation",
-    "title": "GSoC 2026: Django Software Foundation",
+    "id": "gsoc-2026-python-software-foundation",
+    "title": "GSoC 2026: Python Software Foundation",
     "organisation": "Google Summer of Code",
     "salary": "$1,500–$6,600 stipend",
     "location": "Remote",
     "closing": "",
-    "url": "https://summerofcode.withgoogle.com/programs/2026/organizations/django-software-foundation-8o",
+    "url": "https://summerofcode.withgoogle.com/programs/2026/organizations/python-software-foundation",
     "source": "GSoC",
     "sponsorship": false,
-    "found": "2026-08-24",
-    "snippet": "Web framework for perfectionists with deadlines",
+    "found": "2026-08-25",
+    "snippet": "A programming language used for science & more",
     "priority": 30
   },
   {
@@ -1163,7 +1286,7 @@
     "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9470-26-0434?keyword=software%20developer&visa_sponsorship=1&language=en",
     "source": "NHS Jobs",
     "sponsorship": true,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 25,
     "noSponsorship": false,
     "dealBreakers": [
@@ -1192,7 +1315,7 @@
     "url": "https://www.tonyelumelufoundation.org/downloads/the-coalition-for-african-entrepreneurs/?tmstv=1715008237",
     "source": "TEF",
     "sponsorship": false,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 20
   },
   {
@@ -1205,7 +1328,7 @@
     "url": "https://www.tonyelumelufoundation.org/tef-entrepreneurship-programme",
     "source": "TEF",
     "sponsorship": false,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 20
   },
   {
@@ -1218,7 +1341,7 @@
     "url": "https://www.tonyelumelufoundation.org/alumni/east-african-alumni/hannington-mambo",
     "source": "TEF",
     "sponsorship": false,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 0
   },
   {
@@ -1231,8 +1354,99 @@
     "url": "https://www.tonyelumelufoundation.org/alumni/east-african-alumni/noah-kipkoech",
     "source": "TEF",
     "sponsorship": false,
-    "found": "2026-08-24",
+    "found": "2026-08-25",
     "priority": 0
+  },
+  {
+    "id": "application-support-lead-anguage-en",
+    "title": "Application Support Lead",
+    "organisation": "Northumbria Healthcare NHS Foundation Trust",
+    "salary": "£39,959 to £48,117 a year",
+    "location": "Stokesley TS9 5QT",
+    "closing": "24 August 2026",
+    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9319-26-0732?keyword=application%20developer&visa_sponsorship=1&language=en",
+    "source": "NHS Jobs",
+    "sponsorship": true,
+    "found": "2026-08-24",
+    "priority": 110,
+    "noSponsorship": false,
+    "dealBreakers": [
+      "10 years"
+    ],
+    "greenFlags": [
+      "git",
+      "sponsorship",
+      "skilled worker"
+    ],
+    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
+    "detailScraped": true
+  },
+  {
+    "id": "software-developer-analyst-rw-loperanalyst",
+    "title": "Software Developer/Analyst",
+    "organisation": "Organization",
+    "salary": "",
+    "location": "Kenya + 1 more",
+    "closing": "24 Jul 2026",
+    "url": "https://reliefweb.int/job/4222968/software-developeranalyst",
+    "source": "ReliefWeb",
+    "sponsorship": true,
+    "found": "2026-08-24",
+    "priority": 70
+  },
+  {
+    "id": "analytics-engineering-lead-remote-home-based-unjobs-787465779314",
+    "title": "Analytics Engineering Lead, Remote, Home based",
+    "organisation": "Triggerise",
+    "salary": "",
+    "location": "Remote / Home-based",
+    "closing": "",
+    "url": "https://unjobs.org/vacancies/1787465779314",
+    "source": "UN Jobs",
+    "sponsorship": true,
+    "found": "2026-08-24",
+    "priority": 50
+  },
+  {
+    "id": "nigeria-client-database-management-coordinator-rw-coordinator",
+    "title": "Nigeria Client Database Management Coordinator",
+    "organisation": "Organization",
+    "salary": "",
+    "location": "Nigeria",
+    "closing": "21 Aug 2026",
+    "url": "https://reliefweb.int/job/4226608/nigeria-client-database-management-coordinator",
+    "source": "ReliefWeb",
+    "sponsorship": true,
+    "found": "2026-08-24",
+    "priority": 50
+  },
+  {
+    "id": "cern-data-analyst-for-beam-instrumentation",
+    "title": "Data Analyst for Beam Instrumentation",
+    "organisation": "CERN",
+    "salary": "",
+    "location": "Geneva, Switzerland",
+    "closing": "",
+    "url": "https://careers.cern/jobs/sy-bi-sw-2026-127-grap/",
+    "source": "CERN",
+    "sponsorship": true,
+    "found": "2026-08-24",
+    "snippet": "Data Analyst for Beam Instrumentation\nSY-BI-SW-2026-127-GRAP",
+    "priority": 50
+  },
+  {
+    "id": "gsoc-2026-django-software-foundation",
+    "title": "GSoC 2026: Django Software Foundation",
+    "organisation": "Google Summer of Code",
+    "salary": "$1,500–$6,600 stipend",
+    "location": "Remote",
+    "closing": "",
+    "url": "https://summerofcode.withgoogle.com/programs/2026/organizations/django-software-foundation-8o",
+    "source": "GSoC",
+    "sponsorship": false,
+    "found": "2026-08-24",
+    "snippet": "Web framework for perfectionists with deadlines",
+    "priority": 30
   },
   {
     "id": "senior-configuration-analyst-anguage-en",
@@ -1409,20 +1623,6 @@
     "found": "2026-08-23",
     "snippet": "Scheduling and Coordination Engineer\nEN-ACE-2026-123-LD",
     "priority": 50
-  },
-  {
-    "id": "gsoc-2026-python-software-foundation",
-    "title": "GSoC 2026: Python Software Foundation",
-    "organisation": "Google Summer of Code",
-    "salary": "$1,500–$6,600 stipend",
-    "location": "Remote",
-    "closing": "",
-    "url": "https://summerofcode.withgoogle.com/programs/2026/organizations/python-software-foundation",
-    "source": "GSoC",
-    "sponsorship": false,
-    "found": "2026-08-23",
-    "snippet": "A programming language used for science & more",
-    "priority": 30
   },
   {
     "id": "senior-digital-solutions-delivery-engineer-digital-solutions-anguage-en",
@@ -7488,264 +7688,6 @@
     "source": "UNDP Jobs",
     "sponsorship": true,
     "found": "2026-07-09",
-    "priority": 50
-  },
-  {
-    "id": "senior-developer-sponsorship-available-jobvisa-available-",
-    "title": "Senior Developer: Sponsorship Available",
-    "organisation": "",
-    "salary": "",
-    "location": "",
-    "closing": "09 July 2026",
-    "url": "https://jobvisa.co.uk/job/senior-developer-sponsorship-available/",
-    "source": "JobVisa UK",
-    "sponsorship": true,
-    "found": "2026-07-08",
-    "priority": 120,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "10 years"
-    ],
-    "greenFlags": [
-      "javascript",
-      "typescript",
-      "react",
-      "next.js",
-      "postgresql",
-      "sql",
-      "api",
-      "git",
-      "agile",
-      "sponsorship",
-      "skilled worker"
-    ],
-    "snippet": "Home » Jobs » Senior Developer: Sponsorship Available",
-    "detailScraped": true
-  },
-  {
-    "id": "head-of-digital-applications-development-anguage-en",
-    "title": "Head of Digital Applications Development",
-    "organisation": "Welsh Ambulance NHS Trust",
-    "salary": "£58,379 to £65,723 a year",
-    "location": "Across Wales NP44 7HF",
-    "closing": "08 July 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9020-26-0109?keyword=application%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-07-08",
-    "priority": 115,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "10 years"
-    ],
-    "greenFlags": [
-      "git",
-      "agile",
-      "sponsorship",
-      "skilled worker"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "digital-applications-developer-anguage-en",
-    "title": "Digital Applications Developer",
-    "organisation": "Welsh Ambulance NHS Trust",
-    "salary": "£40,559 to £48,841 a year",
-    "location": "Across Wales NP44 7HF",
-    "closing": "09 July 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9020-26-0113?keyword=software%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-07-08",
-    "priority": 95,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "hl7",
-      "fhir",
-      "10 years"
-    ],
-    "greenFlags": [
-      "sql",
-      "api",
-      "git",
-      "agile",
-      "sponsorship",
-      "skilled worker"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "software-programmer-sponsorship-available-jobvisa-ailable-2-",
-    "title": "Software Programmer: Sponsorship Available",
-    "organisation": "",
-    "salary": "",
-    "location": "",
-    "closing": "12 July 2026",
-    "url": "https://jobvisa.co.uk/job/software-programmer-sponsorship-available-2/",
-    "source": "JobVisa UK",
-    "sponsorship": true,
-    "found": "2026-07-08",
-    "priority": 90,
-    "noSponsorship": false,
-    "dealBreakers": [],
-    "greenFlags": [
-      "javascript",
-      "react",
-      "sql",
-      "api",
-      "git",
-      "web development",
-      "sponsorship",
-      "visa sponsorship"
-    ],
-    "snippet": "Home » Jobs » Software Programmer: Sponsorship Available",
-    "detailScraped": true
-  },
-  {
-    "id": "cern-software-developer-for-control-systems",
-    "title": "Software Developer for Control Systems",
-    "organisation": "CERN",
-    "salary": "",
-    "location": "Geneva, Switzerland",
-    "closing": "",
-    "url": "https://careers.cern/jobs/software-developer-for-control-systems/",
-    "source": "CERN",
-    "sponsorship": true,
-    "found": "2026-07-08",
-    "snippet": "Software Developer for Control Systems\nBE-ICS-STF-2026-105-GRAP",
-    "priority": 70
-  },
-  {
-    "id": "monitoring-evaluation-and-learning-global-technical-advisor-the-hague-netherland",
-    "title": "Monitoring, Evaluation and Learning Global Technical Advisor, The Hague, Netherlands",
-    "organisation": "SNV Netherlands Development Organisation",
-    "salary": "",
-    "location": "Remote / Home-based",
-    "closing": "",
-    "url": "https://unjobs.org/vacancies/1783450617968",
-    "source": "UN Jobs",
-    "sponsorship": true,
-    "found": "2026-07-08",
-    "priority": 50
-  },
-  {
-    "id": "digital-programme-development-manager-sudan-national-role-rw-ational-role",
-    "title": "Digital Programme Development Manager Sudan (National role)",
-    "organisation": "Organization",
-    "salary": "",
-    "location": "Sudan",
-    "closing": "17 Jun 2026",
-    "url": "https://reliefweb.int/job/4216666/digital-programme-development-manager-sudan-national-role",
-    "source": "ReliefWeb",
-    "sponsorship": true,
-    "found": "2026-07-08",
-    "priority": 50
-  },
-  {
-    "id": "education-technical-advisor-rw-ical-advisor",
-    "title": "Education Technical Advisor",
-    "organisation": "Organization",
-    "salary": "",
-    "location": "International",
-    "closing": "24 Jun 2026",
-    "url": "https://reliefweb.int/job/4217635/education-technical-advisor",
-    "source": "ReliefWeb",
-    "sponsorship": true,
-    "found": "2026-07-08",
-    "priority": 50
-  },
-  {
-    "id": "cern-applied-physicist-on-daq-software",
-    "title": "Applied Physicist on DAQ Software",
-    "organisation": "CERN",
-    "salary": "",
-    "location": "Geneva, Switzerland",
-    "closing": "",
-    "url": "https://careers.cern/jobs/ep-cms-id-2026-113-grap/",
-    "source": "CERN",
-    "sponsorship": true,
-    "found": "2026-07-08",
-    "snippet": "Applied Physicist on DAQ Software\nEP-CMS-ID-2026-113-GRAP",
-    "priority": 50
-  },
-  {
-    "id": "application-developer-anguage-en",
-    "title": "Application Developer",
-    "organisation": "South West London and St Georges Mental Health NHS Trust",
-    "salary": "£55,524 to £62,652 a year",
-    "location": "Tolworth KT6 7QU",
-    "closing": "07 July 2026",
-    "url": "https://www.jobs.nhs.uk/candidate/jobadvert/C9294-26-0253?keyword=software%20developer&visa_sponsorship=1&language=en",
-    "source": "NHS Jobs",
-    "sponsorship": true,
-    "found": "2026-07-07",
-    "priority": 115,
-    "noSponsorship": false,
-    "dealBreakers": [
-      "10 years"
-    ],
-    "greenFlags": [
-      "api",
-      "git",
-      "sponsorship",
-      "skilled worker"
-    ],
-    "snippet": "We've put some small files called cookies on your device to help us make improvements to our site.",
-    "detailScraped": true
-  },
-  {
-    "id": "cern-backend-software-engineer-data-processing-platform",
-    "title": "Backend Software Engineer - Data Processing Platform",
-    "organisation": "CERN",
-    "salary": "",
-    "location": "Geneva, Switzerland",
-    "closing": "",
-    "url": "https://careers.cern/jobs/be-css-dsp-2026-126-ld/",
-    "source": "CERN",
-    "sponsorship": true,
-    "found": "2026-07-07",
-    "snippet": "Backend Software Engineer - Data Processing Platform\nBE-CSS-DSP-2026-126-LD",
-    "priority": 70
-  },
-  {
-    "id": "technical-advisor-energy-transition-home-based-remote-unjobs-783377331728",
-    "title": "Technical Advisor - Energy Transition, Home based, Remote",
-    "organisation": "General Information Position Title: Technical Advisor - Energy Transition Job Category: Technical Duty Station(s): Home based Seniority Level: Senior Level ICS Level: ICS 11 Contract Type: ICA - IICA - Regular Contract…",
-    "salary": "",
-    "location": "Remote / Home-based",
-    "closing": "",
-    "url": "https://unjobs.org/vacancies/1783377331728",
-    "source": "UN Jobs",
-    "sponsorship": true,
-    "found": "2026-07-07",
-    "priority": 50
-  },
-  {
-    "id": "project-manager-ai-rubric-consultancy-did-digital-guardrails-ai-valencia-remote-",
-    "title": "Project Manager AI Rubric Consultancy DID Digital Guardrails AI, Valencia Remote with travel",
-    "organisation": "Project Manager AI Rubric Consultancy, DID, Digital Guardrails/AI Office, 10.5 months, UNICEF Valencia, Remote with travel, # 594247 Job no: 594247 Position type: Consultant Location: Spain Division/Equivalent: Operations…",
-    "salary": "",
-    "location": "Remote / Home-based",
-    "closing": "",
-    "url": "https://unjobs.org/vacancies/1783377592409",
-    "source": "UN Jobs",
-    "sponsorship": true,
-    "found": "2026-07-07",
-    "priority": 50
-  },
-  {
-    "id": "assistantelectrical-design-engineer-amman-unjobs-783377566875",
-    "title": "AssistantElectrical Design Engineer, Amman",
-    "organisation": "Organizational Setting and Reporting UNRWA is a United Nations agency established by the General Assembly in 1949 and is mandated to provide assistance and protection to a population of some…",
-    "salary": "",
-    "location": "Remote / Home-based",
-    "closing": "",
-    "url": "https://unjobs.org/vacancies/1783377566875",
-    "source": "UN Jobs",
-    "sponsorship": true,
-    "found": "2026-07-07",
     "priority": 50
   }
 ]
